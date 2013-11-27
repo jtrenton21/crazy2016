@@ -1,28 +1,25 @@
-
-  <div class='contentmod'>
+<% @contents.each do |content| %>
   <p id="notice"><%= notice %></p>
-  <% @contents.each do |content| %> 
-    <div class='row'>
-      <div class="large-3 columns">
-        <p><%= image_tag content.photo.url(:large) %></p>
-      </div>  
-      <div id='modcol' class="large-9 columns">
-        <% unless content.visit.nil? %>
-        <p id='visitz'> 
-          <span class='tite'>Related Visit:</span>
-           <%= link_to h(content.visit.location), content.visit %>
-           <%= link_to h(content.visit.date), content.visit %>
-          </p>
-           <% end %>
-          <p id='title'><span class='tite'>Title:</span><%= content.title %></p>
-          <p id='author2'><span class='tite'>Author:</span><%= content.author %></p>
-          <p class ='modinfo'><span class='tite'></span><%= content.info %></p>
-      </div>
-    </div>
-    
-  <%end%>
-</div>
-
+    <p id='image'><%= image_tag content.photo.url(:photo) %></p>
+            <div class='row'> 
+              <div class="col-lg-4">
+                <% unless content.visit.nil? %>
+                  <p> 
+                    <span><%= link_to h(content.visit.location), content.visit %>
+                      <%= link_to h(content.visit.vdate), content.visit %></span>
+                  </p>
+                <%end%>
+                <p id='title'><span class='tite'></span><span class='aftite'><%= content.title %></span></p>
+                <p id='author'><span class='tite'></span><span class='aftite'><%= content.author %></span></p>
+              </div>
+            </div>
+            <div class='row'>
+              <div class="col-lg-12"> 
+                <p class ='modinfo'><span class='tite'></span><span class='aftite'><%= content.info %></span>
+                </p>
+              </div>
+            </div>
+ <%end%>
 
 
 

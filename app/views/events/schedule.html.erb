@@ -1,12 +1,10 @@
 <div id="dg">
   <div class="container">
     <div class="row">
-      <div class="col-lg-12">
-       <% x = 0 %>  
+      <div class="col-lg-12"><% x = 0 %>  
         <a data-toggle="modal" data-target="#myModal<%= x %>" href="#myModal<%= x %>"></a>
-        <%=render 'new' %>
-      
-        <table class="table table-bordered"> 
+          <%=render 'new' %>
+        <table  class="table table-bordered table-hover table-responsive"> 
           <thead>
             <tr id='eventheader'>
               <% @eventdays.each do |eventday|%>
@@ -21,59 +19,54 @@
                   <ul class='elist'>
                     <% @events.each do |event| %>
                       <%if eventday.id == event.eventday_id%>
-                        <li><a data-toggle="modal" data-target="#myModal<%= x %>" href="#myModal<%= x %>"><%=event.name%></span><br/><span id="callink"><%=event.start_time.strftime("%H:%M %P")%></span><a/></li>    
-                          <div class="modal fade" id="myModal<%= x %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                        <li>
+                          <a data-toggle="modal" data-target="#myModal<%= x %>" href="#myModal<%= x %>"><%=event.name%></span><br/><span id="callink"><%=event.start_time.strftime("%H:%M %P")%></span>
+                          <a/>
+                        </li>    
+                        <div class="modal fade" id="myModal<%= x %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                           <div class="modal-dialog">
                             <div class="modal-content">
                               <div class="modal-header">
                                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                 <h4 class="modal-title" id="myModalLabel"><%=event.name%></h4>
                               </div>
-                               <div class="modal-body">
-                                  <div class='row'>
-                                    
-                                      
-                                      <p>
-                                        <b class='eventb'>Date:</b>
-                                        <span class='eventshow'><%= event.eventday.day %> <%= event.eventday.month %>  <%= event.eventday.date %>,<%= event.eventday.year %> </span>
-                                      </p>
-                                      <p>
-                                        <b class='eventb'>Starts At:</b>
-                                        <span class='eventshow'> <%= event.start_time.strftime("%H:%M %P")%> </span>
-                                      </p>
-                                      <p>
-                                       <b class='eventb'>Location:</b>
-                                       <span class='eventshow'> <%= event.address %> </span>
-                                      </p>
-                                      <p>
-                                        <b class='eventb'>Details:</b><br/>
-                                        <span class='eventshow'> <%= event.einfo %> </span>
-                                      </p>
-                                       </span>
-                                       <p>
-                                        
-                                        <span><a class= "btn btn-info"> Get Tickets</a> </span>
-                                      </p>
-                                    </div>
-                                    <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{event.latitude}%2C#{event.longitude}" %>
-                                  
+                              <div class="modal-body">
+                                <div class='row'>
+                                  <p>
+                                    <b class='eventb'>Date:</b>
+                                    <span class='eventshow'><%= event.eventday.day %> <%= event.eventday.month %>  <%= event.eventday.date %>,<%= event.eventday.year %> </span>
+                                  </p>
+                                  <p>
+                                    <b class='eventb'>Starts At:</b>
+                                    <span class='eventshow'> <%= event.start_time.strftime("%H:%M %P")%> </span>
+                                  </p>
+                                  <p>
+                                   <b class='eventb'>Location:</b>
+                                   <span class='eventshow'> <%= event.address %> </span>
+                                  </p>
+                                  <p>
+                                    <b class='eventb'>Details:</b><br/>
+                                    <span class='eventshow'> <%= event.einfo %> </span>
+                                  </p>
+                                  <p>
+                                    <span><a class= "btn btn-info"> Get Tickets</a> </span>
+                                  </p>
                                 </div>
-                         
+                                  <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{event.latitude}%2C#{event.longitude}" %>
+                              </div>
+                            </div>
+                          </div>
                         </div>
-                      <%end%>
-                      <% x += 1 %>
+                      <%end%><% x += 1 %>
                     <%end%>
                   </ul>
                 </td>
               <%end%>
             </tr>
-    </tbody>
-  </table>
-
-
+          </tbody>
+        </table>
       </div>
-    </div>
-  <% x += 1 %>
+    </div><% x += 1 %>
   </div><!-- /container -->
 </div><!-- /dg -->
   

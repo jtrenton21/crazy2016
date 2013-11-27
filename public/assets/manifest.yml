@@ -179,6 +179,8 @@ social/YouTube.png: social/YouTube-99f1ec5b86c796911a2eb927f572dffc.png
 social/YouTube/index.png: social/YouTube-99f1ec5b86c796911a2eb927f572dffc.png
 social/Zerply.png: social/Zerply-04ec6ec9501e3921164fd87f06bf9265.png
 social/Zerply/index.png: social/Zerply-04ec6ec9501e3921164fd87f06bf9265.png
+statue.jpeg: statue-0aa0f1169e1e535987beab77795e0ef3.jpeg
+statue/index.jpeg: statue-0aa0f1169e1e535987beab77795e0ef3.jpeg
 tape.png: tape-55e0555ece1bb5518e6d7b8d2b2bf632.png
 tape/index.png: tape-55e0555ece1bb5518e6d7b8d2b2bf632.png
 toggle.png: toggle-09fbc289cfd3a4348f787ee4cd1496e4.png
@@ -227,10 +229,10 @@ work2.png: work2-7e4f1df7bea8c3b7c8dd4052f58930aa.png
 work2/index.png: work2-7e4f1df7bea8c3b7c8dd4052f58930aa.png
 work3.png: work3-9eba368cc1c427015cd446eca1b0b321.png
 work3/index.png: work3-9eba368cc1c427015cd446eca1b0b321.png
-application.js: application-9295cc16b29e1566f04813070163f607.js
-application/index.js: application-9295cc16b29e1566f04813070163f607.js
-application.css: application-c14526f20e0e8e8bc712bd6e2a689079.css
-application/index.css: application-c14526f20e0e8e8bc712bd6e2a689079.css
+application.js: application-b463c3d2067533aa0d24fd6d578ca308.js
+application/index.js: application-b463c3d2067533aa0d24fd6d578ca308.js
+application.css: application-f98935cdd5c8477b4745382964f44651.css
+application/index.css: application-f98935cdd5c8477b4745382964f44651.css
 jquery-ui/animated-overlay.gif: jquery-ui/animated-overlay-602eee4c79a4796b02bb6442948c9e28.gif
 jquery-ui/animated-overlay/index.gif: jquery-ui/animated-overlay-602eee4c79a4796b02bb6442948c9e28.gif
 jquery-ui/ui-bg_flat_0_aaaaaa_40x100.png: jquery-ui/ui-bg_flat_0_aaaaaa_40x100-7d1197a52442bc56fcad60d0390f4b32.png
