@@ -1,0 +1,7 @@
+<h1>Listing events</h1>
+
+<%= @events.calendar(:year => @year, :month => @month, :first_day_of_week => 1) do |d| %>
+   <%=   render_calendar_cell(d) %>
+  <% end%>
+
+<%= link_to 'New Event', new_event_path %>

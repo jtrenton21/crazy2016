@@ -1,0 +1,62 @@
+<div class='container'>
+<div class='row'>
+  <div class='large-12 large-centered columns'>
+    <h2 id='eventz'>Schedule of Events</h2>
+    <% x = 0 %>
+    <div id="events">
+      <h2 id="month">
+        <%#= link_to "<", date: @date.prev_month %>
+        <%#= @date.strftime("%B %Y") %>
+        <%#= link_to ">", date: @date.next_month %>
+      </h2>
+      <%= calendar @date do |date| %>
+        <%= date.day %>
+        <% if @events_by_date[date] %>
+        <% @events_by_date[date].each do |event| %>
+          <ul>
+            <li id='calevent'> <a href="#" data-reveal-id="myModal<%= x %>"><%= event.name %></a></li>
+          </ul>    
+          <div id="myModal<%= x %>" class="reveal-modal" style= "width:825px;">
+            <div class='row'>
+              <div class="large-5 columns">
+                <p>
+                 <b class='eventb'>Event:</b>
+                 <span class='eventshow'> <%= event.name %> </span>
+                </p>
+                <p>
+                  <b class='eventb'>Date:</b>
+                  <span class='eventshow'> <%= event.weekday.strftime("%B %e %Y") %> </span>
+                </p>
+                <p>
+                  <b class='eventb'>Starts At:</b>
+                  <span class='eventshow'> <%= event.start_time.strftime("%H:%M %P") %> </span>
+                </p>
+                <p>
+                 <b class='eventb'>Location:</b>
+                 <span class='eventshow'> <%= event.address %> </span>
+                </p>
+                <p>
+                  <b class='eventb'>Details:</b><br/>
+                  <span class='eventshow'> <%= event.einfo %> </span>
+                </p>
+              </div>
+              <a class="close-reveal-modal">&#215;</a>
+              <div class="large-7 columns">
+                <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{event.latitude}%2C#{event.longitude}" %>
+              </div>
+            </div>
+          </div>      
+        <%end%> 
+      <% end %> 
+      <% x += 1 %>
+    <% end %> 
+   </div>
+  </div>
+</div>
+<br/>
+<div class='row'>
+  <div class='large-5 large-centered columns'>
+    <p id='neweventz'><%= link_to 'New Event', new_event_path %></p>
+  </div>
+</div>
+</div>

@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+<div class='row'>
+    <div class="large-5 columns">
+		<p>
+		  <b>Name:</b>
+		  <%= @event.name %>
+		</p>
+		<p>
+		  <b>Date:</b>
+		 	<%= @event.eventday.day %>
+		</p>
+		<p>
+		  <b>Starts At:</b>
+		  <%= @event.start_time%> 
+		</p>
+		<p>
+		  <b>Location:</b>
+		  <%= @event.address %>
+		</p>
+
+		<p>
+		  <b>Details:</b>
+		  <%= @event.einfo %>
+		</p>
+    </div>
+    <div class="large-7 columns">
+      <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@event.latitude}%2C#{@event.longitude}" %>
+ </div>
+</div>
+
+<%= link_to 'Edit', edit_event_path(@event) %> |
+<%= link_to 'Back', events_path %>

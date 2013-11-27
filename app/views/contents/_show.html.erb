@@ -1,0 +1,30 @@
+
+  <div class='contentmod'>
+  <p id="notice"><%= notice %></p>
+  <% @contents.each do |content| %> 
+    <div class='row'>
+      <div class="large-3 columns">
+        <p><%= image_tag content.photo.url(:large) %></p>
+      </div>  
+      <div id='modcol' class="large-9 columns">
+        <% unless content.visit.nil? %>
+        <p id='visitz'> 
+          <span class='tite'>Related Visit:</span>
+           <%= link_to h(content.visit.location), content.visit %>
+           <%= link_to h(content.visit.date), content.visit %>
+          </p>
+           <% end %>
+          <p id='title'><span class='tite'>Title:</span><%= content.title %></p>
+          <p id='author2'><span class='tite'>Author:</span><%= content.author %></p>
+          <p class ='modinfo'><span class='tite'></span><%= content.info %></p>
+      </div>
+    </div>
+    
+  <%end%>
+</div>
+
+
+
+
+
+

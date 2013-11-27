@@ -1,0 +1,90 @@
+<div class='row'>
+  <div class='large-12 large-centered columns'>
+    <div class='topgal'>
+      <div id='galseek' class='row'>
+        <div class='large-8 large-centered columns'>
+          <%= search_form_for @search, url: search_contents_path, method: :post do |f| %>
+            <a id='gddown'><%= f.select :visit_id_eq, options_from_collection_for_select(Visit.all, "id", "location",  @search.visit_id_eq),({:include_blank => 'All Elvis Visits'})  %></a>
+            <% f.condition_fields do |c| %>
+              <%= render "condition_fields", f: c %>
+            <% end %>
+                <!-- <p><%#= link_to_add_fields "Add Conditions", f, :condition %></p> -->
+            <div id='searchfilter' class="actions"><%= f.submit "Search" %></div>
+          <% end %>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='large-8 large-centered columns'>
+          <%#if current_user%>
+            <div id='addpost' class='bottombutton'>
+              <p id='postprompt'> Click the Share button to contribute your photos & stories.
+              <button id='fbutton2' class='tiny button'><a href="#" data-reveal-id="myModalz">Share</a></button></p>
+            </div><br/>
+          <%#else%>
+          <%#end%>
+        </div>
+      </div>  
+    </div>
+    <div id="myModalz" class="reveal-modal">
+       <%= render 'new' %>
+       <a class="close-reveal-modal">&#215;</a>
+       <% x = 0 %>
+    </div>
+    <% @contents.in_groups_of(2, false) do |contents| %> 
+    <% contents.each do |content| %>
+      <div id="myModal<%= x %>" class="reveal-modal" style=''>
+        <div class='contentmod'>
+          <div class='row'>
+            <div class='large-6 columns'>   
+              <p id="notice"><%= notice %></p>
+              <p id='image'><%= image_tag content.photo.url(:photo) %></p>
+              </div>
+              <div class='large-6 columns'>  
+                <% unless content.visit.nil? %>
+                  <p id='visitz'> 
+                    
+                    <span class='aftite'><%= link_to h(content.visit.location), content.visit %>
+                      <%= link_to h(content.visit.vdate), content.visit %></span>
+                  </p>
+                <%end%>
+                <p id='title'><span class='tite'></span><span class='aftite'><%= content.title %></span></p>
+                <p id='author'><span class='tite'></span><span class='aftite'><%= content.author %></span></p>
+              </div>
+            </div>
+            <div class='row'>
+              <div class='large-12 large-centered columns'> 
+                <p class ='modinfo'><span class='tite'></span><span class='aftite'><%= content.info %></span>
+                </p>
+              </div>
+            </div>
+        </div>
+          <a class="close-reveal-modal">&#215;</a>
+      </div>
+       <!--  BELOW IS THE CODE FOR THE GALLERY PHOTO DISPLAY -->   
+        <div class='large-10 large-centered columns'>
+          <div id='photoz' class='large-5 columns'>
+            <a href="#" data-reveal-id="myModal<%= x %>">
+              <p id='image2'><%= image_tag content.photo.url(:photo) %></p>
+              <div class='constuff'>
+                <% unless content.visit.nil? %>
+                  <p id='visitz2'>
+                    <span class='aftite2'><%= link_to h(content.visit.location), content.visit %><br/>
+                    <%= link_to h(content.visit.vdate), content.visit %></span><br/>
+                  </p>
+                <% end %>
+                <p id='author2'><span class='tite'>Title:</span><span class='aftite'><%=content.title%></span></p><br/>
+                <p id='author2'><span class='tite'>Submitted By:</span><span class='aftite'><%= content.author %></span></p><br/>
+              </div>
+            </a>
+          </div>
+        </div>
+        <% x += 1 %>
+      <%end%> 
+    <%end%> 
+  </div>
+</div>
+<div class='bottom' class='row'>
+  <div class='large-12 columns'>
+  </div>
+</div>
+

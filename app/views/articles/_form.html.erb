@@ -1,0 +1,35 @@
+<%= simple_form_for @article,  :html => {:multipart => true} do |f| %>
+  <%= f.error_notification %>
+    <div class ='tedform'>
+      <div class="row">
+        <div id='cform' class="large-6 large-centered columns">
+          <p>
+            <span id='drop'>Title</span><br/>
+            <%= f.input_field :title %>
+          </p>
+          <p>
+            <span id='drop'>Author</span><br/>
+            <%= f.input_field :author %>
+          </p>
+          <p>
+           <span id='drop'>Published On</span><br/>
+            <%= f.input_field :published %>
+          </p>
+           <p>
+           <span id='drop'>Article URL</span><br/>
+            <%= f.input_field :link %>
+          </p>
+
+          <p>
+            <span id='drop'><p id='pictext'>Please Select A Photo to Upload</p></span><br/>
+            <%= f.file_field :photo %>
+          </p>
+          
+          <div class="form-actions">
+            <a class='buttonsub' id='fbutton'><%= f.button :submit %></a> 
+          </div>
+        </div>
+      </div> 
+      <% end %>
+    </div>
+      

@@ -1,0 +1,62 @@
+<% x = 0 %>  
+<div class="modal fade" id="myModal<%= x %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel">Add Event</h4>
+              </div>
+              <div class="modal-body">
+              <%= simple_form_for(@event) do |f| %>
+  <% if @event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% @event.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+<div class ='tedform2'>
+      <div class="row">
+        <div id='eform' class="large-6 large-centered columns">
+  <div class="field">
+    <span class='eventlab'>Event Name</span><br/>
+   <p id='calname'> <%= f.text_field :name %></p>
+  </div>
+  <div class="field">
+   <span class='eventlab'>Event Date</span><br/>
+ <span id='daydrop'><%= f.collection_select(:eventday_id, Eventday.all, :id, :day)%> </span>
+  </div>
+  <div class="field">
+    <span class='eventlab'>Start Time</span><br/>
+ <p id='caltime'><%= f.text_field :start_time, {:ampm => true} %> </p>
+  </div>
+  <div class="field">
+   <span class='eventlab'>Address</span><br/>
+  <p id='calplace'>  <%= f.text_area :address %></p>
+  </div>
+  <div class="field">
+    <span class='eventlab'>Event Description</span><br/>
+  <p id='calinfo'>  <%= f.text_area :einfo %></p>
+  </div>
+  <div class="actions">
+ <%= f.submit %>
+  </div>
+<% end %>
+</div>
+</div>
+</div>
+
+              </div>
+              <div class="modal-footer">
+              </div>
+            </div><!-- /.modal-content -->
+          </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+
+
+

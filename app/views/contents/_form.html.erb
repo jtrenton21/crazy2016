@@ -1,0 +1,37 @@
+<%= simple_form_for @content, :html => {:multipart => true} do |f| %>
+  <%= f.error_notification %>
+    <div class ='tedform'>
+      <div class="row">
+        <div id='cform' class="large-6 large-centered columns">
+          <span id='drop'>Select Related Visit</span><br/>
+             <a class="medium button dropdown" style="background:none; border:none; margin-left:-20px"><%= f.collection_select(:visit_id, Visit.all, :id, :location)%> </a>
+            <span id='drop'>Title</span><br/>
+            <%= f.input_field :title %>
+          </p>
+          <p>
+            <span id='drop'>Your Name</span><br/>
+            <%= f.input_field :author %>
+          </p>
+          <p>
+            <span id='drop'>Please Select A Photo to Upload</span><br/>
+            <%= f.file_field :photo %>
+          </p>
+          <p id='infoz'>
+           <span id='drop'>Info</span><br/>
+            <%= f.text_area :info, input_html: { wrap: 'hard' } %>
+          </p>
+          <div class="form-actions">
+            <a id='fbutton'><%= f.button :submit %></a> 
+          </div>
+        </div>
+      </div> 
+      <% end %>
+    </div>
+      
+   
+  
+  
+  
+  
+ 
+  

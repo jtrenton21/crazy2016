@@ -1,0 +1,70 @@
+<div class='row'>
+	<div id= 'featurez' class='small-12 small-centered columns'>
+        <div class='row'>
+	<div class='small-12 small-centered columns'>
+
+        <div class="headline"> <!-- headline -->
+	         <h2 id='crossr'>THE CROSSROADS OF ELVIS PRESLEY</h2>	
+		         <span class='eflame'><%= link_to image_tag("eflame.png", alt:"Flame"),'http://www.crazyaboutelvis.com/'%></span>
+        </div> <!-- ENDS headline -->
+    </div>
+</div>
+<div class='row'>
+	<div class='small-12 small-centered columns'>
+		<div class='featurebox'>
+			<ul id="filter-container-feature" class="feature"> <!-- Feature -->
+				<div id='featcolumn' class="small-4 columns">
+					<li>
+						<a class='thumb'>
+				   			<%= link_to image_tag("dummies/shrine.jpg", alt:"Shrine")%>
+					 		<div class="date"><a href='#' data-reveal-id="myModala"><span class="d">MORE</span><span class="m">INFO</span></a></div> 
+						</a>
+						<div id="myModala" class="reveal-modal">
+				  			<%= render 'layouts/shrine' %>
+				 			<a class="close-reveal-modal">&#215;</a>
+						</div>
+						<div class="caption">
+							<span class='t'>Shrine Mosque</span></br>
+							<span class='b'>May 17, 1956</span>
+						</div>
+					</li>
+				</div><!-- END Column LFT -->
+			    <div id='featcolumn' class="small-4 columns">
+					<li>
+						<a class='thumb'> 
+							<%= link_to image_tag("dummies/frisco.jpg", alt:"Frisco")%>
+							 <div class="date"><a href='#' data-reveal-id="myModalb"><span class="d">MORE</span><span class="m">INFO</span></a></div>
+						</a>
+						<div id="myModalb" class="reveal-modal">
+						  <%= render 'layouts/frisco' %>
+						 <a class="close-reveal-modal">&#215;</a>
+						</div>
+						<div class="caption">
+							<span class='t'>Frisco Train Depot</span></br>
+							<span class='b'>Nov. 8, 1956</span>
+						</div>
+					</li>
+				</div><!-- END Column MID-->
+				<div id='featcolumn' class="small-4 columns">
+					<li>
+						<a class='thumb'>
+							<%= link_to image_tag("dummies/jqh.jpg", alt:"Hammons")%>
+							<div class="date"><a href='#' data-reveal-id="myModalc"><span class="d">MORE</span><span class="m">INFO</span></a></div>
+						</a>
+						<div id="myModalc" class="reveal-modal">
+						  <%= render 'layouts/hammons' %>
+						 <a class="close-reveal-modal">&#215;</a>
+						</div>
+
+						<div class="caption">
+							<span class='t'>Hammons Student Center</span></br>
+							<span class='b'>June 17, 1977</span>
+						</div>
+					</li>
+				</div><!-- END Column RGT-->
+		    </ul><!-- ENDS feature -->
+		</div>
+	</div>
+</div>
+</div>
+</div>

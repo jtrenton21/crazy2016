@@ -1,0 +1,27 @@
+<h1>Listing events</h1>
+
+<table id='eventtable'>
+  <thead>
+    <tr id='eventheader'>
+      <th class='thevent'><span class='eday'>TUESDAY</span><br/><span class='edate'>26</span></th>
+      <th class='thevent'><span class='eday'>WEDNESDAY</span><br/><span class='edate'>27</span></th>
+      <th class='thevent'><span class='eday'>THURSDAY</span><br/><span class='edate'>28</span></th>
+      <th class='thevent'><span class='eday'>FRIDAY</span><br/><span class='edate'>29</span></th>
+      <th class='thevent'><span class='eday'>SATURDAY</span><br/><span class='edate'>30</span></th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @events.each do |event| %>
+  <tr>
+    <td><%= event.name %></td>
+    <td><%= event.info %></td>
+    <td><%= link_to 'Show', event %></td>
+    <td><%= link_to 'Edit', edit_event_path(event) %></td>
+    <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Event', new_event_path %>

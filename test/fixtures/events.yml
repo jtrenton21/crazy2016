@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  einfo: MyText
+  start_time: 2013-10-16 13:01:02
+  address: MyString
+  weekday: 2013-10-16
+  longitude: 1.5
+  latitude: 1.5
+
+two:
+  name: MyString
+  einfo: MyText
+  start_time: 2013-10-16 13:01:02
+  address: MyString
+  weekday: 2013-10-16
+  longitude: 1.5
+  latitude: 1.5

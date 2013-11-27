@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
+    <title>Crazy About Elvis</title>
+    <!-- Bootstrap core CSS -->
+    <link href="assets/stylesheets/bootstrap.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="assets/stylesheets/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link href="assets/stylesheets/responsive-slider.css" rel="stylesheet" media="screen">
+    <link href="http//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js">
+    <link href="http//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+    <script src="assets/javascripts/jquery.min.js"></script>
+    <script src="assets/javascripts/Chart.js"></script>
+    <script src="assets/javascripts/modernizr.custom.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  </head>
+  <body data-spy="scroll" data-offset="0" data-target="#theMenu">
+   
+           
+          <%= render 'layouts/header' %>
+          
+            <% flash.each do |key, value| %>
+              <%= content_tag(:div, value, class: "alert alert-#{key}") %>
+            <% end %>
+            <%= yield %>
+        <%= render 'layouts/footer' %>
+         
+        <% if current_user %>
+          Logged in as <%= current_user.email %>.
+          <%= link_to "Log Out", session_path("current"), method: "delete" %>
+        <%end%>
+    
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js">
+    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/Chart.js/0.2.0/Chart.min.js">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/Chart.js/0.2.0/Chart.min.js">
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/Chart.js/0.2.0/Chart.min.js">
+    <script src="assets/javascripts/classie.js"></script>
+    <script src="assets/javascripts/bootstrap.min.js"></script>
+    <script src="assets/javascripts/smoothscroll.js"></script>
+    <script src="assets/javascripts/main.js"></script>
+    <script src="assets/javascripts/jquery.js"></script>
+    <script src="assets/javascripts/jquery.event.move.js"></script>
+    <script src="assets/javascripts/responsive-slider.js"></script>
+
+
+  </body>
+</html>
