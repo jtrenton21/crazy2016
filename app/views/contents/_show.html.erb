@@ -1,26 +1,39 @@
-<% @contents.each do |content| %>
-  <p id="notice"><%= notice %></p>
-    <p id='image'><%= image_tag content.photo.url(:photo) %></p>
-            <div class='row'> 
-              <div class="col-lg-4">
-                <% unless content.visit.nil? %>
-                  <p> 
-                    <span><%= link_to h(content.visit.location), content.visit %>
-                      <%= link_to h(content.visit.vdate), content.visit %></span>
-                  </p>
-                <%end%>
-                <p id='title'><span class='tite'></span><span class='aftite'><%= content.title %></span></p>
-                <p id='author'><span class='tite'></span><span class='aftite'><%= content.author %></span></p>
-              </div>
-            </div>
-            <div class='row'>
-              <div class="col-lg-12"> 
-                <p class ='modinfo'><span class='tite'></span><span class='aftite'><%= content.info %></span>
-                </p>
-              </div>
-            </div>
- <%end%>
+<% x = 0 %>  
+<div class="modal fade" id="myModal2<%= x %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title" id="myModalLabel">Add Content</h4>
+      </div>
+      <div class="modal-body">
 
+        <% @contents.each do |content| %>
+          <p id="notice"><%= notice %></p>
+            <p id='image'><%= image_tag content.photo.url(:photo) %></p>
+                    <div class='row'> 
+                      <div class="col-lg-4">
+                        <% unless content.visit.nil? %>
+                          <p> 
+                            <span><%= link_to h(content.visit.location), content.visit %>
+                              <%= link_to h(content.visit.vdate), content.visit %></span>
+                          </p>
+                        <%end%>
+                        <p id='title'><span class='tite'></span><span class='aftite'><%= content.title %></span></p>
+                        <p id='author'><span class='tite'></span><span class='aftite'><%= content.author %></span></p>
+                      </div>
+                    </div>
+                    <div class='row'>
+                      <div class="col-lg-12"> 
+                        <p class ='modinfo'><span class='tite'></span><span class='aftite'><%= content.info %></span>
+                        </p>
+                      </div>
+                    </div>
+         <%end%>
+</div>
+</div>
+</div>
+</div>
 
 
 

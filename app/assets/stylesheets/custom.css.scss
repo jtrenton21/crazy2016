@@ -1,6 +1,18 @@
+/**UNIVERSAL*****************************/
+
 @import url(http://fonts.googleapis.com/css?family=Lora);
 
+.container{
 
+font-family: 'Lora', serif;
+
+}
+.red{
+
+  color: #AE1A26;
+  font-family: 'Lora', serif;
+  font-size:36px;
+}
 
 /**FOOTER*****************************/
 
@@ -16,21 +28,49 @@
 
 }
 
+/*EVENT CALENDER******************************/
 
 table.table.table-bordered {
 
 	
-	text-align:center;
+	
 }
 
 table td{
 
-	text-align:center;
+	
 }
 
 table th{
-
+	
+	background:grey;
+	color:white;
+	font-size:18px;
 	text-align:center;
+	
+}
+
+.table-bordered > thead > tr > th
+{
+
+	width:228px;
+}
+
+.table-bordered > tbody > tr > td{
+
+	
+}
+
+.elist li{
+
+	margin-bottom:15px;
+	margin-left:-50px;
+
+}
+
+.elist li:nth-child(odd){ 
+  background: white;
+  padding:10px 0px 10px 0px
 }
 
 table ul li{
@@ -44,7 +84,7 @@ table ul li{
 	height:350px;
 }
 
-
+/*PHOTO GALLERY******************************/
 #sbut{
 
 	margin-left:15px;
@@ -85,4 +125,21 @@ table ul li{
 #galauthor{
 
 margin-top:-10px;
+}
+
+/*HOME PAGE IMAGE SLIDER******************************/
+.carousel{
+	max-height:500px;
+	max-width:800px;
+}
+
+.carousel-inner>.item>img{
+
+	height:100%;
+	width:100%;
+}
+
+.carousel-indicators{
+
+	margin-bottom:-55px;
 }

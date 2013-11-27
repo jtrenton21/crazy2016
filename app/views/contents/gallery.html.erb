@@ -30,10 +30,13 @@
   <div id="gallery" class="container">
     <div class='row'>
       <div class="col-lg-1"></div>
+        <%= render 'show' %>
         <% @contents.in_groups_of(3, false) do |contents| %> 
           <% @contents.each do |content| %>
           <!--  BELOW IS THE CODE FOR THE GALLERY PHOTO DISPLAY -->                
-      <!-- <a data-toggle="modal" data-target="#myModal<%= x %>" href="#myModal<%= x %>"> -->
+         
+          
+            <a data-toggle="modal" data-target="#myModal2<%= x %>" href="#myModal2<%= x %>">
             <div class="col-lg-4">      
               <p id='image2'><%= image_tag content.photo.url(:photo) %></p>
               <% unless content.visit.nil? %>
@@ -46,9 +49,10 @@
               <p id='galauthor'><span class='tite'>Submitted By:</span><span class='aftite'><%= content.author %></span></p><br/>
             </div>
             <div class="col-lg-1"></div>
-            <!-- </a> -->
+            
                 <% x += 1 %>
           <%end%> 
+          </a>
         <%end%> 
       </div>
     </div>
