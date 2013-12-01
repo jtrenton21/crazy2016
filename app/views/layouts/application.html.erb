@@ -9,13 +9,14 @@
     <title>Crazy About Elvis</title>
     <!-- Bootstrap core CSS -->
     
-    <link href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
-    <link href="assets/stylesheets/main.css" rel="stylesheet">
-    <link rel="stylesheet" href="assets/font/font-awesome.min.css">
-    <link href="assets/stylesheets/responsive-slider.css" rel="stylesheet" media="screen">
+    
+   <!--  <link href="assets/stylesheets/main.css" rel="stylesheet"> -->
+   
+    <!-- <link href="assets/stylesheets/responsive-slider.css" rel="stylesheet" media="screen"> -->
+    <link href="http://d3js.org/d3.v2.min.js?2.8.1">
     <link href="http//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js">
     <link href="http//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
-     <!-- <script src="assets/javascripts/jquery.min.js"></script> -->
+    <!-- <script type="text/javascript" src="assets/javascripts/jquery.min.js"></script> -->
      <!-- <script src="assets/javascripts/Chart.js"></script> -->
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Lora:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
@@ -26,7 +27,7 @@
       <script src="assets/js/respond.min.js"></script>
     <![endif]-->
     <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application"  %>
+  <%= javascript_include_tag "application" , "main"  %>
   <%= csrf_meta_tags %>
   </head>
   <body data-spy="scroll" data-offset="0" data-target="#theMenu">
@@ -35,7 +36,7 @@
           <%= content_tag(:div, value, class: "alert alert-#{key}") %>
         <% end %>
         <%= yield %>
-       <%= javascript_include_tag "application" %>
+       <%= javascript_include_tag "application" , "main"  %>
       <%= render 'layouts/footer' %> 
       <% if current_user %>
           Logged in as <%= current_user.email %>.
@@ -52,11 +53,13 @@
     
      <!-- <script src="assets/javascripts/classie.js"></script> -->
    <!--  // <script src="assets/javascripts/bootstrap.min.js"></script> -->
-     <script src="assets/javascripts/smoothscroll.js"></script>
-    <script src="assets/javascripts/main.js"></script>
-    <script src="assets/javascripts/jquery.min.js"></script>
-    <script src="assets/javascripts/jquery.event.move.js"></script>
-    <script src="assets/javascripts/responsive-slider.js"></script>
+     
+   
+    <!-- <script src="assets/javascripts/smoothscroll.js"></script>
+    // <script src="assets/javascripts/main.js"></script>
+    // <script src="assets/javascripts/jquery.min.js"></script>
+    // <script src="assets/javascripts/jquery.event.move.js"></script>
+    // <script src="assets/javascripts/responsive-slider.js"></script> -->
 
 
   </body>

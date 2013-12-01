@@ -2270,3 +2270,129 @@
 [11/27/13 10:57:04 -0800 ChrUbuntu (30548)] INFO : Installing Rails 3.1/3.2 view instrumentation
 [11/27/13 10:57:04 -0800 ChrUbuntu (30548)] INFO : Finished instrumentation
 [11/27/13 10:57:05 -0800 ChrUbuntu (30548)] INFO : Doing deferred dependency-detection before Rack startup
+[11/27/13 16:25:31 -0800 ChrUbuntu (13041)] INFO : Starting the New Relic agent in "development" environment.
+[11/27/13 16:25:31 -0800 ChrUbuntu (13041)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[11/27/13 16:25:31 -0800 ChrUbuntu (13041)] INFO : Reading configuration from 
+[11/27/13 16:25:31 -0800 ChrUbuntu (13041)] ERROR : Unable to read configuration file : Is a directory - /home/user/workspace/crazye
+[11/27/13 16:25:31 -0800 ChrUbuntu (13041)] INFO : Enabling the Request Sampler.
+[11/27/13 16:25:31 -0800 ChrUbuntu (13041)] INFO : Enabling the Request Sampler.
+[11/27/13 16:25:31 -0800 ChrUbuntu (13041)] INFO : Environment: development
+[11/27/13 16:25:31 -0800 ChrUbuntu (13041)] INFO : Dispatcher: webrick
+[11/27/13 16:25:31 -0800 ChrUbuntu (13041)] INFO : Application: development
+[11/27/13 16:25:31 -0800 ChrUbuntu (13041)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'development'
+[11/27/13 16:25:31 -0800 ChrUbuntu (13041)] INFO : Installing Net instrumentation
+[11/27/13 16:25:31 -0800 ChrUbuntu (13041)] INFO : Installing deferred Rack instrumentation
+[11/27/13 16:25:31 -0800 ChrUbuntu (13041)] INFO : Installing ActiveRecord instrumentation
+[11/27/13 16:25:31 -0800 ChrUbuntu (13041)] INFO : Installing Rails3 Error instrumentation
+[11/27/13 16:25:31 -0800 ChrUbuntu (13041)] INFO : Installing Rails 3 Controller instrumentation
+[11/27/13 16:25:31 -0800 ChrUbuntu (13041)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[11/27/13 16:25:31 -0800 ChrUbuntu (13041)] INFO : Finished instrumentation
+[11/27/13 16:25:32 -0800 ChrUbuntu (13041)] INFO : Doing deferred dependency-detection before Rack startup
+[11/28/13 21:09:45 -0800 ChrUbuntu (26606)] INFO : Starting the New Relic agent in "development" environment.
+[11/28/13 21:09:45 -0800 ChrUbuntu (26606)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[11/28/13 21:09:45 -0800 ChrUbuntu (26606)] INFO : Reading configuration from 
+[11/28/13 21:09:45 -0800 ChrUbuntu (26606)] ERROR : Unable to read configuration file : Is a directory - /home/user/workspace/crazye
+[11/28/13 21:09:45 -0800 ChrUbuntu (26606)] INFO : Enabling the Request Sampler.
+[11/28/13 21:09:45 -0800 ChrUbuntu (26606)] INFO : Enabling the Request Sampler.
+[11/28/13 21:09:45 -0800 ChrUbuntu (26606)] INFO : Environment: development
+[11/28/13 21:09:45 -0800 ChrUbuntu (26606)] INFO : Dispatcher: webrick
+[11/28/13 21:09:45 -0800 ChrUbuntu (26606)] INFO : Application: development
+[11/28/13 21:09:45 -0800 ChrUbuntu (26606)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'development'
+[11/28/13 21:09:45 -0800 ChrUbuntu (26606)] INFO : Installing Net instrumentation
+[11/28/13 21:09:45 -0800 ChrUbuntu (26606)] INFO : Installing deferred Rack instrumentation
+[11/28/13 21:09:45 -0800 ChrUbuntu (26606)] INFO : Installing ActiveRecord instrumentation
+[11/28/13 21:09:45 -0800 ChrUbuntu (26606)] INFO : Installing Rails3 Error instrumentation
+[11/28/13 21:09:45 -0800 ChrUbuntu (26606)] INFO : Installing Rails 3 Controller instrumentation
+[11/28/13 21:09:45 -0800 ChrUbuntu (26606)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[11/28/13 21:09:45 -0800 ChrUbuntu (26606)] INFO : Finished instrumentation
+[11/28/13 21:09:45 -0800 ChrUbuntu (26606)] INFO : Doing deferred dependency-detection before Rack startup
+[11/28/13 21:22:15 -0800 ChrUbuntu (27546)] INFO : Starting the New Relic agent in "development" environment.
+[11/28/13 21:22:15 -0800 ChrUbuntu (27546)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[11/28/13 21:22:15 -0800 ChrUbuntu (27546)] INFO : Reading configuration from 
+[11/28/13 21:22:15 -0800 ChrUbuntu (27546)] ERROR : Unable to read configuration file : Is a directory - /home/user/workspace/crazye
+[11/28/13 21:22:15 -0800 ChrUbuntu (27546)] INFO : Enabling the Request Sampler.
+[11/28/13 21:22:15 -0800 ChrUbuntu (27546)] INFO : Enabling the Request Sampler.
+[11/28/13 21:22:15 -0800 ChrUbuntu (27546)] INFO : Environment: development
+[11/28/13 21:22:15 -0800 ChrUbuntu (27546)] INFO : Dispatcher: webrick
+[11/28/13 21:22:15 -0800 ChrUbuntu (27546)] INFO : Application: development
+[11/28/13 21:22:15 -0800 ChrUbuntu (27546)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'development'
+[11/28/13 21:22:15 -0800 ChrUbuntu (27546)] INFO : Installing Net instrumentation
+[11/28/13 21:22:15 -0800 ChrUbuntu (27546)] INFO : Installing deferred Rack instrumentation
+[11/28/13 21:22:15 -0800 ChrUbuntu (27546)] INFO : Installing ActiveRecord instrumentation
+[11/28/13 21:22:15 -0800 ChrUbuntu (27546)] INFO : Installing Rails3 Error instrumentation
+[11/28/13 21:22:15 -0800 ChrUbuntu (27546)] INFO : Installing Rails 3 Controller instrumentation
+[11/28/13 21:22:15 -0800 ChrUbuntu (27546)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[11/28/13 21:22:15 -0800 ChrUbuntu (27546)] INFO : Finished instrumentation
+[11/28/13 21:22:15 -0800 ChrUbuntu (27546)] INFO : Doing deferred dependency-detection before Rack startup
+[11/28/13 21:42:19 -0800 ChrUbuntu (28748)] INFO : Starting the New Relic agent in "development" environment.
+[11/28/13 21:42:19 -0800 ChrUbuntu (28748)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[11/28/13 21:42:19 -0800 ChrUbuntu (28748)] INFO : Reading configuration from 
+[11/28/13 21:42:19 -0800 ChrUbuntu (28748)] ERROR : Unable to read configuration file : Is a directory - /home/user/workspace/crazye
+[11/28/13 21:42:19 -0800 ChrUbuntu (28748)] INFO : Enabling the Request Sampler.
+[11/28/13 21:42:19 -0800 ChrUbuntu (28748)] INFO : Enabling the Request Sampler.
+[11/28/13 21:42:19 -0800 ChrUbuntu (28748)] INFO : Environment: development
+[11/28/13 21:42:19 -0800 ChrUbuntu (28748)] INFO : Dispatcher: webrick
+[11/28/13 21:42:19 -0800 ChrUbuntu (28748)] INFO : Application: development
+[11/28/13 21:42:19 -0800 ChrUbuntu (28748)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'development'
+[11/28/13 21:42:19 -0800 ChrUbuntu (28748)] INFO : Installing Net instrumentation
+[11/28/13 21:42:19 -0800 ChrUbuntu (28748)] INFO : Installing deferred Rack instrumentation
+[11/28/13 21:42:19 -0800 ChrUbuntu (28748)] INFO : Installing ActiveRecord instrumentation
+[11/28/13 21:42:19 -0800 ChrUbuntu (28748)] INFO : Installing Rails3 Error instrumentation
+[11/28/13 21:42:19 -0800 ChrUbuntu (28748)] INFO : Installing Rails 3 Controller instrumentation
+[11/28/13 21:42:19 -0800 ChrUbuntu (28748)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[11/28/13 21:42:19 -0800 ChrUbuntu (28748)] INFO : Finished instrumentation
+[11/28/13 21:42:19 -0800 ChrUbuntu (28748)] INFO : Doing deferred dependency-detection before Rack startup
+[12/01/13 10:57:28 -0800 ChrUbuntu (9965)] INFO : Starting the New Relic agent in "development" environment.
+[12/01/13 10:57:28 -0800 ChrUbuntu (9965)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[12/01/13 10:57:28 -0800 ChrUbuntu (9965)] INFO : Reading configuration from 
+[12/01/13 10:57:28 -0800 ChrUbuntu (9965)] ERROR : Unable to read configuration file : Is a directory - /home/user/workspace/crazye
+[12/01/13 10:57:28 -0800 ChrUbuntu (9965)] INFO : Enabling the Request Sampler.
+[12/01/13 10:57:28 -0800 ChrUbuntu (9965)] INFO : Enabling the Request Sampler.
+[12/01/13 10:57:28 -0800 ChrUbuntu (9965)] INFO : Environment: development
+[12/01/13 10:57:28 -0800 ChrUbuntu (9965)] INFO : Dispatcher: webrick
+[12/01/13 10:57:28 -0800 ChrUbuntu (9965)] INFO : Application: development
+[12/01/13 10:57:28 -0800 ChrUbuntu (9965)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'development'
+[12/01/13 10:57:28 -0800 ChrUbuntu (9965)] INFO : Installing Net instrumentation
+[12/01/13 10:57:28 -0800 ChrUbuntu (9965)] INFO : Installing deferred Rack instrumentation
+[12/01/13 10:57:28 -0800 ChrUbuntu (9965)] INFO : Installing ActiveRecord instrumentation
+[12/01/13 10:57:28 -0800 ChrUbuntu (9965)] INFO : Installing Rails3 Error instrumentation
+[12/01/13 10:57:28 -0800 ChrUbuntu (9965)] INFO : Installing Rails 3 Controller instrumentation
+[12/01/13 10:57:28 -0800 ChrUbuntu (9965)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[12/01/13 10:57:28 -0800 ChrUbuntu (9965)] INFO : Finished instrumentation
+[12/01/13 10:57:29 -0800 ChrUbuntu (9965)] INFO : Doing deferred dependency-detection before Rack startup
+[12/01/13 11:13:38 -0800 ChrUbuntu (10464)] INFO : Starting the New Relic agent in "development" environment.
+[12/01/13 11:13:38 -0800 ChrUbuntu (10464)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[12/01/13 11:13:38 -0800 ChrUbuntu (10464)] INFO : Reading configuration from 
+[12/01/13 11:13:38 -0800 ChrUbuntu (10464)] ERROR : Unable to read configuration file : Is a directory - /home/user/workspace/crazye
+[12/01/13 11:13:38 -0800 ChrUbuntu (10464)] INFO : Enabling the Request Sampler.
+[12/01/13 11:13:38 -0800 ChrUbuntu (10464)] INFO : Enabling the Request Sampler.
+[12/01/13 11:13:38 -0800 ChrUbuntu (10464)] INFO : Environment: development
+[12/01/13 11:13:38 -0800 ChrUbuntu (10464)] INFO : Dispatcher: webrick
+[12/01/13 11:13:38 -0800 ChrUbuntu (10464)] INFO : Application: development
+[12/01/13 11:13:38 -0800 ChrUbuntu (10464)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'development'
+[12/01/13 11:13:39 -0800 ChrUbuntu (10464)] INFO : Installing Net instrumentation
+[12/01/13 11:13:39 -0800 ChrUbuntu (10464)] INFO : Installing deferred Rack instrumentation
+[12/01/13 11:13:39 -0800 ChrUbuntu (10464)] INFO : Installing ActiveRecord instrumentation
+[12/01/13 11:13:39 -0800 ChrUbuntu (10464)] INFO : Installing Rails3 Error instrumentation
+[12/01/13 11:13:39 -0800 ChrUbuntu (10464)] INFO : Installing Rails 3 Controller instrumentation
+[12/01/13 11:13:39 -0800 ChrUbuntu (10464)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[12/01/13 11:13:39 -0800 ChrUbuntu (10464)] INFO : Finished instrumentation
+[12/01/13 11:13:39 -0800 ChrUbuntu (10464)] INFO : Doing deferred dependency-detection before Rack startup
+[12/01/13 11:28:13 -0800 ChrUbuntu (11150)] INFO : Starting the New Relic agent in "development" environment.
+[12/01/13 11:28:13 -0800 ChrUbuntu (11150)] INFO : To prevent agent startup add a NEWRELIC_ENABLE=false environment variable or modify the "development" section of your newrelic.yml.
+[12/01/13 11:28:13 -0800 ChrUbuntu (11150)] INFO : Reading configuration from 
+[12/01/13 11:28:13 -0800 ChrUbuntu (11150)] ERROR : Unable to read configuration file : Is a directory - /home/user/workspace/crazye
+[12/01/13 11:28:13 -0800 ChrUbuntu (11150)] INFO : Enabling the Request Sampler.
+[12/01/13 11:28:13 -0800 ChrUbuntu (11150)] INFO : Enabling the Request Sampler.
+[12/01/13 11:28:13 -0800 ChrUbuntu (11150)] INFO : Environment: development
+[12/01/13 11:28:13 -0800 ChrUbuntu (11150)] INFO : Dispatcher: webrick
+[12/01/13 11:28:13 -0800 ChrUbuntu (11150)] INFO : Application: development
+[12/01/13 11:28:13 -0800 ChrUbuntu (11150)] WARN : No license key found in newrelic.yml config. This often means your newrelic.yml is missing a section for the running environment 'development'
+[12/01/13 11:28:13 -0800 ChrUbuntu (11150)] INFO : Installing Net instrumentation
+[12/01/13 11:28:13 -0800 ChrUbuntu (11150)] INFO : Installing deferred Rack instrumentation
+[12/01/13 11:28:13 -0800 ChrUbuntu (11150)] INFO : Installing ActiveRecord instrumentation
+[12/01/13 11:28:13 -0800 ChrUbuntu (11150)] INFO : Installing Rails3 Error instrumentation
+[12/01/13 11:28:13 -0800 ChrUbuntu (11150)] INFO : Installing Rails 3 Controller instrumentation
+[12/01/13 11:28:13 -0800 ChrUbuntu (11150)] INFO : Installing Rails 3.1/3.2 view instrumentation
+[12/01/13 11:28:13 -0800 ChrUbuntu (11150)] INFO : Finished instrumentation
+[12/01/13 11:28:13 -0800 ChrUbuntu (11150)] INFO : Doing deferred dependency-detection before Rack startup

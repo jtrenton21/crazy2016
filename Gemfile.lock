@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/minimagick/minimagick.git
-  revision: d8903dde9a24faa4331098077481a67024109887
+  revision: 26f0e968123ada773f03467a8e40f7fca09b8286
   specs:
     mini_magick (3.7.0)
       subexec (~> 0.2.1)

@@ -14,6 +14,43 @@ font-family: 'Lora', serif;
   font-size:36px;
 }
 
+
+
+.modal{
+
+margin:0 auto;
+position:fixed;
+
+width:100%;
+}
+
+
+
+.modal.modal-content{
+  
+  margin-right:400px;
+}
+
+.modal-dialog{
+ 
+  margin-left:-400px;
+}
+
+
+#galbg{
+
+  background: #F7F7F7;
+  padding:20px 5px 0px 5px;
+  margin:20px 0px 20px 0px;
+}
+
+/*HEADER************************/
+
+#closex{
+
+	margin-top:-20px;
+	margin-right:-5px
+}
 /**FOOTER*****************************/
 
 #iconso li{
@@ -107,25 +144,56 @@ table ul li{
 
 #gallery img{
 
-	height:250px;
+	height:230px;
 }
 
-.galvisit{
 
-	font-size:18px;
+#visitz2 {
+  color:#AE1A26;
+  font-size:22px;
+  margin-bottom:9px;
+}
 
+#visitz2 a{
+  color:#AE1A26;
+ 
 }
 
 #galtitle{
-	margin-top:-10px;
-	margin-bottom:-10px;
-
+  margin-bottom:-12px;
+  font-size:18px;
 }
 
 #galauthor{
 
-margin-top:-10px;
+  margin-top:-12px;
 }
+
+
+#image img{
+
+  height:350px;
+}
+
+/*Modal Layout in Gallery*/
+
+#viewvisit{
+  color:#AE1A26;
+  font-size:22px;
+  margin-bottom:9px;
+
+}
+
+#viewvisit a{
+  color:#AE1A26;
+}
+
+#viewtitle{
+  margin-bottom:-5px;
+  font-size:18px;
+}
+
+
 
 /*HOME PAGE IMAGE SLIDER******************************/
 .carousel{
@@ -142,4 +210,140 @@ margin-top:-10px;
 .carousel-indicators{
 
 	margin-bottom:-55px;
+}
+
+
+/*NEWS ARTICLES*********************************/
+
+#anews{
+  margin-top:-7px;
+  
+}
+
+#articlez{
+
+  height:100%;
+  min-height:1000px;
+}
+
+#newsrow{
+
+  margin-left:-5px;
+}
+
+#figure{
+  
+  box-shadow: 10px 10px 5px #888888;
+  border:3px solid white;
+  margin-left:50px;
+  width:85%;
+}
+
+#figure img{
+  float:left;
+  height:150px;
+
+  margin:10px 15px 0px 15px;
+  padding:10px 0px 10px 5px;
+  width:175px;
+}
+
+#artnew{
+
+  margin-top:15px;
+}
+
+
+.newnews{
+
+  background:grey;
+   padding:5px;
+}
+
+#newnews a{
+
+  padding:5px;
+  
+}
+
+#articleh{
+  
+  text-align:center;
+  width:100%
+}
+
+#tnews{
+
+  margin-top:20px;
+}
+
+#dnews{
+
+  margin-top:-5px;
+}
+
+#anews{
+
+  margin-bottom:-5px;
+}
+
+#adminr{
+
+  height:100%;
+  min-height:500px;
+}
+
+.elist{
+
+  list-style:none;
+}
+
+/*PAGINATION*************************************/
+
+
+
+
+.pagination {
+  
+  cursor: default;
+  height: 22px;
+  a, span, em {
+    padding: 0.2em 0.5em;
+    display: block;
+    float: left;
+    margin-right: 1px;
+  }
+  
+  .disabled {
+    
+  }
+  .current {
+    font-style: normal;
+    font-weight: bold;
+    background: #2e6ab1;
+    color: white;
+    border: 1px solid #2e6ab1;
+  }
+  a {
+    text-decoration: none;
+    color: #105cb6;
+    border: 1px solid #9aafe5;
+    &:hover, &:focus {
+      color: #000033;
+      border-color: #000033;
+    }
+  }
+  .page_info {
+    background: #2e6ab1;
+    color: white;
+    padding: 0.4em 0.6em;
+    width: 22em;
+    margin-bottom: 0.3em;
+    text-align: center;
+    b {
+      color: #000033;
+      background: #2e6ab1 + 60;
+      padding: 0.1em 0.25em;
+    }
+  }
 }

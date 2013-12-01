@@ -1,41 +1,55 @@
-<div id="articlez" class='large-12 large-centered columns'> 
-  <div id="artnew" class='large-4 large-centered columns'>  
-  
-  <%#= page_navigation_links(@articles) %>
-  <%#if current_user%>
-  <p> Create <span class="newnews"><%= link_to 'New', new_article_path %></span> Article Link</p>
-  <%#else%>
-  <%#end%>
+<div id="dg">
+  <div class="container">
+    <div class="row">
+      <div class= "col-lg-12">
+        <div class= "col-lg-4">
+          <%#= page_navigation_links(@articles) %>
+            <%#if current_user%>
+             <p> Create <span class="newnews"><%= link_to 'New', new_article_path %></span> Article Link</p>
+              <%#else%>
+            <%#end%>
+        </div>
+        <div id="paginate" class='large-4 large-centered columns'> 
+      </div> 
+    </div>
   </div>
-  <div id="paginate" class='large-4 large-centered columns'>  
-    
-  </div>
-  <div id='newsrow' class='row'>
-      <div class='large-9 large-centered columns'>   
-        <h1 style="font-family:Lora;" id='articleh'>Published Articles</h1>
-        <div class='large-3 large-centered columns'>
+    <div id='newsrow' class='row'>
+      <div class= "col-lg-2"></div>
+      <div class= "col-lg-8">  
+        
+        <div class= "col-lg-4">
           <span id="pageit"> <%= will_paginate @articles, previous_label: h("<"), next_label: h(">") %></span>
         </div>
-          <% @articles.each do |article| %>
-             <div id="figure" class='panel'>
-                 <a href=<%=article.link%>>
-                    <p id='image' style='margin-top:-35px;'><%= image_tag article.photo.url(:photo) %></p>
-                    <h3 style="font-family:Lora;" id='tnews'><%= article.title %></h3>
-                    <p id='anews'><%= article.author %></p>
-                    <p id='dnews'><%= article.published %></p>
-                  </a>
-              </div>
-              <div class='large-4 large-centered columns'>  
-                
-                <%#if current_user%>
-                <span class="newnews">  <%= link_to 'Show', article %></span> 
-                <span class="newnews">  <%= link_to 'Edit', edit_article_path(article) %></span> 
-                <span class="newnews">  <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></span> 
-                  <%#else%>
-                <%#end%>
-              </div>
-          <% end %>
       </div>
+      <div class= "col-lg-2"></div>
+    </div>
+    <% @articles.each do |article| %>
+      <div id='newsrow' class='row'>
+        <div class= "col-lg-2"></div>
+        <div class= "col-lg-8">  
+          <div id="figure" class="panel panel-default">
+            <a href=<%=article.link%>>
+              <div class="panel-body">              
+                <div class= "col-lg-2">
+                  <p id='image2'><%= image_tag article.photo.url(:photo) %></p>
+                </div>
+                <div style="padding-right:20px;" class= "col-lg-6 pull-right">
+                  <h3 style="font-family:Lora;" id='tnews'><%= article.title %></h3>
+                  <p id='anews'><%= article.author %></p>
+                  <p id='dnews'><%= article.published %></p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>   
+      <%#if current_user%>
+        <span class="newnews">  <%= link_to 'Show', article %></span> 
+        <span class="newnews">  <%= link_to 'Edit', edit_article_path(article) %></span> 
+        <span class="newnews">  <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></span> 
+        <%#else%>
+      <%#end%>
+    <% end %>
   </div>
 </div>
 
