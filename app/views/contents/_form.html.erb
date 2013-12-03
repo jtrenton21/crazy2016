@@ -1,13 +1,14 @@
 <%= simple_form_for @content, :html => {:multipart => true} do |f| %>
   <%= f.error_notification %>
     <div class ='tedform'>
-      <div class="row">
-        <div id='cform' class="large-6 large-centered columns">
+      <div class="row centered">
+       <div class="col-lg-3"></div>
+        <div id='cform' class="col-lg-6">
           <span id='drop'>Select Related Visit</span><br/>
-             <a class="medium button dropdown" style="background:none; border:none; margin-left:-20px"><%= f.collection_select(:visit_id, Visit.all, :id, :location)%> </a>
+             <a class="medium button dropdown" style="background:none; border:none; margin-left:-20px"><%= f.collection_select(:visit_id, Visit.all, :id, :location)%> </a><br/>
             <span id='drop'>Title</span><br/>
             <%= f.input_field :title %>
-          </p>
+          </p><br/>
           <p>
             <span id='drop'>Your Name</span><br/>
             <%= f.input_field :author %>
@@ -24,6 +25,7 @@
             <a id='fbutton'><%= f.button :submit %></a> 
           </div>
         </div>
+        <div class="col-lg-3"></div>
       </div> 
       <% end %>
     </div>

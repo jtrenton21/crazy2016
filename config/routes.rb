@@ -35,7 +35,8 @@ Elvis::Application.routes.draw do
   
   match '/signup',      to: 'users#new',                via: 'get'
   match '/admin',       to: 'users#admin',              via: 'get'
-  
+  match '/dashboard',   to: 'users#dashboard',          via: 'get'
+
   get 'login',          to: 'sessions#new',              as: 'login'
   get 'logout',         to: 'sessions#destroy',          as: 'logout'
  

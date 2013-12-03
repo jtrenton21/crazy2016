@@ -1,0 +1,93 @@
+<%if current_user %>
+ <div id="w">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+         <h1 class="red">THE CROSSROADS OF ELVIS PRESLEY</h1> 
+             <span class='eflame'><%#= link_to image_tag("eflame.png", alt:"Flame"),'http://www.crazyaboutelvis.com/'%></span>
+        </div>
+      </div>
+    </div><!-- /container -->
+  </div><!-- /w -->
+  <div style="height:450px;" id="dg">
+    <div class="container">
+      <div class="row">
+        <h1>Admin Users</h1>
+        <%= render 'adminusers' %>     
+
+      </div>
+    </div><!-- /container -->
+  </div><!-- /dg -->
+  <!-- ========== SERVICES - GREY SECTION ========== -->
+  <section id="services" name="services"></section>
+  <div id="g">
+    <div class="container">
+      <div class="row">
+       
+        
+      </div>
+    </div><!-- /container -->
+  </div><!-- /g -->
+  <!-- ========== RESPONSIVE SLIDER - DARK GREY SECTION ========== -->
+  
+   <!-- ========== JOHN WILKINSON SECTION ========== -->
+  <section id="portfolio" name="portfolio"></section>
+    <div id="dg">
+      <div style="padding-bottom:40px;" id="portfoliowrap">
+        <div class="container">
+          <div class="row">
+            <h1>News Articles</h1>
+           <%= render 'news_articles' %>
+          </div>  
+        </div><!-- /container -->
+      </div><!-- /portfoliowrap -->
+    </div>
+  <!-- ========== WHITE SECTION ========== -->
+  <div id="w">
+    <div class="container">
+      <div class="row">
+        
+      </div>
+    </div><!-- /container -->
+  </div><!-- /w -->
+  
+   <section id="portfolio" name="portfolio"></section>
+    <div id="dg">
+      <div style="padding-bottom:40px;" id="portfoliowrap">
+        <div class="container">
+          <div class="row">
+            <h1>Photo Gallery</h1>
+           <%= render 'photo_gallery' %>
+          </div>  
+        </div><!-- /container -->
+      </div><!-- /portfoliowrap -->
+    </div>
+
+
+
+  <!-- ========== ABOUT - GREY SECTION ========== -->
+  <section id="about" name="about"></section>
+  <div id="g">
+    <div class="container">
+      <div class="row">
+        
+       
+        
+      </div>
+    </div><!-- /container -->
+  </div><!-- /g --></div><!-- /f -->
+  <section id="portfolio" name="portfolio"></section>
+    <div id="dg">
+      <div style="padding-bottom:40px;" id="portfoliowrap">
+        <div class="container">
+          <div class="row">
+            <h1>Events</h1>
+           <%= render 'events' %>
+          </div>  
+        </div><!-- /container -->
+      </div><!-- /portfoliowrap -->
+    </div>
+
+  <%else%>
+  <h1>YOU ARE NOT AUTHORIZED TO ACCESS THIS AREA</h1>
+  <%end%>

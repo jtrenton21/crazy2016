@@ -3,11 +3,11 @@
     <div class="row">
       <div class= "col-lg-12">
         <div class= "col-lg-4">
-          <%#= page_navigation_links(@articles) %>
-            <%#if current_user%>
+          
+            <%if current_user%>
              <p> Create <span class="newnews"><%= link_to 'New', new_article_path %></span> Article Link</p>
-              <%#else%>
-            <%#end%>
+              <%else%>
+            <%end%>
         </div>
         <div id="paginate" class='large-4 large-centered columns'> 
       </div> 
@@ -21,35 +21,37 @@
           <span id="pageit"> <%= will_paginate @articles, previous_label: h("<"), next_label: h(">") %></span>
         </div>
       </div>
-      <div class= "col-lg-2"></div>
+      
     </div>
-    <% @articles.each do |article| %>
-      <div id='newsrow' class='row'>
-        <div class= "col-lg-2"></div>
-        <div class= "col-lg-8">  
-          <div id="figure" class="panel panel-default">
-            <a href=<%=article.link%>>
-              <div class="panel-body">              
-                <div class= "col-lg-2">
-                  <p id='image2'><%= image_tag article.photo.url(:photo) %></p>
+    
+      <% @articles.each do |article| %>
+        <div id='newsrow' class='row'>
+          <div class= "col-lg-2"></div>
+          <div style="float:left;" class= "col-lg-7">  
+            <div  id="figure" class="panel panel-default">
+              <a href=<%=article.link%>>
+                <div class="panel-body">              
+                  <div class= "col-lg-2">
+                    <p id='image2'><%= image_tag article.photo.url(:photo) %></p>
+                  </div>
+                  <div style="padding-right:20px; margin-top:5px;" class= "col-lg-7 pull-right">
+                    <h3 style="font-family:Lora;" id='tnews'><%= article.title %></h3>
+                    <p id='anews'><%= article.author %></p>
+                    <p id='dnews'><%= article.published %></p>
+                  </div>
                 </div>
-                <div style="padding-right:20px;" class= "col-lg-6 pull-right">
-                  <h3 style="font-family:Lora;" id='tnews'><%= article.title %></h3>
-                  <p id='anews'><%= article.author %></p>
-                  <p id='dnews'><%= article.published %></p>
-                </div>
-              </div>
-            </a>
+              </a>
+            </div>
           </div>
-        </div>
-      </div>   
-      <%#if current_user%>
-        <span class="newnews">  <%= link_to 'Show', article %></span> 
-        <span class="newnews">  <%= link_to 'Edit', edit_article_path(article) %></span> 
-        <span class="newnews">  <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></span> 
-        <%#else%>
-      <%#end%>
-    <% end %>
+        </div>   
+        <%if current_user%>
+          <span class="newnews">  <%= link_to 'Show', article %></span> 
+          <span class="newnews">  <%= link_to 'Edit', edit_article_path(article) %></span> 
+          <span class="newnews">  <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></span> 
+          <%else%>
+        <%end%>
+      <% end %>
+   
   </div>
 </div>
 

@@ -1,32 +1,31 @@
-<div id="artnew" class='large-12 large-centered columns'> 
-  <p id="notice"><%= notice %></p>
+<div class="contents"> 
+    <div class="container">
+        <div id="dg">
+          <div id='newsrow' class='row'>
+            <div class= "col-lg-2"></div>
+              <div style="float:left;" class= "col-lg-7">  
+                <div  id="figure" class="panel panel-default">
+                  <div class="panel-body">              
+                    <div class= "col-lg-2">
+                      <p id='image2'><%= image_tag @article.photo.url(:photo) %></p>
+                    </div>
+                    <div style="padding-right:20px; margin-top:5px;" class= "col-lg-7 pull-right">
+                      <h3 style="font-family:Lora;" id='tnews'><%= @article.title %></h3>
+                      <p id='anews'><%= @article.author %></p>
+                      <p id='dnews'><%= @article.published %></p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>   
 
-  <p>
-    <b>Title:</b>
-    <%= @article.title %>
-  </p>
+            <p>
+              <b>Link:</b>
+              <%= @article.link %>
+            </p>
 
-  <p>
-    <b>Author:</b>
-    <%= @article.author %>
-  </p>
-
-  <p>
-    <b>Published:</b>
-    <%= @article.published %>
-  </p>
-
-  <p>
-    <b>Photo:</b>
-    <%= @article.photo %>
-  </p>
-
-  <p>
-    <b>Link:</b>
-    <%= @article.link %>
-  </p>
-</div>
-<div class='large-4 large-centered columns'> 
-  <span class="newnews"><%= link_to 'Edit', edit_article_path(@article) %></span> |
-  <span class="newnews"><%= link_to 'Back', articles_path %></span>
+            <span class="newnews"><%= link_to 'Edit', edit_article_path(@article) %></span> |
+            <span class="newnews"><%= link_to 'Back', dashboard_path %></span>
+    </div>
+  </div>
 </div>

@@ -1,0 +1,51 @@
+<div id="gallery" class="container"><% x = 0 %> 
+
+  <% @contents.each do |content| %>             
+    <div class="modal fade" id="myModald<%= x %>" tabindex="-1" role="dialog"             aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel"><%= content.title %></h4>
+          </div>
+          <div class="modal-body">
+            <p id="notice"><%= notice %></p>
+            <p id='image2'><%= image_tag content.photo.url(:photo) %></p>
+            <div class='row'> 
+              <% unless content.visit.nil? %>
+                <p id="viewvisit"> 
+                  <span><%= content.visit.location %> <%= content.visit.vdate  %></span>
+                </p>
+              <%end%>
+                <p id='viewtitle'><span class='tite'></span><span class='aftite'><%= content.title %></span></p>
+                <p id='viewauthor'><span class='tite'></span><span class='aftite'><%= content.author %></span></p>
+            </div><!--END OF ROW-->
+            <div class='row'>
+              <p class ='modinfo'><span class='tite'></span><span class='aftite'><%= content.info %></span>
+                </p>
+            </div>
+          </div><!--MODAL BODY-->
+        </div><!--MODAL CONTENT-->
+      </div><!--MODAL DIALOG-->
+    </div><!--MODAL FADE-->
+    <!-- <div class="row centered" > -->
+      <div class="col-lg-2"></div>  
+      <div id="galbg" class="col-lg-4">  
+        <a data-toggle="modal" data-target="#myModald<%= x %>" href= "#myModald<%= x %>">
+          <p id='image2'><%= image_tag content.photo.url(:photo) %></p>
+            <% unless content.visit.nil? %>
+              <p id='visitz2'>
+                <span class="galvisit"><%= content.visit.location %> <%= content.visit.vdate  %></span><br/>
+              </p>
+            <% end %>
+            <p id='galtitle'><span class='aftite'><%=content.title%></span></p><br/>
+            <p id='galauthor'><span class='tite'>Submitted By:</span><span class='aftite'><%= content.author %></span></p><br/>
+        </a>
+      <!-- </div> -->
+        
+    <% x += 1 %>
+     </div>
+  <%end%> 
+</div>
+
+

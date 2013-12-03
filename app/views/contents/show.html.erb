@@ -1,28 +1,34 @@
-<p id="notice"><%= notice %></p>
+<div id="dg">
+  <div class="container">
+    <div class="row centered">
+      <p id="notice"><%= notice %></p>
 
-<p>
-  <%= image_tag @content.photo.url(:large) %>
-</p>
-<% unless @content.visit.nil? %>
-<p id='visitz'>
-  <strong>Elvis Visit:</strong>
-  <%= link_to h(@content.visit.location), @content.visit %>
-  <%= link_to h(@content.visit.vdate), @content.visit %>
-</p>
-<% end %>
+      <p>
+        <%= image_tag @content.photo.url(:large) %>
+      </p>
+      <% unless @content.visit.nil? %>
+      <p id='visitz'>
+        <strong>Elvis Visit:</strong>
+        <%= link_to h(@content.visit.location), @content.visit %>
+        <%= link_to h(@content.visit.vdate), @content.visit %>
+      </p>
+      <% end %>
 
-<p>
-  <b>Title:</b>
-  <%= @content.title %>
-</p>
-<p>
-  <b>Author:</b>
-  <%= @content.author %>
-</p>
-<p>
-  <b>Story:</b><br/>
-  <%= @content.info %>
-</p>
+      <p>
+        <b>Title:</b>
+        <%= @content.title %>
+      </p>
+      <p>
+        <b>Author:</b>
+        <%= @content.author %>
+      </p>
+      <p>
+        <b>Story:</b><br/>
+        <%= @content.info %>
+      </p>
 
-<%= link_to 'Edit', edit_content_path(@content) %> |
-<%= link_to 'Back', contents_path %>
+      <%= link_to 'Edit', edit_content_path(@content) %> |
+      <%= link_to 'Back', dashboard_path %>
+    </div>
+  </div>
+</div>

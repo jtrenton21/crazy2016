@@ -7,6 +7,17 @@
 font-family: 'Lora', serif;
 
 }
+
+a {
+
+  color: #AE1A26;
+}
+
+#clickit{
+
+  color: #AE1A26;
+}
+
 .red{
 
   color: #AE1A26;
@@ -33,9 +44,15 @@ width:100%;
 
 .modal-dialog{
  
-  margin-left:-400px;
+  
+  min-width:800px;
 }
 
+
+textarea{
+
+  min-width:500px;
+}
 
 #galbg{
 
@@ -52,6 +69,8 @@ width:100%;
 	margin-right:-5px
 }
 /**FOOTER*****************************/
+
+
 
 #iconso li{
 
@@ -142,9 +161,9 @@ table ul li{
 	margin-bottom:20px;
 }
 
-#gallery img{
+#image2 img{
 
-	height:230px;
+	height:220px;
 }
 
 
@@ -184,8 +203,18 @@ table ul li{
 
 }
 
-#viewvisit a{
+#galvisit{
   color:#AE1A26;
+}
+
+#galtitle{
+
+  color:grey;
+}
+
+#galauthor{
+
+  color:grey;
 }
 
 #viewtitle{
@@ -193,7 +222,10 @@ table ul li{
   font-size:18px;
 }
 
+#galbg{
 
+  margin-right:25px;
+}
 
 /*HOME PAGE IMAGE SLIDER******************************/
 .carousel{
@@ -236,6 +268,7 @@ table ul li{
   box-shadow: 10px 10px 5px #888888;
   border:3px solid white;
   margin-left:50px;
+
   width:85%;
 }
 
@@ -243,7 +276,7 @@ table ul li{
   float:left;
   height:150px;
 
-  margin:10px 15px 0px 15px;
+  margin:10px 20px 0px 5px;
   padding:10px 0px 10px 5px;
   width:175px;
 }
@@ -272,18 +305,21 @@ table ul li{
   width:100%
 }
 
-#tnews{
 
+
+#tnews{
+   color:#AE1A26;
+  font-size:18px;
   margin-top:20px;
 }
 
 #dnews{
-
+  color:grey;
   margin-top:-5px;
 }
 
 #anews{
-
+  color:grey;
   margin-bottom:-5px;
 }
 
@@ -347,3 +383,19 @@ table ul li{
     }
   }
 }
+
+#aboutus{
+
+  border:1px solid black;
+  padding:20px;
+
+}
+
+
+
+#newsphoto img{
+
+  height:60px;
+  width:60px;
+}
+

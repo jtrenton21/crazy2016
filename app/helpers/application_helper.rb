@@ -1,5 +1,4 @@
 module ApplicationHelper
-
 	# class FoundationLinkRenderer < ::WillPaginate::ActionView::LinkRenderer
 	#      protected
 	 
