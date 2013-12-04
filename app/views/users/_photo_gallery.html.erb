@@ -10,6 +10,7 @@
               <th>Visit Date</th>
               <th>Title</th>
               <th>Author</th>
+              <th>Approved</th>
               <th>Show</th>
               <th>Edit</th>
               <th>Remove</th>
@@ -22,6 +23,7 @@
                      <td><%= content.visit.vdate %></td>
                     <td><%= content.title %></td>
                     <td><%= content.author %></td>
+                    <td><%= content.approved %></td>
                     <td><%= link_to 'Show', content %></td>
                     <td><%= link_to 'Edit', edit_content_path(content) %></td>
                     <td><%= link_to 'Destroy', content, method: :delete, data: { confirm: 'Are you sure?' } %></td>

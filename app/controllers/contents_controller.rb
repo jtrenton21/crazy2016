@@ -74,7 +74,7 @@ class ContentsController < ApplicationController
 
     respond_to do |format|
       if @content.update_attributes(params[:content])
-        format.html { redirect_to @content, notice: 'Content was successfully updated.' }
+        format.html { redirect_to :controller => "users", :action => "dashboard", notice: 'Content was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

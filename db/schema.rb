@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131114190838) do
+ActiveRecord::Schema.define(:version => 20131204173447) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -34,12 +34,13 @@ ActiveRecord::Schema.define(:version => 20131114190838) do
     t.string   "source"
     t.string   "photo"
     t.integer  "visit_id"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
     t.string   "photo_file_name"
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+    t.boolean  "approved",           :default => false
   end
 
   add_index "contents", ["visit_id"], :name => "index_contents_on_visit_id"

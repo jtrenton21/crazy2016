@@ -1,6 +1,7 @@
 <div id="gallery" class="container"><% x = 0 %> 
 
-  <% @contents.each do |content| %>             
+  <% @contents.each do |content| %>    
+  <%unless content.approved == false %>         
     <div class="modal fade" id="myModald<%= x %>" tabindex="-1" role="dialog"             aria-labelledby="myModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -46,6 +47,7 @@
     <% x += 1 %>
      </div>
   <%end%> 
+<%end%>
 </div>
 
 

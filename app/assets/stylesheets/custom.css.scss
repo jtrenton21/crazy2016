@@ -83,29 +83,15 @@ textarea{
 	margin-right:15px;
 }
 
-#iconso{
-
-
-}
 
 /*EVENT CALENDER******************************/
-
-table.table.table-bordered {
-
-	
-	
-}
-
-table td{
-
-	
-}
 
 table th{
 	
 	background:grey;
 	color:white;
-	font-size:18px;
+	
+  font-size:18px;
 	text-align:center;
 	
 }
@@ -121,6 +107,12 @@ table th{
 	
 }
 
+.textp{
+
+  color:black;
+}
+
+
 .elist li{
 
 	margin-bottom:15px;
@@ -130,7 +122,8 @@ table th{
 
 .elist li:nth-child(odd){ 
   background: white;
-  padding:10px 0px 10px 0px
+  padding:10px 3px 10px 3px;
+  
 }
 
 table ul li{

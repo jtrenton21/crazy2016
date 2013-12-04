@@ -1,5 +1,5 @@
 class Content < ActiveRecord::Base
-  attr_accessible :author, :info, :photo, :source, :title, :visit_id
+  attr_accessible :author, :info, :photo, :source, :title, :visit_id, :approved
   belongs_to :visit 
   has_attached_file :photo, 
   					:styles => { :export => {:geometry => "250x150#", :quality => 100, :format => 'JPG'} },

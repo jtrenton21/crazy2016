@@ -83,6 +83,8 @@ grunge.png: grunge-1eb3f9fb925d4c0e83f9720d05028eaf.png
 grunge/index.png: grunge-1eb3f9fb925d4c0e83f9720d05028eaf.png
 header.png: header-3270b2195333bbf32d8946152e8596bf.png
 header/index.png: header-3270b2195333bbf32d8946152e8596bf.png
+jande.jpg: jande-9e314e57fc0edf88b990557f7bd9123b.jpg
+jande/index.jpg: jande-9e314e57fc0edf88b990557f7bd9123b.jpg
 link_loader.gif: link_loader-6aae1fe5c70485096ca19f6fc2b10ba4.gif
 link_loader/index.gif: link_loader-6aae1fe5c70485096ca19f6fc2b10ba4.gif
 loading.gif: loading-245fc5c94a2afd5ce57327cba5bbd114.gif
@@ -193,6 +195,8 @@ yahoo.png: yahoo-d9de8777895772d92153ddbd2e2e5a9a.png
 yahoo/index.png: yahoo-d9de8777895772d92153ddbd2e2e5a9a.png
 bghead2.png: bghead2-370360f0178478df1febd997391cd085.png
 bghead2/index.png: bghead2-370360f0178478df1febd997391cd085.png
+bluehead.png: bluehead-056e48f2556e55acd2210000555cdf11.png
+bluehead/index.png: bluehead-056e48f2556e55acd2210000555cdf11.png
 glyphicons-halflings-white.png: glyphicons-halflings-white-6cccd17a7aed91dbc0157d343c68c0d9.png
 glyphicons-halflings-white/index.png: glyphicons-halflings-white-6cccd17a7aed91dbc0157d343c68c0d9.png
 header-bg.jpg: header-bg-b0aa97566894d12657d1b3ffd3888fad.jpg
@@ -219,8 +223,8 @@ slider-bg.jpg: slider-bg-c9ece569cd1b2e5a11620970875b3dd5.jpg
 slider-bg/index.jpg: slider-bg-c9ece569cd1b2e5a11620970875b3dd5.jpg
 application.js: application-fc59c068e61d2891a11192e215b53237.js
 application/index.js: application-fc59c068e61d2891a11192e215b53237.js
-application.css: application-d03ea19aea1a4d56b490fcd97c6e73f1.css
-application/index.css: application-d03ea19aea1a4d56b490fcd97c6e73f1.css
+application.css: application-bfe04bd49d1e6e83785e017a1d56893c.css
+application/index.css: application-bfe04bd49d1e6e83785e017a1d56893c.css
 jquery-ui/animated-overlay.gif: jquery-ui/animated-overlay-602eee4c79a4796b02bb6442948c9e28.gif
 jquery-ui/animated-overlay/index.gif: jquery-ui/animated-overlay-602eee4c79a4796b02bb6442948c9e28.gif
 jquery-ui/ui-bg_flat_0_aaaaaa_40x100.png: jquery-ui/ui-bg_flat_0_aaaaaa_40x100-7d1197a52442bc56fcad60d0390f4b32.png

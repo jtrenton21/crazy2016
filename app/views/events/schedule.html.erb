@@ -1,7 +1,8 @@
 <div id="dg">
   <div class="container">
     <div class="row">
-      <div class="col-lg-12"><% x = 0 %>  
+      <div class="col-lg-12 col-md-12"><% x = 0 %>  
+        <h2 class="red">EVENT SCHEDULE</h2><br/>
         <a data-toggle="modal" data-target="#myModal<%= x %>" href="#myModal<%= x %>"></a>
           <%=render 'new' %>
         <table  class="table table-bordered table-responsive"> 
@@ -20,7 +21,7 @@
                     <% @events.each do |event| %>
                       <%if eventday.id == event.eventday_id%>
                         <li>
-                          <a data-toggle="modal" data-target="#myModal<%= x %>" href="#myModal<%= x %>"><%=event.name%></span><br/><span id="callink"><%=event.start_time.strftime("%H:%M %P")%></span>
+                          <a data-toggle="modal" data-target="#myModal<%= x %>" href="#myModal<%= x %>"><span class="textp"><%=event.name%></span><br/><span class="textp" id="callink"><%=event.start_time.strftime("%I:%M %P")%></span>
                           <a/>
                         </li>    
                         <div class="modal fade" id="myModal<%= x %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
