@@ -336,7 +336,7 @@ a:after {
 
 .menu a {
 	margin-left: 20px;
-	color: #808080;
+	color: #ffffff;
 	display: block;
 	font-size: 12px;
 	font-weight: 700;
@@ -346,7 +346,7 @@ a:after {
 }
 
 .menu a:hover {
-	color: #ffffff;
+	color: #AE1A26;
 }
 
 .menu a:active {

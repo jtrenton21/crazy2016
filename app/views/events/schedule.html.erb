@@ -35,25 +35,25 @@
                                 <div class='row'>
                                   <p>
                                     <b class='eventb'>Date:</b>
-                                    <span class='eventshow'><%= event.eventday.day %> <%= event.eventday.month %>  <%= event.eventday.date %>,<%= event.eventday.year %> </span>
+                                    <span class='textp'><%= event.eventday.day %> <%= event.eventday.month %>  <%= event.eventday.date %>,<%= event.eventday.year %> </span>
                                   </p>
                                   <p>
                                     <b class='eventb'>Starts At:</b>
-                                    <span class='eventshow'> <%= event.start_time.strftime("%H:%M %P")%> </span>
+                                    <span class='textp'> <%= event.start_time.strftime("%I:%M %P")%> </span>
                                   </p>
                                   <p>
                                    <b class='eventb'>Location:</b>
-                                   <span class='eventshow'> <%= event.address %> </span>
+                                   <span class='textp'> <%= event.address %> </span>
                                   </p>
                                   <p>
                                     <b class='eventb'>Details:</b><br/>
-                                    <span class='eventshow'> <%= event.einfo %> </span>
+                                    <span class='textp'> <%= event.einfo %> </span>
                                   </p>
                                   <p>
                                     <span><a class= "btn btn-info"> Get Tickets</a> </span>
                                   </p>
                                 </div>
-                                  <%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{event.latitude}%2C#{event.longitude}" %>
+                                  <p><%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{event.latitude}%2C#{event.longitude}" %></p><br/>
                               </div>
                             </div>
                           </div>
