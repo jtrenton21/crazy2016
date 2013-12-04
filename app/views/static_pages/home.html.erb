@@ -1,17 +1,7 @@
-<!-- ========== WHITE SECTION ========== -->
-  <div id="w">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-         <h1 class="red">THE CROSSROADS OF ELVIS PRESLEY</h1> 
-             <span class='eflame'><%#= link_to image_tag("eflame.png", alt:"Flame"),'http://www.crazyaboutelvis.com/'%></span>
-        </div>
-      </div>
-    </div><!-- /container -->
-  </div><!-- /w -->
+
   <div id="dg">
-    <div class="container">
-      <div class="row">
+    <div style= "padding:10px 0px 60px 0px;" class="container">
+      <div style= class="row">
        <div class="col-lg-2"></div>
         <div class="col-lg-8">
           <div id="carousel-example-generic" class="carousel slide">
@@ -21,16 +11,27 @@
               <li data-target="#carousel-example-generic" data-slide-to="1"></li>
               <li data-target="#carousel-example-generic" data-slide-to="2"></li>
             </ol>
+            
           
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
               <div class="item active">
+                <div  class="carousel-caption">
+                  <h2 class="capcare" >Test Caption 1</h2>
+                </div>
                 <%= image_tag 'dummies/slides/e1.jpg' %>
+                
               </div>
               <div class="item">
+                <div  class="carousel-caption">
+                  <h2 class="capcare" >Test Caption 2</h2>
+                </div>
                 <%= image_tag 'dummies/slides/e2.jpg' %> 
               </div>
               <div class="item">
+                <div  class="carousel-caption">
+                  <h2 class="capcare" >Test Caption 3</h2>
+                </div>
                 <%= image_tag 'dummies/slides/e3.jpg' %> 
               </div>
             </div>
@@ -68,12 +69,23 @@
       </div>  
     </div><!-- /container -->
   </div><!-- /dg -->
+  <!-- ========== WHITE SECTION ========== -->
+  <div id="w">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+         <h1 class="red">THE CROSSROADS OF ELVIS PRESLEY</h1> 
+             <span class='eflame'><%#= link_to image_tag("eflame.png", alt:"Flame"),'http://www.crazyaboutelvis.com/'%></span>
+        </div>
+      </div>
+    </div><!-- /container -->
+  </div><!-- /w -->
   <!-- ========== SERVICES - GREY SECTION ========== -->
   <section id="services" name="services"></section>
   <div id="g">
     <div class="container">
       <div class="row">
-        <h3>ELVIS VISITS TO SPRINGFIELD</h3>
+        <!-- <h3>ELVIS VISITS TO SPRINGFIELD</h3> -->
         <br>
         <br>
         <div class="col-lg-4">
@@ -113,7 +125,7 @@
    <!-- ========== JOHN WILKINSON SECTION ========== -->
   <section id="portfolio" name="portfolio"></section>
     <div id="dg">
-      <div style="padding-bottom:40px;padding-top:-20px;" id="portfoliowrap">
+      <div style="padding-bottom:40px;padding-top:-30px;" id="portfoliowrap">
         <div class="container">
           <div class="row">
             <h2>JOHN WILKINSON</h2>

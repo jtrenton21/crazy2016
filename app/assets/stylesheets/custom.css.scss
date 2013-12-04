@@ -238,19 +238,43 @@ table ul li{
 
 /*HOME PAGE IMAGE SLIDER******************************/
 .carousel{
+position: relative;
+z-index: 9;
+}
+
+.carousel{
 	max-height:500px;
 	max-width:800px;
 }
 
 .carousel-inner>.item>img{
 
+  border:10px solid white;
 	height:100%;
-	width:100%;
+	margin-right:-5px;
+  width:100%;
+  
 }
 
 .carousel-indicators{
 
-	margin-bottom:-55px;
+	margin-bottom:-95px;
+  padding-bottom:20px;
+}
+
+.capcare{
+
+  
+
+
+  
+}
+
+.carousel-caption{
+
+  position:static;
+  margin-top:-40px;
+  
 }
 
 
