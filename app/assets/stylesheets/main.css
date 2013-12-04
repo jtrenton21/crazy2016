@@ -193,20 +193,21 @@ a:after {
 /* Footer Wrap */
 
 
-
-	
-
-
 #f {
-	/*background: url(bghead2.png) no-repeat center top;*/
-	background: #2f2f2f;
-	padding-top: 70px;
-	padding-bottom: 70px;
+	
+	background:#656561;
+	padding-top: 50px;
+	padding-bottom: 50px;
 	text-align: center
 }
 
 #f h3 {
 	color: white;	
+}
+
+#f p {
+	color: white;
+	text-align: center;	
 }
 
 #f i {
@@ -308,7 +309,7 @@ a:after {
 	position: absolute;
 	top: 0;
 	left: 60px;
-	background: #1a1a1a;
+	background: #656561;
 	width: 200px;
 	height: 100%;
 }

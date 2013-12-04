@@ -113,12 +113,12 @@
    <!-- ========== JOHN WILKINSON SECTION ========== -->
   <section id="portfolio" name="portfolio"></section>
     <div id="dg">
-      <div style="padding-bottom:40px;" id="portfoliowrap">
+      <div style="padding-bottom:40px;padding-top:-20px;" id="portfoliowrap">
         <div class="container">
           <div class="row">
             <h2>JOHN WILKINSON</h2>
             <br>
-            <br>
+            <br> 
             <div class="col-lg-4 port-space">
               <a id ="jpic1" href="#"><%= image_tag 'statue.jpeg' %></a>
             </div>
@@ -152,6 +152,9 @@
         
         <div class="col-lg-2"></div>
         <div class="col-lg-8">
+        <a data-toggle="modal" data-target="#myModalj" href="#myModalj"> 
+           <button class="btn btn alert">More Info</button>
+         </a>
         <%= render 'about' %>
       
         </div>
