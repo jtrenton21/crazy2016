@@ -203,6 +203,8 @@ item-02.png: item-02-b79097bb973f60c5f571e13347d19a78.png
 item-02/index.png: item-02-b79097bb973f60c5f571e13347d19a78.png
 item-bg.jpg: item-bg-46772059339f244519ca6ab021cb4f94.jpg
 item-bg/index.jpg: item-bg-46772059339f244519ca6ab021cb4f94.jpg
+polaroid-bg.png: polaroid-bg-426997b222a216e4c143a2cab2dff966.png
+polaroid-bg/index.png: polaroid-bg-426997b222a216e4c143a2cab2dff966.png
 portfolio-bg.jpg: portfolio-bg-3eca472a87256fb2a32ae8830f8f255c.jpg
 portfolio-bg/index.jpg: portfolio-bg-3eca472a87256fb2a32ae8830f8f255c.jpg
 s1.png: s1-b628c931a803f2fbb7e0c720c9d15e7c.png
@@ -215,10 +217,10 @@ s4.png: s4-7917f2d2afbb2826d238fd88af25e8c3.png
 s4/index.png: s4-7917f2d2afbb2826d238fd88af25e8c3.png
 slider-bg.jpg: slider-bg-c9ece569cd1b2e5a11620970875b3dd5.jpg
 slider-bg/index.jpg: slider-bg-c9ece569cd1b2e5a11620970875b3dd5.jpg
-application.js: application-11ad1a13130dcacac4bb940abbc2bf9c.js
-application/index.js: application-11ad1a13130dcacac4bb940abbc2bf9c.js
-application.css: application-43312585d781a9758ec5cc51ad336c97.css
-application/index.css: application-43312585d781a9758ec5cc51ad336c97.css
+application.js: application-4c06d39cd540cf38217320dbbdbdf8b1.js
+application/index.js: application-4c06d39cd540cf38217320dbbdbdf8b1.js
+application.css: application-2f57d8fe04ece3ba8e6466ad2f88b512.css
+application/index.css: application-2f57d8fe04ece3ba8e6466ad2f88b512.css
 jquery-ui/animated-overlay.gif: jquery-ui/animated-overlay-602eee4c79a4796b02bb6442948c9e28.gif
 jquery-ui/animated-overlay/index.gif: jquery-ui/animated-overlay-602eee4c79a4796b02bb6442948c9e28.gif
 jquery-ui/ui-bg_flat_0_aaaaaa_40x100.png: jquery-ui/ui-bg_flat_0_aaaaaa_40x100-7d1197a52442bc56fcad60d0390f4b32.png
