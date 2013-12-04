@@ -1,0 +1,342 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (9.5ms)[0m  [1mALTER TABLE "articles" DISABLE TRIGGER ALL;ALTER TABLE "contents" DISABLE TRIGGER ALL;ALTER TABLE "eventdays" DISABLE TRIGGER ALL;ALTER TABLE "events" DISABLE TRIGGER ALL;ALTER TABLE "link_preview_parsers" DISABLE TRIGGER ALL;ALTER TABLE "moderations" DISABLE TRIGGER ALL;ALTER TABLE "users" DISABLE TRIGGER ALL;ALTER TABLE "visits" DISABLE TRIGGER ALL;ALTER TABLE "schema_migrations" DISABLE TRIGGER ALL[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mFixture Delete (1.2ms)[0m  [1mDELETE FROM "contents"[0m
+  [1m[35mFixture Insert (1.6ms)[0m  INSERT INTO "contents" ("title", "author", "info", "source", "photo", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', 'MyString', 'MyString', '2013-12-04 07:27:00', '2013-12-04 07:27:00', 980190962)
+  [1m[36mFixture Insert (0.9ms)[0m  [1mINSERT INTO "contents" ("title", "author", "info", "source", "photo", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyText', 'MyString', 'MyString', '2013-12-04 07:27:00', '2013-12-04 07:27:00', 298486374)[0m
+  [1m[35mFixture Delete (0.9ms)[0m  DELETE FROM "users"
+  [1m[36mFixture Insert (1.1ms)[0m  [1mINSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-12-04 07:27:00', '2013-12-04 07:27:00', 980190962)[0m
+  [1m[35mFixture Insert (0.8ms)[0m  INSERT INTO "users" ("email", "password_digest", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-12-04 07:27:00', '2013-12-04 07:27:00', 298486374)
+  [1m[36mFixture Delete (0.8ms)[0m  [1mDELETE FROM "visits"[0m
+  [1m[35mFixture Insert (1.2ms)[0m  INSERT INTO "visits" ("location", "vdate", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-12-04 07:27:00', '2013-12-04 07:27:00', 980190962)
+  [1m[36mFixture Insert (0.8ms)[0m  [1mINSERT INTO "visits" ("location", "vdate", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', '2013-12-04 07:27:00', '2013-12-04 07:27:00', 298486374)[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "events"
+  [1m[36mFixture Insert (1.4ms)[0m  [1mINSERT INTO "events" ("name", "einfo", "start_time", "address", "weekday", "longitude", "latitude", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-10-16 13:01:02.000000', 'MyString', '2013-10-16', 1.5, 1.5, '2013-12-04 07:27:00', '2013-12-04 07:27:00', 980190962)[0m
+  [1m[35mFixture Insert (1.2ms)[0m  INSERT INTO "events" ("name", "einfo", "start_time", "address", "weekday", "longitude", "latitude", "created_at", "updated_at", "id") VALUES ('MyString', 'MyText', '2013-10-16 13:01:02.000000', 'MyString', '2013-10-16', 1.5, 1.5, '2013-12-04 07:27:00', '2013-12-04 07:27:00', 298486374)
+  [1m[36mFixture Delete (0.9ms)[0m  [1mDELETE FROM "eventdays"[0m
+  [1m[35mFixture Insert (1.1ms)[0m  INSERT INTO "eventdays" ("day", "created_at", "updated_at", "id") VALUES ('MyString', '2013-12-04 07:27:00', '2013-12-04 07:27:00', 980190962)
+  [1m[36mFixture Insert (0.7ms)[0m  [1mINSERT INTO "eventdays" ("day", "created_at", "updated_at", "id") VALUES ('MyString', '2013-12-04 07:27:00', '2013-12-04 07:27:00', 298486374)[0m
+  [1m[35mFixture Delete (1.0ms)[0m  DELETE FROM "articles"
+  [1m[36mFixture Insert (1.0ms)[0m  [1mINSERT INTO "articles" ("title", "author", "published", "photo", "link", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2013-12-04 07:27:00', '2013-12-04 07:27:00', 980190962)[0m
+  [1m[35mFixture Insert (0.9ms)[0m  INSERT INTO "articles" ("title", "author", "published", "photo", "link", "created_at", "updated_at", "id") VALUES ('MyString', 'MyString', 'MyString', 'MyString', 'MyString', '2013-12-04 07:27:00', '2013-12-04 07:27:00', 298486374)
+  [1m[36m (27.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  ALTER TABLE "articles" ENABLE TRIGGER ALL;ALTER TABLE "contents" ENABLE TRIGGER ALL;ALTER TABLE "eventdays" ENABLE TRIGGER ALL;ALTER TABLE "events" ENABLE TRIGGER ALL;ALTER TABLE "link_preview_parsers" ENABLE TRIGGER ALL;ALTER TABLE "moderations" ENABLE TRIGGER ALL;ALTER TABLE "users" ENABLE TRIGGER ALL;ALTER TABLE "visits" ENABLE TRIGGER ALL;ALTER TABLE "schema_migrations" ENABLE TRIGGER ALL
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mArticle Load (3.6ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "articles" [0m
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"author"=>"MyString", "link"=>"MyString", "photo"=>"/photos/original/missing.png", "published"=>"MyString", "title"=>"MyString"}}
+Completed 500 Internal Server Error in 2ms
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mArticle Load (0.8ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "articles" [0m
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mArticle Load (0.7ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.5ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  DELETE FROM "articles" WHERE "articles"."id" = $1  [["id", 980190962]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/articles
+Completed 302 Found in 14ms (ActiveRecord: 3.2ms)
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "articles" 
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mArticle Load (0.7ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Redirected to http://test.host/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mArticle Load (0.9ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by ArticlesController#index as HTML
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "articles" [0m
+  [1m[35mArticle Load (1.8ms)[0m  SELECT "articles".* FROM "articles" ORDER BY title LIMIT 5 OFFSET 0
+  Rendered layouts/_header.html.erb (3.9ms)
+  Rendered layouts/_footer.html.erb (0.8ms)
+Completed 200 OK in 60ms (Views: 54.1ms | ActiveRecord: 2.6ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mArticle Load (0.9ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by ArticlesController#new as HTML
+  Rendered articles/_form.html.erb (258.9ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 342ms (Views: 340.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.9ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mArticle Load (0.9ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mArticle Load (1.0ms)[0m  [1mSELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT 1[0m  [["id", "980190962"]]
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 35ms (Views: 29.9ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mArticle Load (0.9ms)[0m  SELECT "articles".* FROM "articles" WHERE "articles"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by ArticlesController#update as HTML
+  Parameters: {"article"=>{"author"=>"MyString", "link"=>"MyString", "photo"=>"/photos/original/missing.png", "published"=>"MyString", "title"=>"MyString"}, "id"=>"980190962"}
+Redirected to http://test.host/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mContent Load (1.6ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "contents" 
+Processing by ContentsController#create as HTML
+  Parameters: {"content"=>{"author"=>"MyString", "info"=>"MyText", "photo"=>"/photos/original/missing.png", "source"=>"MyString", "title"=>"MyString"}}
+Completed 500 Internal Server Error in 2ms
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mContent Load (0.9ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (1.0ms)[0m  SELECT COUNT(*) FROM "contents" 
+Processing by ContentsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mContent Load (0.9ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."id" = $1 LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.1ms)[0m  [1mDELETE FROM "contents" WHERE "contents"."id" = $1[0m  [["id", 980190962]]
+  [1m[35m (0.5ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/contents
+Completed 302 Found in 14ms (ActiveRecord: 3.1ms)
+  [1m[36m (1.2ms)[0m  [1mSELECT COUNT(*) FROM "contents" [0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mContent Load (0.6ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by ContentsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Redirected to http://test.host/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mContent Load (0.8ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by ContentsController#index as HTML
+  [1m[35mVisit Load (1.1ms)[0m  SELECT "visits".* FROM "visits" 
+  Rendered contents/_condition_fields.html.erb (40.1ms)
+  [1m[36mVisit Load (0.9ms)[0m  [1mSELECT "visits".* FROM "visits" [0m
+  Rendered contents/_new.html.erb (14.4ms)
+  [1m[35mContent Load (1.2ms)[0m  SELECT "contents".* FROM "contents" INNER JOIN "visits" ON "visits"."id" = "contents"."visit_id"
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 175ms (Views: 154.2ms | ActiveRecord: 3.2ms)
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mContent Load (0.9ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by ContentsController#new as HTML
+  [1m[35mVisit Load (1.0ms)[0m  SELECT "visits".* FROM "visits" 
+  Rendered contents/_form.html.erb (12.0ms)
+  Rendered layouts/_header.html.erb (1.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 42ms (Views: 39.7ms | ActiveRecord: 1.0ms)
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mContent Load (0.8ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by ContentsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mContent Load (0.8ms)[0m  SELECT "contents".* FROM "contents" WHERE "contents"."id" = $1 LIMIT 1  [["id", "980190962"]]
+Redirected to http://test.host/gallery
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms)
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  BEGIN
+  [1m[36mContent Load (0.8ms)[0m  [1mSELECT "contents".* FROM "contents" WHERE "contents"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by ContentsController#update as HTML
+  Parameters: {"content"=>{"author"=>"MyString", "info"=>"MyText", "photo"=>"/photos/original/missing.png", "source"=>"MyString", "title"=>"MyString"}, "id"=>"980190962"}
+Redirected to http://test.host/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mEventday Load (1.5ms)[0m  SELECT "eventdays".* FROM "eventdays" WHERE "eventdays"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "eventdays" [0m
+Processing by EventdaysController#create as HTML
+  Parameters: {"eventday"=>{"day"=>"MyString"}}
+  [1m[35m (0.5ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (30.1ms)[0m  [1mINSERT INTO "eventdays" ("created_at", "date", "day", "month", "updated_at", "year") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", Wed, 04 Dec 2013 07:27:02 UTC +00:00], ["date", nil], ["day", "MyString"], ["month", nil], ["updated_at", Wed, 04 Dec 2013 07:27:02 UTC +00:00], ["year", nil]]
+  [1m[35m (0.5ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/eventdays/980190963
+Completed 302 Found in 43ms (ActiveRecord: 31.2ms)
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "eventdays" [0m
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mEventday Load (0.8ms)[0m  SELECT "eventdays".* FROM "eventdays" WHERE "eventdays"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "eventdays" [0m
+Processing by EventdaysController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mEventday Load (0.7ms)[0m  SELECT "eventdays".* FROM "eventdays" WHERE "eventdays"."id" = $1 LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.4ms)[0m  DELETE FROM "eventdays" WHERE "eventdays"."id" = $1  [["id", 980190962]]
+  [1m[36m (0.5ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/eventdays
+Completed 302 Found in 12ms (ActiveRecord: 3.0ms)
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "eventdays" 
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mEventday Load (0.8ms)[0m  [1mSELECT "eventdays".* FROM "eventdays" WHERE "eventdays"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by EventdaysController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Redirected to http://test.host/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mEventday Load (0.8ms)[0m  SELECT "eventdays".* FROM "eventdays" WHERE "eventdays"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by EventdaysController#index as HTML
+  [1m[36mEventday Load (0.9ms)[0m  [1mSELECT "eventdays".* FROM "eventdays" [0m
+  Rendered layouts/_header.html.erb (2.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 54ms (Views: 49.3ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mEventday Load (0.8ms)[0m  SELECT "eventdays".* FROM "eventdays" WHERE "eventdays"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by EventdaysController#new as HTML
+  Rendered eventdays/_form.html.erb (6.8ms)
+  Rendered layouts/_header.html.erb (2.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 36ms (Views: 34.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  BEGIN
+  [1m[36mEventday Load (0.8ms)[0m  [1mSELECT "eventdays".* FROM "eventdays" WHERE "eventdays"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by EventdaysController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mEventday Load (0.9ms)[0m  SELECT "eventdays".* FROM "eventdays" WHERE "eventdays"."id" = $1 LIMIT 1  [["id", "980190962"]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 20.9ms | ActiveRecord: 0.9ms)
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mEventday Load (0.9ms)[0m  [1mSELECT "eventdays".* FROM "eventdays" WHERE "eventdays"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by EventdaysController#update as HTML
+  Parameters: {"eventday"=>{"day"=>"MyString"}, "id"=>"980190962"}
+Redirected to http://test.host/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 78ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.7ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mEvent Load (1.6ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "events" [0m
+Processing by EventsController#create as HTML
+  Parameters: {"event"=>{"address"=>"MyString", "einfo"=>"MyText", "latitude"=>"1.5", "longitude"=>"1.5", "name"=>"MyString", "start_time"=>"2000-01-01 13:01:02 UTC", "weekday"=>"2013-10-16"}}
+Completed 500 Internal Server Error in 1ms
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mEvent Load (0.8ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 980190962]]
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "events" [0m
+Processing by EventsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35mEvent Load (0.9ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", "980190962"]]
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.2ms)[0m  DELETE FROM "events" WHERE "events"."id" = $1  [["id", 980190962]]
+  [1m[36m (0.7ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/events
+Completed 302 Found in 14ms (ActiveRecord: 3.3ms)
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "events" 
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mEvent Load (0.6ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Redirected to http://test.host/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mEvent Load (0.8ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by EventsController#index as HTML
+  [1m[36mEvent Load (0.9ms)[0m  [1mSELECT "events".* FROM "events" [0m
+Completed 500 Internal Server Error in 62ms
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mBEGIN[0m
+  [1m[35mEvent Load (0.9ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by EventsController#new as HTML
+  [1m[36mEventday Load (1.0ms)[0m  [1mSELECT "eventdays".* FROM "eventdays" [0m
+  Rendered events/_form.html.erb (20.7ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 36ms (Views: 32.8ms | ActiveRecord: 1.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mEvent Load (0.9ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mEvent Load (0.7ms)[0m  [1mSELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1[0m  [["id", "980190962"]]
+Redirected to http://test.host/schedule
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms)
+  [1m[35m (0.6ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mEvent Load (0.8ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by EventsController#update as HTML
+  Parameters: {"event"=>{"address"=>"MyString", "einfo"=>"MyText", "latitude"=>"1.5", "longitude"=>"1.5", "name"=>"MyString", "start_time"=>"2000-01-01 13:01:02 UTC", "weekday"=>"2013-10-16"}, "id"=>"980190962"}
+Redirected to http://test.host/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mVisit Load (1.5ms)[0m  [1mSELECT "visits".* FROM "visits" WHERE "visits"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "visits" 
+Processing by VisitsController#create as HTML
+  Parameters: {"visit"=>{"location"=>"MyString", "vdate"=>"MyString"}}
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "visits" ("created_at", "location", "updated_at", "vdate") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", Wed, 04 Dec 2013 07:27:02 UTC +00:00], ["location", "MyString"], ["updated_at", Wed, 04 Dec 2013 07:27:02 UTC +00:00], ["vdate", "MyString"]]
+  [1m[36m (0.4ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://test.host/visits/980190963
+Completed 302 Found in 12ms (ActiveRecord: 2.3ms)
+  [1m[35m (1.5ms)[0m  SELECT COUNT(*) FROM "visits" 
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mVisit Load (0.7ms)[0m  [1mSELECT "visits".* FROM "visits" WHERE "visits"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM "visits" 
+Processing by VisitsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mVisit Load (0.8ms)[0m  [1mSELECT "visits".* FROM "visits" WHERE "visits"."id" = $1 LIMIT 1[0m  [["id", "980190962"]]
+  [1m[35m (0.4ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (1.4ms)[0m  [1mDELETE FROM "visits" WHERE "visits"."id" = $1[0m  [["id", 980190962]]
+  [1m[35m (0.4ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://test.host/visits
+Completed 302 Found in 12ms (ActiveRecord: 3.1ms)
+  [1m[36m (0.8ms)[0m  [1mSELECT COUNT(*) FROM "visits" [0m
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mVisit Load (0.7ms)[0m  SELECT "visits".* FROM "visits" WHERE "visits"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by VisitsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Redirected to http://test.host/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 2ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mVisit Load (0.9ms)[0m  [1mSELECT "visits".* FROM "visits" WHERE "visits"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by VisitsController#index as HTML
+  [1m[35mVisit Load (0.7ms)[0m  SELECT "visits".* FROM "visits" 
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 35ms (Views: 30.9ms | ActiveRecord: 0.7ms)
+  [1m[36m (0.6ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mVisit Load (0.7ms)[0m  [1mSELECT "visits".* FROM "visits" WHERE "visits"."id" = $1 LIMIT 1[0m  [["id", 980190962]]
+Processing by VisitsController#new as HTML
+  Rendered visits/_form.html.erb (5.7ms)
+  Rendered layouts/_header.html.erb (1.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mVisit Load (0.6ms)[0m  SELECT "visits".* FROM "visits" WHERE "visits"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by VisitsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mVisit Load (0.7ms)[0m  [1mSELECT "visits".* FROM "visits" WHERE "visits"."id" = $1 LIMIT 1[0m  [["id", "980190962"]]
+  Rendered layouts/_header.html.erb (2.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 24.6ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.7ms)[0m  ROLLBACK
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mVisit Load (0.9ms)[0m  SELECT "visits".* FROM "visits" WHERE "visits"."id" = $1 LIMIT 1  [["id", 980190962]]
+Processing by VisitsController#update as HTML
+  Parameters: {"visit"=>{"location"=>"MyString", "vdate"=>"MyString"}, "id"=>"980190962"}
+Redirected to http://test.host/login
+Filter chain halted as :authorize rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.5ms)[0m  [1mROLLBACK[0m
