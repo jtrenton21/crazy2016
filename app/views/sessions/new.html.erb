@@ -2,6 +2,8 @@
   <div class="container">
     <div class="row">
 		<h2>Admin Log In</h2>
+			<p>Not Registered?
+				<%= link_to "Sign Up", new_user_path %> </p>
 			<%= form_tag sessions_path do %>
 			  <div class="field">
 			    <%= label_tag :email %><br />
