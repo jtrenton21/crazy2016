@@ -36,34 +36,6 @@
               </div>
             </div>
           </div>
-
-        <!-- <div class="responsive-slider" >
-          <div class="slides" data-group="slides">
-            <ul>
-              <li>
-                <div class="slide-body" data-group="slide">
-                  <a><%#= image_tag 'dummies/slides/e1.jpg' %> </a>
-                </div>
-              </li>
-              <li>
-                <div class="slide-body" data-group="slide">
-                  <a><%#= image_tag 'dummies/slides/e2.jpg' %> </a>
-                </div>
-              </li>
-              <li>
-                <div class="slide-body" data-group="slide">
-                  <a><%#= image_tag 'dummies/slides/e3.jpg' %> </a>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <a class="slider-control left" href="#" data-jump="prev"><</a>
-          <a class="slider-control right" href="#" data-jump="next">></a>
-          <div class="pages">
-            <a class="page" href="#" data-jump-to="1">1</a>
-            <a class="page" href="#" data-jump-to="2">2</a>
-            <a class="page" href="#" data-jump-to="3">3</a>
-          </div> -->
         </div>
       <div class="col-lg-2"></div>
       </div>  
@@ -80,7 +52,7 @@
       </div>
     </div><!-- /container -->
   </div><!-- /w -->
-  <!-- ========== SERVICES - GREY SECTION ========== -->
+  <!-- ========== ELVIS VISITS- GREY SECTION ========== -->
   <section id="services" name="services"></section>
   <div id="g">
     <div class="container">
@@ -120,7 +92,7 @@
       </div>
     </div><!-- /container -->
   </div><!-- /g -->
-  <!-- ========== RESPONSIVE SLIDER - DARK GREY SECTION ========== -->
+  
   
    <!-- ========== JOHN WILKINSON SECTION ========== -->
   <section id="portfolio" name="portfolio"></section>
@@ -149,8 +121,13 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
-        <h3>SOME SORT OF QUOTE <bold>FROM ELVIS</bold>. MAYBE A EXCERPT FROM <bold>NEWS ARTICLE</bold>.
-        </h3>
+        <h3>WHAT IS<bold> CRAZY 'BOUT </bold>ELVIS <bold>?</bold>
+        </h3><br/>
+        <span id="findb">
+        <a data-toggle="modal" data-target="#myModalj" href="#myModalj"> 
+           <button class="btn btn alert">FIND OUT</button>
+        </a>
+      </span>
         </div>
       </div>
     </div><!-- /container -->
@@ -160,13 +137,12 @@
   <section id="about" name="about"></section>
   <div id="g">
     <div class="container">
-      <div class="row">
-        
+      <div class="row centered">
+         
         <div class="col-lg-2"></div>
         <div class="col-lg-8">
-        <a data-toggle="modal" data-target="#myModalj" href="#myModalj"> 
-           <button class="btn btn alert">More Info</button>
-         </a>
+        
+        
         <%= render 'about' %>
       
         </div>
