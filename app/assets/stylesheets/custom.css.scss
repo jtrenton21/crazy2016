@@ -86,45 +86,49 @@ textarea{
 
 /*EVENT CALENDER******************************/
 
-table th{
+.table>thead th{
 	
 	background:grey;
 	color:white;
-	
-  font-size:18px;
+	font-size:18px;
 	text-align:center;
-	
+	width:226px;
 }
 
-.table-bordered > thead > tr > th
-{
-
-	width:228px;
-}
-
-.table-bordered > tbody > tr > td{
-
-	
-}
 
 .textp{
 
   color:black;
 }
 
+.textp:hover{ 
+
+  color:#AE1A26;
+}
+
+
+
 
 .elist li{
 
 	margin-bottom:15px;
-	margin-left:-50px;
+	margin-left:-40px;
 
 }
 
 .elist li:nth-child(odd){ 
   background: white;
   padding:10px 3px 10px 3px;
-  
+
 }
+
+.elist li:nth-child(even){ 
+  background: #D7D5C8;
+  padding:10px 3px 10px 3px;
+
+}
+
+
 
 table ul li{
 
