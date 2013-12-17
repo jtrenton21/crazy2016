@@ -512,5 +512,29 @@ font-size:22px;
 
 .navbar-toggle > .icon-bar{
 
-  backgroud:white;
+  background:white;
+}
+
+
+/*BX SLIDER*/
+
+.bx-wrapper{
+
+  max-width:700px;
+}
+
+.bx-viewport {
+    height: 540px;
+}
+
+// .slide img{
+
+//   min-height:400px;
+//   margin:10px 0px 0px 25px;
+//   padding:10px 20px 40px 20px;
+// }
+
+.caption{
+
+  line-height:20px;
 }

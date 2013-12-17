@@ -9,3 +9,15 @@ $('[data-toggle="tooltip"]').popover({
         'placement': 'left'
 });
 
+ $(document).ready(function(){
+          $('.bxslider').bxSlider({
+            touchEnabled: true,
+            captions: true,
+            responsive: true,
+            minSlides: 1,
+            maxSlides: 1,
+            slideMargin: 10
+          });
+        
+          
+        });

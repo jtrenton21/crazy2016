@@ -231,10 +231,16 @@ slider-bg.jpg: slider-bg-c9ece569cd1b2e5a11620970875b3dd5.jpg
 slider-bg/index.jpg: slider-bg-c9ece569cd1b2e5a11620970875b3dd5.jpg
 ticket.png: ticket-28e48a992d20c2cccebccb734b114e99.png
 ticket/index.png: ticket-28e48a992d20c2cccebccb734b114e99.png
-application.js: application-27e86d9b7c6389294f71c2ff6b554829.js
-application/index.js: application-27e86d9b7c6389294f71c2ff6b554829.js
-application.css: application-bf376c3bbed0a4b53d10bb79138adeb0.css
-application/index.css: application-bf376c3bbed0a4b53d10bb79138adeb0.css
+application.js: application-259fce6f3ecf04811204c3d07e8bf8e2.js
+application/index.js: application-259fce6f3ecf04811204c3d07e8bf8e2.js
+jquery bxslider/images/bx_loader.gif: jquery bxslider/images/bx_loader-37b139bcec1bd2f0c2bfa72308d0acb3.gif
+jquery bxslider/images/bx_loader/index.gif: jquery bxslider/images/bx_loader-37b139bcec1bd2f0c2bfa72308d0acb3.gif
+jquery bxslider/images/controls.png: jquery bxslider/images/controls-2af6f6eefa441c18a81b4bf909317876.png
+jquery bxslider/images/controls/index.png: jquery bxslider/images/controls-2af6f6eefa441c18a81b4bf909317876.png
+jquery bxslider/readme.md: jquery bxslider/readme-a711ee80cffd9176fbc073e5dcaec076.md
+jquery bxslider/readme/index.md: jquery bxslider/readme-a711ee80cffd9176fbc073e5dcaec076.md
+application.css: application-8a8ede623b21d53d51af3c046bfa6e2c.css
+application/index.css: application-8a8ede623b21d53d51af3c046bfa6e2c.css
 jquery-ui/animated-overlay.gif: jquery-ui/animated-overlay-602eee4c79a4796b02bb6442948c9e28.gif
 jquery-ui/animated-overlay/index.gif: jquery-ui/animated-overlay-602eee4c79a4796b02bb6442948c9e28.gif
 jquery-ui/ui-bg_flat_0_aaaaaa_40x100.png: jquery-ui/ui-bg_flat_0_aaaaaa_40x100-7d1197a52442bc56fcad60d0390f4b32.png
