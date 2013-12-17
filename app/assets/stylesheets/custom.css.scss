@@ -91,6 +91,23 @@ textarea{
   margin:20px 0px 20px 0px;
 }
 
+
+/*Elvis Visits Section*/
+
+#evisit img{
+
+border:2px solid grey;
+width:260px;
+
+}
+
+#evisit button:hover{
+  border:2px solid #AE1A26;
+  color:#AE1A26;
+  font-weight:bold;
+  
+}
+
 /*HEADER************************/
 
 #closex{
@@ -465,3 +482,35 @@ font-size:22px;
   width:60px;
 }
 
+/*Toggle Menu*/
+
+#menuTop{
+
+  border:1px solid grey;
+  background:white;
+}
+
+#johnrow img{
+
+  max-width:255px;
+  min-height:350px;
+}
+
+.modal-body{
+
+  margin:5px 15px 5px 15px;
+}
+
+#modclose{
+  
+  
+  font-size:12px;
+  margin-right:270px;
+  
+  margin-bottom:10px;
+}
+
+.navbar-toggle > .icon-bar{
+
+  backgroud:white;
+}
