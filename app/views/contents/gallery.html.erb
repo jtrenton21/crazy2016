@@ -1,30 +1,32 @@
-<div id="dg">
-  <div class="container">
-    <div id="toprowg" class="row"><% x = 0 %>  
-      <div class="col-lg-4"></div>
-      <div class="col-lg-4">
-        <%= search_form_for @search, url: search_contents_path, method: :post do |f| %>
-          <a id='gddown'><%= f.select :visit_id_eq, options_from_collection_for_select(Visit.all, "id", "location",  @search.visit_id_eq),({:include_blank => 'All Elvis Visits'})  %></a>
-          <% f.condition_fields do |c| %>
-            <%= render "condition_fields", f: c %>
+<div id="dg ">
+  <div style="padding-top:30px;" class="container">
+    <div  class="topshelf">
+      <div  id="toprowg" class="row"><% x = 0 %>  
+        <div id="shareu" class="col-lg-8 col-lg-offset-4">
+       
+       
+          <p><%= search_form_for @search, url: search_contents_path, method: :post do |f| %>
+            <a id='gddown'><%= f.select :visit_id_eq, options_from_collection_for_select(Visit.all, "id", "location",  @search.visit_id_eq),({:include_blank => 'All Elvis Visits'})  %></a>
+            <% f.condition_fields do |c| %>
+              <%= render "condition_fields", f: c %>
+            <% end %>
+            <button id="sbut" class="btn btn-default" type="submit">Search</button></p>
           <% end %>
-          <button id="sbut" class="btn btn-default" type="submit">Search</button>
-        <% end %>
+        
+      
+      
+       
+        
+          <!-- <p id="gshare"> Click the Share button to contribute your photos & stories.</p> -->
+          <a data-toggle="modal" data-target="#myModalz<%= x %>" href="#myModalz<%= x %>"><p><span  id="clickit">Click the button to share your photos & stories.</span><button id="share" class="btn btn-default" type="submit">Share</button></p></a>
+          <%= render 'new' %>
+        </div>
       </div>
-      <div class="col-lg-4"></div>
-    </div>
-    <div class='row'>
-      <div class="col-lg-3"></div>
-      <div id="shareu" class="col-lg-6">
-        <!-- <p id="gshare"> Click the Share button to contribute your photos & stories.</p> -->
-        <a data-toggle="modal" data-target="#myModalz<%= x %>" href="#myModalz<%= x %>"><span id="clickit">Click the Share button to contribute your photos & stories.</span><button id="share" class="btn btn-default" type="submit">Share</button></a>
-        <%= render 'new' %>
-      </div>
-      <div class="col-lg-3"></div>
+      
     </div>
   </div>
 </div> <!--END of FIRST dg -->
-<div id="dg">
+<div id="dg" style="padding-top:30px;">
 <%= render 'picdisplay' %>
 </div>
   

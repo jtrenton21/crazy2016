@@ -8,6 +8,21 @@ font-family: 'Lora', serif;
 
 }
 
+
+
+/*NAVBAR MENU*/
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+
+
 a {
 
   color: #AE1A26;
@@ -54,6 +69,15 @@ width:100%;
   min-width:800px;
 }
 
+#myModalLabel p{
+
+  font-size:14px;
+}
+
+.xit{
+color:#AE1A26;
+  
+}
 
 textarea{
 
@@ -71,8 +95,8 @@ textarea{
 
 #closex{
 
-	margin-top:-20px;
-	margin-right:-5px
+	// margin-top:-20px;
+	// margin-right:-5px
 }
 /**FOOTER*****************************/
 
@@ -270,10 +294,6 @@ z-index: 9;
 
 .capcare{
 
-  
-
-
-  
 }
 
 .carousel-caption{
@@ -281,6 +301,13 @@ z-index: 9;
   position:static;
   margin-top:-40px;
   
+}
+
+button.close{
+
+color:#AE1A26;
+font-size:22px;
+  font-weight:bold;
 }
 
 

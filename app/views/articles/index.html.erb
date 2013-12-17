@@ -1,4 +1,4 @@
-<div id="dg">
+<div id="dg" style=" padding-top:20px;">
   <div class="container">
     <div class="row">
       <div class= "col-lg-12">
@@ -22,11 +22,11 @@
     </div>
     
       <% @articles.each do |article| %>
-        <div id='newsrow' class='row'>
+        <div style="padding-top:60px;" id='newsrow' class='row'>
           <div class= "col-lg-2"></div>
           <div style="float:left;" class= "col-lg-7">  
             <div  id="figure" class="panel panel-default">
-              <a href=><%=article.link%>
+              <a href=<%=article.link%>>
                 <div class="panel-body">              
                   <div class= "col-lg-2">
                     <p id='image2'><%= image_tag article.photo.url(:photo) %></p>
@@ -36,6 +36,7 @@
                     <p id='anews'><%= article.author %></p>
                     <p id='dnews'><%= article.published %></p>
                   </div>
+                
                 </div>
               </a>
             </div>

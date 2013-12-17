@@ -1,203 +1,129 @@
-
-  <div id="dg">
-    <div style= "padding:10px 0px 60px 0px;" class="container">
-      <div style= class="row">
-       <div class="col-lg-2"></div>
-        <div class="col-lg-8">
-          <div id="carousel-example-generic" class="carousel slide">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            </ol>
-            
-          
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-              <div class="item active">
-                <div  class="carousel-caption">
-                  <h2 class="capcare" >Test Caption 1</h2>
-                </div>
-                <%= image_tag 'dummies/slides/e1.jpg' %>
-                
-              </div>
-              <div class="item">
-                <div  class="carousel-caption">
-                  <h2 class="capcare" >Test Caption 2</h2>
-                </div>
-                <%= image_tag 'dummies/slides/e2.jpg' %> 
-              </div>
-              <div class="item">
-                <div  class="carousel-caption">
-                  <h2 class="capcare" >Test Caption 3</h2>
-                </div>
-                <%= image_tag 'dummies/slides/e3.jpg' %> 
-              </div>
-            </div>
-          </div>
-        </div>
-      <div class="col-lg-2"></div>
-      </div>  
-    </div><!-- /container -->
-  </div><!-- /dg -->
-  <!-- ========== WHITE SECTION ========== -->
-  <div id="w">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
+<div  id="dg" >
+  <div class="container">
+    <div  class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <%= render 'elvis_tale' %>
+      </div>
+    </div>
+  </div><!-- /container -->
+</div><!-- /dg -->
+<!-- ========== WHITE SECTION ========== -->
+<div id="w" >
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
          <h1 class="red">THE CROSSROADS OF ELVIS PRESLEY</h1> 
              <span class='eflame'><%#= link_to image_tag("eflame.png", alt:"Flame"),'http://www.crazyaboutelvis.com/'%></span>
-        </div>
       </div>
-    </div><!-- /container -->
-  </div><!-- /w -->
-  <!-- ========== ELVIS VISITS- GREY SECTION ========== -->
-  <section id="services" name="services"></section>
-  <div id="g">
-    <div class="container">
-      <div class="row">
-        <!-- <h3>ELVIS VISITS TO SPRINGFIELD</h3> -->
-        <br>
-        <br>
-        <div class="col-lg-4">
-         
-          <%= link_to image_tag("dummies/shrine.jpg", alt:"Shrine")%>
-          <h3>Shrine Mosque</h3>
-          <h4>May 17, 1956</h4>
-         <a data-toggle="modal" data-target="#myModald" href="#myModald">
-          <button class="btn btn alert">More Info</button>
-         </a> 
-          <%= render 'shrine' %>   
-        </div>
-        <div class="col-lg-4">
-          <%= link_to image_tag("dummies/frisco.jpg", alt:"Frisco")%>
-           <h3>Frisco Train Depot</h3>
-          <h4>Nov. 8, 1956</h4>
-         <a data-toggle="modal" data-target="#myModale" href="#myModale">
-          <button class="btn btn alert">More Info</button>
-         </a> 
-         <%= render 'frisco' %> 
-        </div>
-        <div class="col-lg-4">
-          <%= link_to image_tag("dummies/jqh.jpg", alt:"Hammons")%>
-          <h3>Hammons Student Center</h3>
-          <h4>June 17, 1977</h4>
-         <a data-toggle="modal" data-target="#myModalf" href="#myModalf"> 
-           <button class="btn btn alert">More Info</button>
-         </a>
-         <%= render 'hammons' %> 
-        </div>
-        
-      </div>
-    </div><!-- /container -->
-  </div><!-- /g -->
-  
-  
-   <!-- ========== JOHN WILKINSON SECTION ========== -->
-  <section id="portfolio" name="portfolio"></section>
-    <div id="dg">
-      <div style="padding-bottom:40px;padding-top:-30px;" id="portfoliowrap">
-        <div class="container">
-          <div class="row">
-            <h2>JOHN WILKINSON</h2>
-            <br>
-            <br> 
-            <div class="col-lg-4 port-space">
-              <a id ="jpic1" href="#"><%= image_tag 'statue.jpeg' %></a>
-            </div>
-            <div class="col-lg-4 port-space">
-              <a id ="jpic1" href="#"><%= image_tag 'statue.jpeg' %></a>
-            </div>
-            <div class="col-lg-4 port-space">
-              <a id ="jpic1" href="#"><%= image_tag 'statue.jpeg' %></a>
-            </div>        
-          </div>  
-        </div><!-- /container -->
-      </div><!-- /portfoliowrap -->
     </div>
+  </div><!-- /container -->
+</div><!-- /w -->
+<!-- ========== PICTURE SLIDER SECTION ========== -->
+<div  id="dg" >
+  <div style= "padding:10px 0px 60px 0px; margin-top:60px; magrin-bottom:40px;" class="container">
+    <div  class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+        <%= render 'slider' %>
+      </div>
+    </div>  
+  </div><!-- /container -->
+</div><!-- /dg -->
   <!-- ========== WHITE SECTION ========== -->
-  <div id="w">
+<div id="w">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+       <h1 class="red">THE CROSSROADS OF ELVIS PRESLEY</h1> 
+           <span class='eflame'><%#= link_to image_tag("eflame.png", alt:"Flame"),'http://www.crazyaboutelvis.com/'%></span>
+      </div>
+    </div>
+  </div><!-- /container -->
+</div><!-- /w -->
+<!-- ========== ELVIS VISITS- GREY SECTION ========== -->
+<section id="services" name="services"></section>
+<div id="g">
+  <div class="container">
+    <div class="row">
+      <!-- <h3>ELVIS VISITS TO SPRINGFIELD</h3> -->
+      <br>
+      <br>
+      <div class="col-lg-4">
+        <%= link_to image_tag("dummies/shrine.jpg", alt:"Shrine")%>
+        <h3>Shrine Mosque</h3>
+        <h4>May 17, 1956</h4>
+       <a data-toggle="modal" data-target="#myModald" href="#myModald">
+        <button class="btn btn alert">More Info</button>
+       </a> 
+        <%= render 'shrine' %>   
+      </div>
+      <div class="col-lg-4">
+        <%= link_to image_tag("dummies/frisco.jpg", alt:"Frisco")%>
+         <h3>Frisco Train Depot</h3>
+        <h4>Nov. 8, 1956</h4>
+       <a data-toggle="modal" data-target="#myModale" href="#myModale">
+        <button class="btn btn alert">More Info</button>
+       </a> 
+       <%= render 'frisco' %> 
+      </div>
+      <div class="col-lg-4">
+        <%= link_to image_tag("dummies/jqh.jpg", alt:"Hammons")%>
+        <h3>Hammons Student Center</h3>
+        <h4>June 17, 1977</h4>
+       <a data-toggle="modal" data-target="#myModalf" href="#myModalf"> 
+         <button class="btn btn alert">More Info</button>
+       </a>
+       <%= render 'hammons' %> 
+      </div>
+    </div>
+  </div><!-- /container -->
+</div><!-- /g -->
+ <!-- ========== JOHN WILKINSON SECTION ========== -->
+<section id="portfolio" name="portfolio"></section>
+<div id="dg">
+  <div style="padding-bottom:40px;padding-top:-30px;" id="portfoliowrap">
     <div class="container">
       <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-        <h3>WHAT IS<bold> CRAZY 'BOUT </bold>ELVIS <bold>?</bold>
-        </h3><br/>
-        <span id="findb">
-        <a data-toggle="modal" data-target="#myModalj" href="#myModalj"> 
-           <button class="btn btn alert">FIND OUT</button>
-        </a>
-      </span>
+        <h2>JOHN WILKINSON</h2>
+        <br>
+        <br> 
+        <div class="col-lg-4 port-space">
+          <a id ="jpic1" href="#"><%= image_tag 'statue.jpeg' %></a>
         </div>
-      </div>
+        <div class="col-lg-4 port-space">
+          <a id ="jpic1" href="#"><%= image_tag 'statue.jpeg' %></a>
+        </div>
+        <div class="col-lg-4 port-space">
+          <a id ="jpic1" href="#"><%= image_tag 'statue.jpeg' %></a>
+        </div>        
+      </div>  
     </div><!-- /container -->
-  </div><!-- /w -->
-  
-  <!-- ========== ABOUT - GREY SECTION ========== -->
-  <section id="about" name="about"></section>
-  <div id="g">
-    <div class="container">
-      <div class="row centered">
-         
-        <div class="col-lg-2"></div>
-        <div class="col-lg-8">
-        
-        
-        <%= render 'about' %>
-      
-        </div>
-        <!-- <div class="col-lg-2"></div>
-        <div class="col-lg-3 team">
-          <img class="img-circle" src="assets/img/team01.jpg" height="90" width="90">
-          <h4>Liz Stewart</h4>
-          <h5><i>Product Manager</i></h5>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-          <p>
-            <a href="index.html#"><i class="icon-facebook"></i></a>
-            <a href="index.html#"><i class="icon-twitter"></i></a>
-            <a href="index.html#"><i class="icon-envelope"></i></a>
-
-          </p>
-        </div>
-
-        <div class="col-lg-3 team">
-          <img class="img-circle" src="assets/img/team02.jpg" height="90" width="90">
-          <h4>Brad Casey</h4>
-          <h5><i>Front-end Developer</i></h5>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-          <p>
-            <a href="index.html#"><i class="icon-facebook"></i></a>
-            <a href="index.html#"><i class="icon-twitter"></i></a>
-            <a href="index.html#"><i class="icon-envelope"></i></a>
-
-          </p>
-        </div>
-
-        <div class="col-lg-3 team">
-          <img class="img-circle" src="assets/img/team03.jpg" height="90" width="90">
-          <h4>Pamela Chow</h4>
-          <h5><i>Web Designer</i></h5>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-          <p>
-            <a href="index.html#"><i class="icon-facebook"></i></a>
-            <a href="index.html#"><i class="icon-twitter"></i></a>
-            <a href="index.html#"><i class="icon-envelope"></i></a>
-
-          </p>
-        </div>
-
-        <div class="col-lg-3 team">
-          <img class="img-circle" src="assets/img/team04.jpg" height="90" width="90">
-          <h4>Tim Gates</h4>
-          <h5><i>Back-end Guru</i></h5>
-          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-          <p>
-            <a href="index.html#"><i class="icon-facebook"></i></a>
-            <a href="index.html#"><i class="icon-twitter"></i></a>
-            <a href="index.html#"><i class="icon-envelope"></i></a>
-
-          </p>
-        </div> -->
+  </div><!-- /portfoliowrap -->
+</div>
+<!-- ========== WHITE SECTION ========== -->
+<div id="w">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+      <h3>WHAT IS<bold> CRAZY 'BOUT </bold>ELVIS <bold>?</bold>
+      </h3><br/>
+      <span id="findb">
+      <a data-toggle="modal" data-target="#myModalj" href="#myModalj"> 
+         <button class="btn btn alert">FIND OUT</button>
+      </a>
+    </span>
       </div>
-    </div><!-- /container -->
-  </div><!-- /g --></div><!-- /f -->
+    </div>
+  </div><!-- /container -->
+</div><!-- /w -->
+<!-- ========== ABOUT - GREY SECTION ========== -->
+<section id="about" name="about"></section>
+<div id="g">
+  <div class="container">
+    <div class="row centered">
+      <div class="col-lg-2"></div>
+      <div class="col-lg-8">
+      <%= render 'about' %>
+      </div>
+    </div>
+  </div><!-- /container -->
+</div><!-- /g --></div><!-- /f -->
