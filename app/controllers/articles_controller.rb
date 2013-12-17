@@ -11,6 +11,11 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def news
+    @articles = Article.all
+    @articles = Article.order("title").page(params[:page]).per_page(5)
+  end
+
   # GET /articles/1
   # GET /articles/1.json
   def show
