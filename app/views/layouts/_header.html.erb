@@ -5,32 +5,33 @@
 				<h1 style="margin-top:-2px;"><%= link_to image_tag("elogo.png", alt:"elvislogo"),'http://www.crazyaboutelvis.com/'%></h1>
 				<h2>COMING IN 2016</h2>
 			</div>
-				
-				<div class="navbar navbar-fixed" >
-	     			<div class="container">
+			<div class="row">	
+				<div class="navbar navbar-fixed" role="navigation">
+	     			<!-- <div class="container"> -->
 	        			<div class="navbar-header">
-				          <button style="border:3px solid grey;" type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-				            <span style="background:#AE1A26;" class="icon-bar"></span>
-				            <span style="background:#AE1A26;" class="icon-bar"></span>
-				            <span style="background:#AE1A26;" class="icon-bar"></span>
-				          </button>
+					        <button  type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					            <span class="sr-only">Toggle navigation</span>
+					            <span class="icon-bar"></span>
+					            <span class="icon-bar"></span>
+					            <span class="icon-bar"></span>
+					        </button>
 
         				</div>
 			        	<div class="navbar-collapse collapse">
-			          		<ul class="nav navbar-nav navbar">
+			          		<ul class="nav navbar-nav">
 			            		<li><%= link_to "HOME",  home_path %></li>
 								<li><%= link_to "PHOTOS", gallery_path %></li>
 								<li><%= link_to "EVENT INFO", schedule_path %></li>
 								<li><%= link_to "TICKET INFO", ticket_path %></li>
 								<li><%= link_to "MERCHANDISE", merchandise_path %></li>
 								<li><%= link_to "NEWS", news_path %></li>
-
 			          		</ul>
 			        	</div><!--/.nav-collapse -->
-			        </div>
+			       <!--  </div> -->
       			</div>
 			</div>
-      	</div>
+		</div>
+    </div>
     
 			
 	
