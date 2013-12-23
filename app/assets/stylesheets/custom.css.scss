@@ -8,7 +8,12 @@ font-family: 'Lora', serif;
 
 }
 
-
+/*MODAL RESPONSIVE*/
+// .modal-body {
+//   min-height: 500px;
+//   width:auto;
+//   overflow: auto;
+// }
 
 /*NAVBAR MENU*/
 
@@ -48,26 +53,26 @@ a {
 
 }
 
-.modal{
+// .modal{
 
-margin:0 auto;
-position:fixed;
+// margin:0 auto;
+// position:fixed;
 
-width:100%;
-}
+// width:100%;
+// }
 
 
 
-.modal.modal-content{
+// .modal.modal-content{
   
-  margin-right:400px;
-}
+//   margin-right:400px;
+// }
 
-.modal-dialog{
+// .modal-dialog{
  
   
-  min-width:800px;
-}
+//   min-width:800px;
+// }
 
 #myModalLabel p{
 
