@@ -144,7 +144,7 @@ width:260px;
 	color:white;
 	font-size:18px;
 	text-align:center;
-	width:226px;
+	max-width:226px;
 }
 
 
@@ -506,11 +506,16 @@ font-size:22px;
   margin:5px 15px 5px 15px;
 }
 
+.modal-body p{
+
+  font-size:14px;
+}
+
 #modclose{
   
   
   font-size:12px;
-  margin-right:270px;
+  margin-right:160px;
   
   margin-bottom:10px;
 }

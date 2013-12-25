@@ -73,9 +73,9 @@ a:after {
    ========================================================================== */
 
 #headerwrap {
-	background: url(bluehead.png) no-repeat center top;
+	background: url(ecloud.jpg) no-repeat center top;
 	margin-top: -50px;
-	margin-bottom:50px;
+	
 	padding-top:20px;
 	text-align:center;
 	background-attachment: relative;
@@ -156,8 +156,8 @@ a:after {
 /* White Wrap */
 
 #w {
-	background: #ffffff;
-	/*background: url(bluehead.png) no-repeat center top;*/
+	background: #ffffff;*/
+	/*background: url(ecloud.jpg) no-repeat center top;*/*/
 	padding-top: 35px;
 	padding-bottom: 35px;
 	text-align: center;
