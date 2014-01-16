@@ -1,6 +1,8 @@
 class StaticPagesController < ApplicationController
 	
-
+        def home
+                @slides= Slide.all
+        end
 
 
         def news

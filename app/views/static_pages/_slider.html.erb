@@ -1,34 +1,43 @@
-<div  id="carousel-example-generic" class="carousel slide">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-              <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-              <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-              <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-            </ol>
-            
-          
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner">
-              <div class="item active">
-                <div  class="carousel-caption">
-                  <h2 class="capcare" >Test Caption 1</h2>
-                </div>
-                <%= image_tag 'dummies/slides/e1.jpg' %>
-                
-              </div>
-              <div class="item">
-                <div  class="carousel-caption">
-                  <h2 class="capcare" >Test Caption 2</h2>
-                </div>
-                <%= image_tag 'dummies/slides/e2.jpg' %> 
-              </div>
-              <div class="item">
-                <div  class="carousel-caption">
-                  <h2 class="capcare" >Test Caption 3</h2>
-                </div>
-                <%= image_tag 'dummies/slides/e3.jpg' %> 
-              </div>
-            </div>
-          </div>
+<div class="row">
+  <div class="col-sm-2 col-sm-offset-2">
+    <a id="cleft" class="carousel-control left" href="#myslider" data-slide="prev"><span style="font-size:42px; font-weight:bold;" id="left"> < </span></a>
+  </div>
+  <div class="col-sm-2 col-sm-offset-8">
+    <a style="" id ="cright" class="carousel-control right" href="#myslider" data-slide="next"><span style="font-size:42px; font-weight:bold; " id="right"> ></span> </a>
+  </div>
+</div>
+<div class="col-sm-8 col-sm-offset-2 ">
+  <div  id="myslider" class="carousel slide">
+    <ol class="carousel-indicators">
+      <li data-target="#myslider" data-slide-to="0" class="active"></li>
+      <li data-target="#myslider" data-slide-to="1"></li>
+      <li data-target="#myslider" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner"><!-- Wrapper for slides -->
+      <div class="item active">
+        <div  class="carousel-caption">
+          <h2 class="capcare" >Test Caption 1</h2>
         </div>
+        <%= image_tag 'dummies/slides/e1.jpg' %>
+      </div>
+      <div class="item">
+        <div  class="carousel-caption">
+          <h2 class="capcare" >Test Caption 2</h2>
+        </div>
+        <%= image_tag 'dummies/slides/e2.jpg' %> 
+      </div>
+      <div class="item">
+        <div  class="carousel-caption">
+          <h2 class="capcare" >Test Caption 3</h2>
+        </div>
+        <%= image_tag 'dummies/slides/e3.jpg' %> 
+      </div>
+    </div><!-- Wrapper for slides END-->
+  </div>
+</div>
+
+  <!-- <a id="cleft" class="carousel-control left" href="#myslider" data-slide="prev"><i id="aleft" class="fa fa-angle-left"></i></a>
+  <a id ="cright" class="carousel-control right" href="#myslider" data-slide="next"><i id="aright" class="fa fa-angle-right"></i> </a> -->
+
+        
       

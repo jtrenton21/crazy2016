@@ -1,0 +1,26 @@
+
+<%= simple_form_for(@slide) do |f| %>
+  <% if @slide.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@slide.errors.count, "error") %> prohibited this slide from being saved:</h2>
+
+      <ul>
+      <% @slide.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <p>
+    <span id='drop'><p style="margin-bottom:-5px;" id='pictext'>Please Select A Photo to Upload</p></span><br/>
+    <p style="margin-left:450px;" id="newspe"><%= f.file_field :image %></p>
+  </p><br/>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

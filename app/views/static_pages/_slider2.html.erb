@@ -1,33 +1,30 @@
-<div class="bxslider">
-  <div class="slide">
-    <div class="bx-caption">
-      Caption 1
-    </div>
-  
-      <%= image_tag 'dummies/slides/e1.jpg' %>        
-    
-  </div>
-  <div class="slide">
-    <div class="bx-caption">
-      Caption 2
-    </div>
-    
-      <%= image_tag 'dummies/slides/e2.jpg' %>        
-    
-  </div>
-  <div class="slide">
-    <div class="bx-caption">
-      Caption 3
-    </div>
-    
-      <%= image_tag 'dummies/slides/e3.jpg' %>        
-    </div>
-  
-</div>
+<div class="slider">
+  <div id="topslide" class='row centered'>
+    <div class="col-sm-12 col-md-8 col-md-offset-2">
+      <ul class="bxslider">
+        <% @slides.each do |slide| %>
+          
+          <li>
+            <span class="slidetitle"><%#=slide.title%></span>
+            <span class="slideimage"><%= image_tag slide.image.url(:image) %></span>
+            
+          </li>
+          <%end%>
 
-<!-- <ul class="bxslider">
-  <li><%#= image_tag 'dummies/slides/e1.jpg' %>       </li>
-  <li><%#= image_tag 'dummies/slides/e2.jpg' %>       </li>
-  <li><%#= image_tag 'dummies/slides/e3.jpg' %>       </li>
-</ul>
- -->
+        </ul>
+    </div>
+  </div>
+</div>
+     
+<script>
+$('.bxslider').bxSlider({
+  minSlides: 1,
+  maxSlides: 1,
+  captions: true,
+  auto: false,
+  adaptiveHeight: true,
+  touchEnabled: true,
+  slideWidth: 270,
+  slideMargin: 1
+});
+</script>

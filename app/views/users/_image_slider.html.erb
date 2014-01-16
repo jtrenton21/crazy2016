@@ -1,0 +1,29 @@
+<div id="dg">
+  <div class="container">
+    <div class="row centered">
+      
+       <%= link_to 'ADD NEW SLIDE', new_slide_path %>
+          <table id="newsart" class="table table-bordered">
+            <tr>
+              <th>Image</th>
+              <th>Title</th>
+              
+              <th>Show</th>
+              <th>Edit</th>
+              <th>Remove</th>
+            </tr>
+            <% @slides.each do |slide| %>
+              
+                <tr>
+                  <td id="slidephoto"><%= image_tag slide.image.url(:image) %></td>
+                    <td><%= slide.title %></td>
+                    <td><%= link_to 'Show', slide %></td>
+                    <td><%= link_to 'Edit', edit_slide_path(slide) %></td>
+                    <td><%= link_to 'Destroy', slide, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+              <%end%>  
+            </table>
+          
+        </div>
+      </div>
+    </div>

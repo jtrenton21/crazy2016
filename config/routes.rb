@@ -1,5 +1,8 @@
 Elvis::Application.routes.draw do
   
+  resources :slides
+
+
   resources :eventdays
   resources :articles
   resources :visits

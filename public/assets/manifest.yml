@@ -37,6 +37,8 @@ cloudz.png: cloudz-24fb87a625fa620ec1660a50e03cead7.png
 cloudz/index.png: cloudz-24fb87a625fa620ec1660a50e03cead7.png
 contents/yahoo.png: contents/yahoo-d9de8777895772d92153ddbd2e2e5a9a.png
 contents/yahoo/index.png: contents/yahoo-d9de8777895772d92153ddbd2e2e5a9a.png
+controls.png: controls-2af6f6eefa441c18a81b4bf909317876.png
+controls/index.png: controls-2af6f6eefa441c18a81b4bf909317876.png
 corner-1.png: corner-1-a317d78a59608aed4283d90476a9533e.png
 corner-1/index.png: corner-1-a317d78a59608aed4283d90476a9533e.png
 corner-2.png: corner-2-ad8dc1157ab541ad96a46a79e86c61c6.png
@@ -231,16 +233,16 @@ slider-bg.jpg: slider-bg-c9ece569cd1b2e5a11620970875b3dd5.jpg
 slider-bg/index.jpg: slider-bg-c9ece569cd1b2e5a11620970875b3dd5.jpg
 ticket.png: ticket-28e48a992d20c2cccebccb734b114e99.png
 ticket/index.png: ticket-28e48a992d20c2cccebccb734b114e99.png
-application.js: application-259fce6f3ecf04811204c3d07e8bf8e2.js
-application/index.js: application-259fce6f3ecf04811204c3d07e8bf8e2.js
+application.js: application-ef2d30d26c425f2dda3a6bff513a6a4d.js
+application/index.js: application-ef2d30d26c425f2dda3a6bff513a6a4d.js
 jquery bxslider/images/bx_loader.gif: jquery bxslider/images/bx_loader-37b139bcec1bd2f0c2bfa72308d0acb3.gif
 jquery bxslider/images/bx_loader/index.gif: jquery bxslider/images/bx_loader-37b139bcec1bd2f0c2bfa72308d0acb3.gif
 jquery bxslider/images/controls.png: jquery bxslider/images/controls-2af6f6eefa441c18a81b4bf909317876.png
 jquery bxslider/images/controls/index.png: jquery bxslider/images/controls-2af6f6eefa441c18a81b4bf909317876.png
 jquery bxslider/readme.md: jquery bxslider/readme-a711ee80cffd9176fbc073e5dcaec076.md
 jquery bxslider/readme/index.md: jquery bxslider/readme-a711ee80cffd9176fbc073e5dcaec076.md
-application.css: application-f8ad0d48ccda8516ce2f884773474379.css
-application/index.css: application-f8ad0d48ccda8516ce2f884773474379.css
+application.css: application-3828805fc4bee8918852db09f8a6cee9.css
+application/index.css: application-3828805fc4bee8918852db09f8a6cee9.css
 jquery-ui/animated-overlay.gif: jquery-ui/animated-overlay-602eee4c79a4796b02bb6442948c9e28.gif
 jquery-ui/animated-overlay/index.gif: jquery-ui/animated-overlay-602eee4c79a4796b02bb6442948c9e28.gif
 jquery-ui/ui-bg_flat_0_aaaaaa_40x100.png: jquery-ui/ui-bg_flat_0_aaaaaa_40x100-7d1197a52442bc56fcad60d0390f4b32.png

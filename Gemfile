@@ -25,6 +25,7 @@ group :assets do
   gem 'jquery-rails', '2.0.2'
   gem "jquery-ui-rails"
   gem 'jquery_datepicker'
+  
 end
   
   gem 'turbolinks'

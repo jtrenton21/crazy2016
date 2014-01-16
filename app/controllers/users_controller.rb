@@ -25,6 +25,8 @@ class UsersController < ApplicationController
 		@content = Content.new
 		@contents = Content.all
 		@events= Event.all
+		@slides = Slide.all
+		@slide = Slide.new
 		# @contents = @contents.joins(:visit)
 
 	end

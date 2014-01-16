@@ -15,6 +15,7 @@
 ===================================*/
 
 .bx-wrapper {
+	
 	position: relative;
 	margin: 0 auto 60px;
 	padding: 0;
@@ -22,20 +23,22 @@
 }
 
 .bx-wrapper img {
-	max-width: 100%;
+	
+	width: 105%;
 	display: block;
+	
 }
-
+.bx-viewport img{
+	width:100%;
+}
 /** THEME
 ===================================*/
 
 .bx-wrapper .bx-viewport {
-	-moz-box-shadow: 0 0 5px #ccc;
-	-webkit-box-shadow: 0 0 5px #ccc;
-	box-shadow: 0 0 5px #ccc;
-	border: solid #fff 5px;
+	
+	
 	left: -5px;
-	background: #fff;
+	background: none;
 }
 
 .bx-wrapper .bx-pager,
@@ -98,12 +101,12 @@
 
 .bx-wrapper .bx-prev {
 	left: 10px;
-	background: url(../images/controls.png) no-repeat 0 -32px;
+	background: url(controls.png) no-repeat 0 -32px;
 }
 
 .bx-wrapper .bx-next {
 	right: 10px;
-	background: url(../images/controls.png) no-repeat -43px -32px;
+	background: url(controls.png) no-repeat -43px -32px;
 }
 
 .bx-wrapper .bx-prev:hover {
@@ -118,6 +121,7 @@
 	position: absolute;
 	top: 50%;
 	margin-top: -16px;
+
 	outline: 0;
 	width: 32px;
 	height: 32px;
@@ -141,7 +145,7 @@
 	width: 10px;
 	height: 11px;
 	outline: 0;
-	background: url(../images/controls.png) -86px -11px no-repeat;
+	background: url(controls.png) -86px -11px no-repeat;
 	margin: 0 3px;
 }
 
@@ -156,7 +160,7 @@
 	width: 9px;
 	height: 11px;
 	outline: 0;
-	background: url(../images/controls.png) -86px -44px no-repeat;
+	background: url(controls.png) -86px -44px no-repeat;
 	margin: 0 3px;
 }
 
@@ -194,4 +198,26 @@
 	display: block;
 	font-size: .85em;
 	padding: 10px;
+}
+
+.bx-next{
+	
+	margin-right:-50px;
+}
+
+a.bx-next{
+	
+	background: url(controls.png) no-repeat -43px -32px;
+	
+}
+
+.bx-prev{
+	
+	margin-left:-65px;
+}
+
+a.bx-prev{
+	
+	background: url(controls.png) no-repeat 0 -32px;
+	
 }

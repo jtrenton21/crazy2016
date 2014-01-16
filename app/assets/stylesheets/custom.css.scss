@@ -120,6 +120,8 @@ width:260px;
 	// margin-top:-20px;
 	// margin-right:-5px
 }
+
+
 /**FOOTER*****************************/
 
 // #f i:hover{
@@ -315,11 +317,11 @@ z-index: 9;
 }
 
 .capcare{
-
+  text-align:center;
 }
 
 .carousel-caption{
-
+  
   position:static;
   margin-top:-40px;
   
@@ -332,6 +334,20 @@ font-size:22px;
   font-weight:bold;
 }
 
+
+#cleft{
+
+  background:transparent;
+}
+
+#cright{
+
+  background:transparent;
+}
+
+#cleft i{
+  margin-top:40px;  
+}
 
 /*NEWS ARTICLES*********************************/
 
@@ -422,6 +438,9 @@ font-size:22px;
   list-style:none;
 }
 
+
+
+
 /*PAGINATION*************************************/
 
 
@@ -487,12 +506,26 @@ font-size:22px;
   width:60px;
 }
 
+#slidephoto img{
+
+  height:60px;
+  width:80px;
+}
+
 /*Toggle Menu*/
 
 #menuTop{
 
   border:1px solid grey;
   background:white;
+  opacity:0.6;
+  filter:alpha(opacity=60);
+  float:right;
+  margin-top:-250px;
+  position:fixed;
+  // width:100%;
+  z-index:999;
+  
 }
 
 #johnrow img{
@@ -533,28 +566,54 @@ font-size:22px;
 
 /*BX SLIDER*/
 
-.bx-wrapper{
-
-  max-width:700px;
-}
-
-.bx-viewport {
-    height: 540px;
-}
-
-// .slide img{
-
-//   min-height:400px;
-//   margin:10px 0px 0px 25px;
-//   padding:10px 20px 40px 20px;
+// .bx-wrapper.bx-viewport{
+//   background:none;
+//   border:none;
+//   max-width:700px;
 // }
 
-.caption{
+.bx-viewport{
 
-  line-height:20px;
+  background:none;
+  border:none;
 }
+
+.bx-viewport ul {
+  background:none;
+  margin: 0;
+  padding: 0;
+}
+
+li.bx-clone{
+
+  width:100%;
+  background:none;
+}
+
+.bx-viewport.bxslider{
+
+  background:none;
+}
+
+// .caption{
+
+//   line-height:20px;
+// }
 
 .jumbotron p{
 
   font-size:16px;
+}
+
+.slidetitle{
+  color:white;
+  background-color: rgba(7,20,30,.7);
+  font-size:18px;
+  margin-top:-10px;
+  margin-left:-290px;
+  padding:0px 5px 0px 5px;
+  position:absolute;
+  width:auto;
+  z-index:999;
+  
 }
