@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 
   gem 'bcrypt-ruby', '~> 3.0.1'
   gem 'pg'
-  
+   gem 'kaminari'
 group :development, :test do
   
   
@@ -22,7 +22,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
   gem 'bootstrap-sass'
   
-  gem 'kaminari'
+ 
   gem 'jquery-rails', '2.0.2'
   gem "jquery-ui-rails"
   gem 'jquery_datepicker'
