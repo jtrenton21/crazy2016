@@ -3,14 +3,15 @@ source 'https://rubygems.org'
   gem 'rails', '3.2.14'
 
   gem 'bcrypt-ruby', '~> 3.0.1'
+  gem 'pg'
   
 group :development, :test do
-  gem 'pg'
-  gem 'rails-footnotes'
+  
+  
 end
 
 group :production do
-  gem 'pg'
+  
   gem 'rails_12factor'
 end
 
@@ -28,21 +29,21 @@ group :assets do
   
 end
   
-  gem 'turbolinks'
+  
   gem 'jbuilder'
-  gem "appointments"
+ 
   gem "mini_magick", :git => "git://github.com/minimagick/minimagick.git"
   
   gem 'hirb'
   gem 'simple_form'
   gem 'paperclip'
-  gem 'newrelic_rpm'
+  
   gem 'geocoder'
   gem "meta_search"
   gem 'ransack'
-  gem "calendar_helper"
+  
   gem 'nokogiri' 
   gem "rest-client"
   gem "mechanize"
-  gem 'has_moderated'
+  
   ruby '2.0.0'

@@ -35,15 +35,11 @@ GEM
     activesupport (3.2.14)
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
-    appointments (1.3.3)
-      thor
     arel (3.0.3)
     bcrypt-ruby (3.0.1)
     bootstrap-sass (3.0.3.0)
       sass (~> 3.2)
     builder (3.0.4)
-    calendar_helper (0.2.6)
-      open4
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.3)
@@ -60,8 +56,6 @@ GEM
     erubis (2.7.0)
     execjs (2.0.2)
     geocoder (1.1.9)
-    has_moderated (1.2.3)
-      rails (>= 3.0.0)
     hike (1.2.3)
     hirb (0.7.1)
     http-cookie (1.0.2)
@@ -78,7 +72,7 @@ GEM
       railties (>= 3.1.0)
     jquery_datepicker (0.4)
     json (1.8.1)
-    kaminari (0.15.0)
+    kaminari (0.15.1)
       actionpack (>= 3.0.0)
       activesupport (>= 3.0.0)
     mail (2.5.4)
@@ -102,12 +96,10 @@ GEM
     mini_portile (0.5.2)
     multi_json (1.8.4)
     net-http-digest_auth (1.4)
-    net-http-persistent (2.9)
-    newrelic_rpm (3.7.1.182)
+    net-http-persistent (2.9.1)
     nokogiri (1.6.1)
       mini_portile (~> 0.5.0)
     ntlm-http (0.1.1)
-    open4 (1.3.0)
     paperclip (3.5.2)
       activemodel (>= 3.0.0)
       activesupport (>= 3.0.0)
@@ -132,8 +124,6 @@ GEM
       activesupport (= 3.2.14)
       bundler (~> 1.0)
       railties (= 3.2.14)
-    rails-footnotes (3.7.9)
-      rails (>= 3.0.0)
     rails_12factor (0.0.2)
       rails_serve_static_assets
       rails_stdout_logging
@@ -174,8 +164,6 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    turbolinks (2.2.0)
-      coffee-rails
     tzinfo (0.3.38)
     uglifier (2.4.0)
       execjs (>= 0.3.0)
@@ -189,13 +177,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  appointments
   bcrypt-ruby (~> 3.0.1)
   bootstrap-sass
-  calendar_helper
   coffee-rails
   geocoder
-  has_moderated
   hirb
   jbuilder
   jquery-rails (= 2.0.2)
@@ -205,16 +190,13 @@ DEPENDENCIES
   mechanize
   meta_search
   mini_magick!
-  newrelic_rpm
   nokogiri
   paperclip
   pg
   rails (= 3.2.14)
-  rails-footnotes
   rails_12factor
   ransack
   rest-client
   sass-rails
   simple_form
-  turbolinks
   uglifier (>= 1.0.3)
