@@ -1,5 +1,18 @@
 class UsersController < ApplicationController
 	
+	def index
+		@users = User.all
+		@articles = Article.order("title").page(params[:page]).per_page(5)
+		@article = Article.new
+		@content = Content.new
+		@contents = Content.all
+		@events= Event.all
+		@slides = Slide.all
+		@slide = Slide.new
+		# @contents = @contents.joins(:visit)
+
+	end
+
 	def new
 	  @user = User.new
 	end
@@ -17,20 +30,5 @@ class UsersController < ApplicationController
 	    render "new"
 	  end
 	end
-
-	def dashboard
-		@users = User.all
-		@articles = Article.order("title").page(params[:page]).per_page(5)
-		@article = Article.new
-		@content = Content.new
-		@contents = Content.all
-		@events= Event.all
-		@slides = Slide.all
-		@slide = Slide.new
-		# @contents = @contents.joins(:visit)
-
-	end
-
-
 
 end
