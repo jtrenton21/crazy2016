@@ -1,6 +1,6 @@
 class Article < ActiveRecord::Base
   attr_accessible :author, :link, :photo, :published, :title
-
+  
   has_attached_file :photo, 
   					:styles => { :export => {:geometry => "250x150#", :quality => 100, :format => 'JPG'} },
   					:convert_options => { :all => "-quality 100" },

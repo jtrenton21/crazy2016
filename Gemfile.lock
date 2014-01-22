@@ -78,6 +78,9 @@ GEM
       railties (>= 3.1.0)
     jquery_datepicker (0.4)
     json (1.8.1)
+    kaminari (0.15.0)
+      actionpack (>= 3.0.0)
+      activesupport (>= 3.0.0)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -181,7 +184,6 @@ GEM
       unf_ext
     unf_ext (0.0.6)
     webrobots (0.1.1)
-    will_paginate (3.0.5)
 
 PLATFORMS
   ruby
@@ -199,6 +201,7 @@ DEPENDENCIES
   jquery-rails (= 2.0.2)
   jquery-ui-rails
   jquery_datepicker
+  kaminari
   mechanize
   meta_search
   mini_magick!
@@ -215,4 +218,3 @@ DEPENDENCIES
   simple_form
   turbolinks
   uglifier (>= 1.0.3)
-  will_paginate

@@ -21,7 +21,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
   gem 'bootstrap-sass'
   
-  gem 'will_paginate'
+  gem 'kaminari'
   gem 'jquery-rails', '2.0.2'
   gem "jquery-ui-rails"
   gem 'jquery_datepicker'

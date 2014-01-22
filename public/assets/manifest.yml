@@ -15,8 +15,8 @@ fontawesome-webfont/index.svg: fontawesome-webfont-f1c2889911d212e1403b68eabc1a3
 2016/index.png: 2016-3c0613ddd7d129ce9ee1fb571e725e55.png
 arrow-left.png: arrow-left-6cb6b79f6b914df5212fba0895bfdefa.png
 arrow-left/index.png: arrow-left-6cb6b79f6b914df5212fba0895bfdefa.png
-arrow-right.png: arrow-right-0caef952c1ab6ed76c3f013855a8f2b9.png
-arrow-right/index.png: arrow-right-0caef952c1ab6ed76c3f013855a8f2b9.png
+arrow_right.png: arrow_right-0caef952c1ab6ed76c3f013855a8f2b9.png
+arrow_right/index.png: arrow_right-0caef952c1ab6ed76c3f013855a8f2b9.png
 arrows.png: arrows-256b0d605149f4486fe1a3560018c0cd.png
 arrows/index.png: arrows-256b0d605149f4486fe1a3560018c0cd.png
 bird.png: bird-31fa8f091c8d545f733a3ed25a41722d.png
@@ -241,8 +241,8 @@ jquery bxslider/images/controls.png: jquery bxslider/images/controls-2af6f6eefa4
 jquery bxslider/images/controls/index.png: jquery bxslider/images/controls-2af6f6eefa441c18a81b4bf909317876.png
 jquery bxslider/readme.md: jquery bxslider/readme-a711ee80cffd9176fbc073e5dcaec076.md
 jquery bxslider/readme/index.md: jquery bxslider/readme-a711ee80cffd9176fbc073e5dcaec076.md
-application.css: application-54602c8bd1a2983d31d3d0a3af5f8e04.css
-application/index.css: application-54602c8bd1a2983d31d3d0a3af5f8e04.css
+application.css: application-43331ad38b1ccb75ed379e8ffc97af83.css
+application/index.css: application-43331ad38b1ccb75ed379e8ffc97af83.css
 jquery-ui/animated-overlay.gif: jquery-ui/animated-overlay-602eee4c79a4796b02bb6442948c9e28.gif
 jquery-ui/animated-overlay/index.gif: jquery-ui/animated-overlay-602eee4c79a4796b02bb6442948c9e28.gif
 jquery-ui/ui-bg_flat_0_aaaaaa_40x100.png: jquery-ui/ui-bg_flat_0_aaaaaa_40x100-7d1197a52442bc56fcad60d0390f4b32.png

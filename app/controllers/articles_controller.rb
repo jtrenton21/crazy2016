@@ -13,7 +13,7 @@ class ArticlesController < ApplicationController
 
   def news
     @articles = Article.all
-    @articles = Article.order("title").page(params[:page]).per_page(5)
+    @articles = Article.order(:title).page(params[:page])
   end
 
   # GET /articles/1

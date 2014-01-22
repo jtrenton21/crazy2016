@@ -462,18 +462,18 @@ font-size:22px;
   }
   .current {
     font-style: normal;
-    font-weight: bold;
-    background: #2e6ab1;
+    margin-top:3px;
+    background: grey;
     color: white;
-    border: 1px solid #2e6ab1;
+   
   }
   a {
     text-decoration: none;
     color: #105cb6;
-    border: 1px solid #9aafe5;
+    
     &:hover, &:focus {
       color: #000033;
-      border-color: #000033;
+      
     }
   }
   .page_info {
@@ -623,3 +623,4 @@ li.bx-clone{
 
   color:#AE1A26;
 }
+
