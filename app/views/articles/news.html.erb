@@ -26,7 +26,7 @@
           <div class= "col-lg-2"></div>
           <div style="float:left;" class= "col-lg-7">  
             <div  id="figure" class="panel panel-default">
-              <a href=<%=article.link%>>
+              
                 <div class="panel-body">              
                   <div class= "col-lg-2">
                     <p id='image2'><%= image_tag article.photo.url(:photo) %></p>
@@ -35,10 +35,11 @@
                     <h3 style="font-family:Lora;" id='tnews'><%= article.title %></h3>
                     <p id='anews'><%= article.author %></p>
                     <p id='dnews'><%= article.published %></p>
+                    <button style="border-radius:7px; margin-bottom:5px; margin-top:-10px;"><%=link_to "Click To Read", article.link, :class => "btn", :target => "_blank" %></button>
                   </div>
                 
                 </div>
-              </a>
+              
             </div>
           </div>
         </div>   

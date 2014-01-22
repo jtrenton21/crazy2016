@@ -521,8 +521,9 @@ font-size:22px;
   opacity:0.6;
   filter:alpha(opacity=60);
   float:right;
-  margin-top:-250px;
-  position:fixed;
+  top:.5;
+  right:0;
+  position:absolute;
   // width:100%;
   z-index:999;
   

@@ -28,8 +28,9 @@
         <% flash.each do |key, value| %>
           <%= content_tag(:div, value, class: "alert alert-#{key}") %>
         <% end %>
+      
         <%= yield %>
-       
+      
       <%= render 'layouts/footer' %> 
       <% if current_user %>
           Logged in as <%= current_user.email %>.

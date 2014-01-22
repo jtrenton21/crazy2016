@@ -1,6 +1,7 @@
 <div class="slider">
   <div id="topslide" class='row centered'>
-    <div class="col-sm-12 col-md-8 col-md-offset-2">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8 ">
       <ul class="bxslider">
         <% @slides.each do |slide| %>
           
@@ -12,7 +13,10 @@
           <%end%>
 
         </ul>
+        <!-- <span style="" id="slider-prev"></span>
+        <span style="" id="slider-next"></span> -->
     </div>
+    <div class="col-sm-2"></div>
   </div>
 </div>
      
@@ -25,6 +29,10 @@ $('.bxslider').bxSlider({
   adaptiveHeight: true,
   touchEnabled: true,
   slideWidth: 270,
-  slideMargin: 1
+  slideMargin: 1,
+  nextSelector: '#slider-next',
+  prevSelector: '#slider-prev',
+  prevText: '<img src= "/assets/images/arrow-left.png">',   
+  nextText: '<img src= "/assets/images/arrow_right.png">',
 });
 </script>
