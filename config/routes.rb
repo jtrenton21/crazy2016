@@ -25,7 +25,7 @@ Elvis::Application.routes.draw do
   match '/template',    to: 'static_pages#template',    via: 'get'
   match '/merchandise', to: 'static_pages#merchandise', via: 'get'
   match '/contact',     to: 'static_pages#contact',     via: 'get'
-  match '/news',        to: 'articles#news',            via: 'get'
+  match '/news',        to: 'articles#index',           via: 'get'
   match '/ticket',      to: 'static_pages#ticket',      via: 'get'
   match '/home',        to: 'static_pages#home',        via: 'get'
   match '/about',       to: 'static_pages#about',       via: 'get'

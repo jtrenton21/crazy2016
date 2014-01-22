@@ -14,8 +14,8 @@
       <div class= "col-lg-2"></div>
       <div class= "col-lg-8">  
         
-        <div class= "col-lg-4">
-          <span id="pageit"> <%= will_paginate @articles, previous_label: h("<"), next_label: h(">") %></span>
+        <div class= "col-sm-8 col-sm-offset-1">
+          <span style="margin-left:20px;" id="pageit"> <%= paginate @articles %></span>
         </div>
       </div>
       
@@ -35,7 +35,7 @@
                     <h3 style="font-family:Lora;" id='tnews'><%= article.title %></h3>
                     <p id='anews'><%= article.author %></p>
                     <p id='dnews'><%= article.published %></p>
-                    <%=link_to "Click To Read", article.link, :class => "btn" %>
+                    <button style="border-radius:7px; color:#AE1A26; margin-bottom:5px; margin-top:-10px;"><%=link_to "Click To Read", article.link, :class => "btn", :id => "newsbut", :target => "_blank" %></button>
                   </div>
                 
                 </div>

@@ -3,7 +3,7 @@ class ArticlesController < ApplicationController
   # GET /articles.json
   def index
     @articles = Article.all
-    # @articles = Article.order("title").page(params[:page]).per_page(5)
+    @articles = Article.order(:title).page(params[:page])
 
     respond_to do |format|
       format.html # index.html.erb
