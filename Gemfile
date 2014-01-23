@@ -41,7 +41,7 @@ end
   gem 'geocoder'
   gem "meta_search"
   gem 'ransack'
-  
+  gem 'unicorn'
   gem 'nokogiri' 
   gem "rest-client"
   gem "mechanize"

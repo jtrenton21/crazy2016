@@ -2,14 +2,15 @@ class UsersController < ApplicationController
 	
 	def index
 		@users = User.all
-		@articles = Article.order("title").page(params[:page]).per_page(5)
+		@articles = Article.all
+    	@articles = Article.order(:title).page(params[:page])
 		@article = Article.new
 		@content = Content.new
 		@contents = Content.all
 		@events= Event.all
 		@slides = Slide.all
 		@slide = Slide.new
-		# @contents = @contents.joins(:visit)
+		
 
 	end
 
