@@ -1,93 +1,34 @@
+<script>
+$('#myTab a').click(function (e) {
+  e.preventDefault()
+  $(this).tab('show')
+})
+</script>
 <%if current_user %>
- <div id="w">
+
+  <div style="min-height:800px;" id="dg">
+    <h3>WEBSITE ADMIN DASHBOARD</h3><br/>
     <div class="container">
+
       <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-         
-             
+        <ul style=" margin-bottom:-5px;" class="nav nav-tabs">
+          <li><a href="#users" data-toggle="tab">Users</a></li>
+          <li><a href="#slider" data-toggle="tab">Slider</a></li>
+          <li><a href="#photos" data-toggle="tab">Photos</a></li>
+          <li><a href="#events" data-toggle="tab">Events</a></li>
+          <li><a href="#news" data-toggle="tab">News</a></li>
+        </ul>
+        <div class="tab-content">
+          <div class="tab-pane active" id="users"><%= render 'adminusers' %></div>
+          <div class="tab-pane" id="slider"><%= render 'image_slider' %></div>
+          <div class="tab-pane" id="photos"><%= render 'photo_gallery' %></div>
+          <div class="tab-pane" id="events"><%= render 'events' %></div>
+          <div class="tab-pane" id="news"><%= render 'news_articles' %></div>
         </div>
       </div>
-    </div><!-- /container -->
-  </div><!-- /w -->
-  <div  id="dg">
-    <div class="container">
-      <div class="row">
-        <h1>Admin Users</h1>
-        <%= render 'adminusers' %>     
-      </div>
-    </div><!-- /container -->
-  </div><!-- /dg -->
-  <!-- ==========SLIDER ========== -->
-   <section id="portfolio" name="portfolio"></section>
-    <div id="dg">
-      <div style="padding-bottom:40px;" id="portfoliowrap">
-        <div class="container">
-          <div class="row">
-            <h1>HOME PAGE SLIDER</h1>
-           <%= render 'image_slider' %>
-          </div>  
-        </div><!-- /container -->
-      </div><!-- /portfoliowrap -->
     </div>
-  <!-- ========== RESPONSIVE SLIDER - DARK GREY SECTION ========== -->
-  
-   <!-- ========== JOHN WILKINSON SECTION ========== -->
-  <section id="portfolio" name="portfolio"></section>
-    <div id="dg">
-      <div style="padding-bottom:40px;" id="portfoliowrap">
-        <div class="container">
-          <div class="row">
-            <h1>News Articles</h1>
-           <%= render 'news_articles' %>
-          </div>  
-        </div><!-- /container -->
-      </div><!-- /portfoliowrap -->
-    </div>
-  <!-- ========== WHITE SECTION ========== -->
-  <div id="w">
-    <div class="container">
-      <div class="row">
-        
-      </div>
-    </div><!-- /container -->
-  </div><!-- /w -->
-  
-   <section id="portfolio" name="portfolio"></section>
-    <div id="dg">
-      <div style="padding-bottom:40px;" id="portfoliowrap">
-        <div class="container">
-          <div class="row">
-            <h1>Photo Gallery</h1>
-           <%= render 'photo_gallery' %>
-          </div>  
-        </div><!-- /container -->
-      </div><!-- /portfoliowrap -->
-    </div>
+  </div>
 
-
-
-  <!-- ========== ABOUT - GREY SECTION ========== -->
-  <section id="about" name="about"></section>
-  <div id="g">
-    <div class="container">
-      <div class="row">
-        
-       
-        
-      </div>
-    </div><!-- /container -->
-  </div><!-- /g --></div><!-- /f -->
-  <section id="portfolio" name="portfolio"></section>
-    <div id="dg">
-      <div style="padding-bottom:40px;" id="portfoliowrap">
-        <div class="container">
-          <div class="row">
-            <h1>Events</h1>
-           <%= render 'events' %>
-          </div>  
-        </div><!-- /container -->
-      </div><!-- /portfoliowrap -->
-    </div>
 
   <%else%>
   <h1>YOU ARE NOT AUTHORIZED TO ACCESS THIS AREA</h1>

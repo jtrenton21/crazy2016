@@ -47,9 +47,9 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.save
-        format.html { redirect_to @event, notice: 'Event was successfully created.' }
-        format.json { render json: @event, status: :created, location: @event }
-        format.js 
+        redirect_to users_path
+      else
+        redirect_to users_path
       end
     end
   end
@@ -61,11 +61,9 @@ class EventsController < ApplicationController
 
     respond_to do |format|
       if @event.update_attributes(params[:event])
-        format.html { redirect_to @event, notice: 'Event was successfully updated.' }
-        format.json { head :no_content }
+        redirect_to users_path
       else
-        format.html { render action: "edit" }
-        format.json { render json: @event.errors, status: :unprocessable_entity }
+        redirect_to users_path
       end
     end
   end
@@ -77,8 +75,8 @@ class EventsController < ApplicationController
     @event.destroy
 
     respond_to do |format|
-      format.html { redirect_to events_url }
-      format.json { head :no_content }
+      format.html { redirect_to users_path}
+      
     end
   end
 end

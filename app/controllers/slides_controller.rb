@@ -44,11 +44,9 @@ class SlidesController < ApplicationController
 
     respond_to do |format|
       if @slide.save
-        format.html { redirect_to @slide, notice: 'Slide was successfully created.' }
-        format.json { render json: @slide, status: :created, location: @slide }
+        redirect_to users_path
       else
-        format.html { render action: "new" }
-        format.json { render json: @slide.errors, status: :unprocessable_entity }
+        redirect_to users_path
       end
     end
   end
@@ -60,11 +58,9 @@ class SlidesController < ApplicationController
 
     respond_to do |format|
       if @slide.update_attributes(params[:slide])
-        format.html { redirect_to @slide, notice: 'Slide was successfully updated.' }
-        format.json { head :no_content }
+        redirect_to users_path
       else
-        format.html { render action: "edit" }
-        format.json { render json: @slide.errors, status: :unprocessable_entity }
+        redirect_to users_path
       end
     end
   end
@@ -76,8 +72,8 @@ class SlidesController < ApplicationController
     @slide.destroy
 
     respond_to do |format|
-      format.html { redirect_to slides_url }
-      format.json { head :no_content }
+      format.html { redirect_to users_path}
+      
     end
   end
 end

@@ -74,11 +74,10 @@ class ContentsController < ApplicationController
 
     respond_to do |format|
       if @content.update_attributes(params[:content])
-        format.html { redirect_to :controller => "users", :action => "dashboard", notice: 'Content was successfully updated.' }
+        format.html { redirect_to :controller => "users", :action => "index", notice: 'Content was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: "edit" }
-        format.json { render json: @content.errors, status: :unprocessable_entity }
+        format.html { redirect_to users_path}
       end
     end
   end
@@ -90,8 +89,9 @@ class ContentsController < ApplicationController
     @content.destroy
 
     respond_to do |format|
-      format.html { redirect_to contents_url }
-      format.json { head :no_content }
+      
+        format.html { redirect_to users_path}
+      
     end
   end
 end

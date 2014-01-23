@@ -409,7 +409,10 @@ font-size:22px;
   width:100%
 }
 
+.container a {
 
+  color:#AE1A26;
+}
 
 #tnews{
    color:#AE1A26;
@@ -624,3 +627,43 @@ li.bx-clone{
   color:#AE1A26;
 }
 
+.nav-tabs>li>a{
+
+  border:1px solid white;
+   box-shadow: 10px -3px 5px #888888;
+  
+  background:white;
+}
+
+.nav-tabs>li.active>a{
+
+  font-weight:bold;
+}
+
+.table {
+
+  border:1px solid black;
+}
+
+.tab-pane{
+
+  background:white;
+  border-radius:10px;
+  box-shadow: 10px 10px 5px #888888;
+  min-height:500px;
+}
+
+.tab-pan tbody{
+
+  margin:6px;
+}
+
+.tab-content{
+
+  background:white;
+  border-radius:10px;
+}
+
+.tab-content h1{
+  padding-top:10px;
+  }
