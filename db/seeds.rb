@@ -16,4 +16,4 @@
     Eventday.create(day:'Friday', month: 'April', date: '29', year: '2016')
     Eventday.create(day:'Saturday', month: 'April', date: '30', year: '2016')
 
-	
+	User.create(email:'tl@example.com' , password: 'password')
