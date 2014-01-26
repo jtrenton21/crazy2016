@@ -1,35 +1,41 @@
-<%= simple_form_for @article,  :html => {:multipart => true} do |f| %>
-  <%= f.error_notification %>
-    <div class ='tedform'>
-      <div class="row">
-        
-          <p>
-            <span id='drop'>Title</span><br/>
-            <%= f.input_field :title %>
-          </p><br/>
-          <p>
-            <span id='drop'>Author</span><br/>
-            <%= f.input_field :author %>
-         </p><br/>
-          <p>
-           <span id='drop'>Published On</span><br/>
-            <%= f.input_field :published %>
-          </p><br/>
-           <p>
-           <span id='drop'>Article URL</span><br/>
-            <%= f.input_field :link %>
-          </p><br/>
+<div id="dg" style=" padding-top:20px;">
+  <div class="container">
+    <div class="row centered">
+      <%= simple_form_for @article,  :html => {:multipart => true} do |f| %>
+        <%= f.error_notification %>
+          <div class ='tedform'>
+            <div class="row">
+              
+                <p>
+                  <span id='drop'>Title</span><br/>
+                  <%= f.input_field :title %>
+                </p><br/>
+                <p>
+                  <span id='drop'>Author</span><br/>
+                  <%= f.input_field :author %>
+               </p><br/>
+                <p>
+                 <span id='drop'>Published On</span><br/>
+                  <%= f.input_field :published %>
+                </p><br/>
+                 <p>
+                 <span id='drop'>Article URL</span><br/>
+                  <%= f.input_field :link %>
+                </p><br/>
 
-          <p>
-            <span id='drop'><p style="margin-bottom:-5px;" id='pictext'>Please Select A Photo to Upload</p></span><br/>
-            <p style="margin-left:450px;" id="newspe"><%= f.file_field :photo %></p>
-          </p><br/>
-          
-          <div class="form-actions">
-            <a class='buttonsub' id='fbutton'><%= f.button :submit %></a> 
-          </div><br/>
+                <p>
+                  <span id='drop'><p style="margin-bottom:-5px;" id='pictext'>Please Select A Photo to Upload</p></span><br/>
+                  <p style="margin-left:450px;" id="newspe"><%= f.file_field :photo %></p>
+                </p><br/>
+                
+                <div class="form-actions">
+                  <a class='buttonsub' id='fbutton'><%= f.button :submit %></a> 
+                </div><br/>
+              </div>
+            </div> 
+            <% end %>
+          </div>
         </div>
-      </div> 
-      <% end %>
+      </div>
     </div>
       

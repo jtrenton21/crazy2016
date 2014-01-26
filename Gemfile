@@ -3,15 +3,15 @@ source 'https://rubygems.org'
   gem 'rails', '3.2.14'
 
   gem 'bcrypt-ruby', '~> 3.0.1'
-  gem 'pg'
+  
    gem 'kaminari'
 group :development, :test do
-  
+ gem 'pg' 
   
 end
 
 group :production do
-  
+  gem 'pg'
   gem 'rails_12factor'
 end
 

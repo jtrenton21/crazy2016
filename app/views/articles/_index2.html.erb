@@ -1,0 +1,27 @@
+<div style="margin-top:-20px;" id="port">
+  <div id="gallery" class="container">
+    <div style="padding-left:15px;" class="row mt">
+      <ul class="grid effect-2" id="grid">
+        <% @articles.each do |article| %>
+          <li class="newsy">
+            <span id="newspic"><%= image_tag article.photo.url(:photo) %></span>
+              <span id='newsit'><%= article.title %></span><br/>
+              <p style="margin-top:4px;" id='anews'><%= article.author %></p>
+              <p id='dnews'><%= article.published %></p>
+              <button style="border-radius:7px; color:#AE1A26; margin-bottom:5px; margin-top:-10px;"><%=link_to "Click To Read", article.link, :class => "btn", :id => "newsbut", :target => "_blank" %></button>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</div>
+<script>
+    new AnimOnScroll( document.getElementById( 'grid' ), {
+      minDuration : 0.4,
+      maxDuration : 0.7,
+      viewportFactor : 0.2
+    } );
+  </script>
+
+
+

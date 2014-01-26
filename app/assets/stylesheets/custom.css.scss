@@ -2,6 +2,15 @@
 
 @import url(http://fonts.googleapis.com/css?family=Lora);
 
+html,body
+{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; 
+}
+
 .container{
 
 font-family: 'Lora', serif;
@@ -146,7 +155,7 @@ width:260px;
 	color:white;
 	font-size:18px;
 	text-align:center;
-	max-width:226px;
+	width:20%;
 }
 
 
@@ -667,3 +676,132 @@ li.bx-clone{
 .tab-content h1{
   padding-top:10px;
   }
+
+  /*GRID CSS*/
+
+  .mt {
+    padding-top: 25px;
+}
+
+
+#port {
+    width: 100%}
+
+.grid {
+     
+    max-width: 69em;
+    list-style: none;
+    margin: 30px auto;
+    padding: 0;
+}
+
+.grid a{
+
+    overflow:hidden;
+}
+
+
+.grid li {
+
+    border:1px solid rgba(7,20,30,.7);
+    background:white;
+    box-shadow: 10px 10px 5px #888888;
+    display: block;
+    float: left;
+    overflow:hidden;
+    padding: 7px;
+    margin-right:13px;
+    width: 31%;
+    opacity: 0;
+
+}
+.grid li.shown, .no-js .grid li, .no-cssanimations .grid li {
+    opacity: 1;
+}
+.grid li a, .grid li img {
+    outline: 0;
+    border: 0;
+    display: block;
+    max-width: 100%
+}
+.grid img {
+    -webkit-transition: all 0.35s ease;
+    -moz-transition: all 0.35s ease;
+    -ms-transition: all 0.35s ease;
+    -o-transition: all 0.35s ease;
+    transition: all 0.35s ease;  
+    opacity: .7;
+}
+.grid img:hover {
+    opacity: 1;
+}
+.grid.effect-2 li.animate {
+    -webkit-transform: translateY(200px);
+    -moz-transform: translateY(200px);
+    transform: translateY(200px);
+    -webkit-animation: moveUp .65s ease forwards;
+    -moz-animation: moveUp .65s ease forwards;
+    animation: moveUp .65s ease forwards;
+}
+@-webkit-keyframes moveUp {
+    to {
+    -webkit-transform: translateY(0);
+    opacity: 1;
+}
+}@-moz-keyframes moveUp {
+    to {
+    -moz-transform: translateY(0);
+    opacity: 1;
+}
+}@keyframes moveUp {
+    to {
+    transform: translateY(0);
+    opacity: 1;
+}
+}
+
+.newsy img{
+
+  height:209px;
+  width:100%;
+}
+
+#newsit{
+  color:#AE1A26;
+  font-size:18px;
+}
+
+#newspic img{
+
+  border:2px solid grey;
+}
+
+#navpic img{
+
+  height:50px;
+  padding-bottom:10px;
+}
+
+#headme2{
+
+  // background: url(bluehead.png) no-repeat center top;
+  background:grey;
+
+}
+
+#headme2 img{
+
+  height:90px;
+  float:left;
+  padding-bottom:10px;
+}
+
+#nav2 li a{
+color:#AE1A26;
+
+}
+
+#header2{
+
+  margin-bottom:90px;
+}

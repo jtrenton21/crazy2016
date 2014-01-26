@@ -196,6 +196,17 @@ a:after {
 }
 
 
+#g2 {
+	background: #f2f2f2;
+	padding-top: 35px;
+	padding-bottom: 35px;
+	text-align: center;
+}
+
+#g2 img{
+	height:300px;
+}
+
 /* Dark Grey Wrap */
 #dg {
 	background: #e0e0e0;
@@ -207,8 +218,8 @@ a:after {
 /* Dark Grey Wrap */
 #dg2 {
 	background: #e0e0e0;
-	padding-top: 70px;
-	padding-bottom: 70px;
+	padding-top: 30px;
+	padding-bottom: 25px;
 	text-align: center;
 }
 
