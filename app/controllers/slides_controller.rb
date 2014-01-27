@@ -4,10 +4,7 @@ class SlidesController < ApplicationController
   def index
     @slides = Slide.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @slides }
-    end
+   
   end
 
   # GET /slides/1
@@ -15,10 +12,7 @@ class SlidesController < ApplicationController
   def show
     @slide = Slide.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @slide }
-    end
+   
   end
 
   # GET /slides/new
@@ -26,10 +20,7 @@ class SlidesController < ApplicationController
   def new
     @slide = Slide.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @slide }
-    end
+   
   end
 
   # GET /slides/1/edit
@@ -44,9 +35,9 @@ class SlidesController < ApplicationController
 
     respond_to do |format|
       if @slide.save
-        redirect_to users_path
+       redirect_to user_root_path
       else
-        redirect_to users_path
+        redirect_to user_root_path
       end
     end
   end
@@ -58,9 +49,9 @@ class SlidesController < ApplicationController
 
     respond_to do |format|
       if @slide.update_attributes(params[:slide])
-        redirect_to users_path
+        redirect_to user_root_path
       else
-        redirect_to users_path
+       redirect_to user_root_path
       end
     end
   end
@@ -72,7 +63,7 @@ class SlidesController < ApplicationController
     @slide.destroy
 
     respond_to do |format|
-      format.html { redirect_to users_path}
+      format.html { redirect_to user_root_path}
       
     end
   end

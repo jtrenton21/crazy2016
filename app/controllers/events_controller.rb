@@ -1,7 +1,6 @@
 class EventsController < ApplicationController
  
- # GET /events
-  # GET /events.json
+ 
   def index
     @events = Event.all
     @events_by_date = @events.group_by(&:weekday)
@@ -18,7 +17,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
 
     redirect_to :controller => "events", :action => "schedule"
-    end
+  end
   
  
   
@@ -27,10 +26,7 @@ class EventsController < ApplicationController
   def new
     @event = Event.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @event }
-    end
+    
   end
  
  
@@ -45,12 +41,10 @@ class EventsController < ApplicationController
   def create
     @event = Event.new(params[:event])
 
-    respond_to do |format|
+    
       if @event.save
-        redirect_to users_path
-      else
-        redirect_to users_path
-      end
+        redirect_to user_root_path
+     
     end
   end
 
@@ -59,12 +53,9 @@ class EventsController < ApplicationController
   def update
     @event = Event.find(params[:id])
 
-    respond_to do |format|
+    
       if @event.update_attributes(params[:event])
-        redirect_to users_path
-      else
-        redirect_to users_path
-      end
+      redirect_to user_root_path
     end
   end
 
@@ -75,7 +66,7 @@ class EventsController < ApplicationController
     @event.destroy
 
     respond_to do |format|
-      format.html { redirect_to users_path}
+      format.html {redirect_to user_root_path}
       
     end
   end

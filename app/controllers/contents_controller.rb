@@ -40,10 +40,7 @@ class ContentsController < ApplicationController
   def new
     @content = Content.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @content }
-    end
+    
   end
 
   # GET /contents/1/edit
@@ -56,15 +53,14 @@ class ContentsController < ApplicationController
   def create
     @content = Content.new(params[:content])
 
-    respond_to do |format|
-      if @content.save
-        format.html { redirect_to @content, notice: 'Content was successfully created.' }
-        format.json { render json: @content, status: :created, location: @content }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @content.errors, status: :unprocessable_entity }
+      if current_user
+        if @content.save
+          redirect_to user_root_path
+        else
+          format.html { redirect_to @content, notice: 'Content was successfully created.' }
+          format.json { render json: @content, status: :created, location: @content }
+        end
       end
-    end
   end
 
   # PUT /contents/1
@@ -72,26 +68,18 @@ class ContentsController < ApplicationController
   def update
     @content = Content.find(params[:id])
 
-    respond_to do |format|
+   
       if @content.update_attributes(params[:content])
-        format.html { redirect_to :controller => "users", :action => "index", notice: 'Content was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { redirect_to users_path}
+         redirect_to user_root_path
+    
       end
-    end
   end
 
-  # DELETE /contents/1
-  # DELETE /contents/1.json
+ 
   def destroy
     @content = Content.find(params[:id])
-    @content.destroy
-
-    respond_to do |format|
-      
-        format.html { redirect_to users_path}
-      
-    end
+    if @content.destroy
+      redirect_to user_root_path
+    end  
   end
 end

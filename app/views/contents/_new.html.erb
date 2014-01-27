@@ -4,7 +4,7 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-        <h4 class="modal-title" id="myModalLabel">All Content Is Subject to Approval. It may take 24 hours before you see it posted.</h4>
+        <p class="modal-title" id="myModalLabel">All Content Is Subject to Approval. <br/>It may take 24 hours before you see it posted.</p>
       </div>
       <div class="modal-body">
         <%= simple_form_for @content,:html => {:multipart => true} do |f| %>
@@ -15,7 +15,7 @@
                      <a><%= f.collection_select(:visit_id, Visit.all, :id, :location)%> </a>
                   </p>
                   
-                  <p>
+                  <p >
                     <span id='drop'>Title</span><br/>
                     <%= f.input_field :title %>
                   </p>
@@ -23,9 +23,9 @@
                     <span id='drop'>Name</span><br/>
                     <%= f.input_field :author %>
                   </p>
-                  <p>
+                  <p >
                     <span id='drop'><p style="margin-bottom:-5px;" id='pictext'>Please Select A Photo to Upload</p></span><br/>
-                    <p style="margin-left:190px;" id="phot"><%= f.file_field :photo %></p>
+                    <p  id="phot"><%= f.file_field :photo %></p>
                   </p>
                   <p id='infoz'>
                    <span id='drop'>Info</span><br/>

@@ -9,7 +9,7 @@ a<%= simple_form_for @content, :html => {:multipart => true} do |f| %>
           <%= f.input_field :approved %>
         </p><br/>
           <span id='drop'>Select Related Visit</span><br/>
-             <a class="medium button dropdown" style="background:none; border:none; margin-left:-20px"><%= f.collection_select(:visit_id, Visit.all, :id, :location)%> </a><br/>
+             <a class="medium button dropdown" style="background:none; border:none; margin-left:-20px"><%= f.collection_select(:visit_id, Visit.all, :id, :location)%> </a><br/><br/>
             <span id='drop'>Title</span><br/>
             <%= f.input_field :title %>
           </p><br/><br/>
@@ -19,7 +19,7 @@ a<%= simple_form_for @content, :html => {:multipart => true} do |f| %>
           </p>
           <p>
             <span id='drop'>Please Select A Photo to Upload</span><br/>
-            <%= f.file_field :photo %>
+           <span style=""> <%= f.file_field :photo %></span>
           </p>
           <p id='infoz'>
            <span id='drop'>Info</span><br/>

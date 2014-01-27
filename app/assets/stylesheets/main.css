@@ -207,9 +207,22 @@ a:after {
 	height:300px;
 }
 
+#g3 {
+	background: #f2f2f2;
+	
+	text-align: center;
+}
+
+#g3 img{
+	height:300px;
+}
+
+
 /* Dark Grey Wrap */
 #dg {
 	background: #e0e0e0;
+	margin-top:-15px;
+	min-height:500px;
 	padding-top: 70px;
 	padding-bottom: 70px;
 	text-align: center;
@@ -229,22 +242,24 @@ a:after {
 #f {
 	
 	background:#656561;
-	padding-top: 50px;
-	padding-bottom: 50px;
+	padding-top: 20px;
+	padding-bottom: 30px;
 	text-align: center
 }
 
 #f h3 {
 	color: white;	
+	font-size:21px;
 }
 
 #f p {
 	color: white;
+	font-size:14px;
 	text-align: center;	
 }
 
 #f i {
-	font-size: 26px;
+	font-size: 22px;
 	color: white;
 	padding-left: 10px;
 	padding-right: 10px;
