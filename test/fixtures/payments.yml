@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  amount: 1
+  token: MyString
+  identifier: MyString
+  payer_id: MyString
+  recurring: false
+  digital: false
+  popup: false
+  completed: false
+  canceled: false
+
+two:
+  amount: 1
+  token: MyString
+  identifier: MyString
+  payer_id: MyString
+  recurring: false
+  digital: false
+  popup: false
+  completed: false
+  canceled: false

@@ -13,7 +13,8 @@
 //= require jquery
 //= require jquery.ui.all
 //= require jquery_ujs
-
+//= require jquery.cookie
+//= require jquery.growl
 //= require_self
 
 //= require_tree .

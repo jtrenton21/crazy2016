@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Amount:</b>
+  <%= @payment.amount %>
+</p>
+
+<p>
+  <b>Token:</b>
+  <%= @payment.token %>
+</p>
+
+<p>
+  <b>Identifier:</b>
+  <%= @payment.identifier %>
+</p>
+
+<p>
+  <b>Payer:</b>
+  <%= @payment.payer_id %>
+</p>
+
+<p>
+  <b>Recurring:</b>
+  <%= @payment.recurring %>
+</p>
+
+<p>
+  <b>Digital:</b>
+  <%= @payment.digital %>
+</p>
+
+<p>
+  <b>Popup:</b>
+  <%= @payment.popup %>
+</p>
+
+<p>
+  <b>Completed:</b>
+  <%= @payment.completed %>
+</p>
+
+<p>
+  <b>Canceled:</b>
+  <%= @payment.canceled %>
+</p>
+
+
+<%= link_to 'Edit', edit_payment_path(@payment) %> |
+<%= link_to 'Back', payments_path %>

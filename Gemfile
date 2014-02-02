@@ -37,7 +37,7 @@ end
   gem 'hirb'
   gem 'simple_form'
   gem 'paperclip'
-  
+  gem 'paypal-express'
   gem 'geocoder'
   gem "meta_search"
   gem 'ransack'

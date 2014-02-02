@@ -36,6 +36,7 @@ GEM
       i18n (~> 0.6, >= 0.6.4)
       multi_json (~> 1.0)
     arel (3.0.3)
+    attr_required (0.0.5)
     bcrypt-ruby (3.0.1)
     bootstrap-sass (3.0.3.0)
       sass (~> 3.2)
@@ -106,6 +107,10 @@ GEM
       activesupport (>= 3.0.0)
       cocaine (~> 0.5.3)
       mime-types
+    paypal-express (0.5.5)
+      activesupport (>= 2.3)
+      attr_required (>= 0.0.5)
+      restclient_with_cert
     pg (0.17.1)
     polyamorous (0.6.4)
       activerecord (>= 3.0)
@@ -147,6 +152,8 @@ GEM
       json (~> 1.4)
     rest-client (1.6.7)
       mime-types (>= 1.16)
+    restclient_with_cert (0.0.8)
+      rest-client (>= 1.6)
     sass (3.2.14)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -198,6 +205,7 @@ DEPENDENCIES
   mini_magick!
   nokogiri
   paperclip
+  paypal-express
   pg
   rails (= 3.2.14)
   rails_12factor

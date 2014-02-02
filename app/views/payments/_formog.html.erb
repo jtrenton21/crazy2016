@@ -1,0 +1,53 @@
+<%= form_for(@payment) do |f| %>
+  <% if @payment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@payment.errors.count, "error") %> prohibited this payment from being saved:</h2>
+
+      <ul>
+      <% @payment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :amount %><br />
+    <%= f.number_field :amount %>
+  </div>
+  <div class="field">
+    <%= f.label :token %><br />
+    <%= f.text_field :token %>
+  </div>
+  <div class="field">
+    <%= f.label :identifier %><br />
+    <%= f.text_field :identifier %>
+  </div>
+  <div class="field">
+    <%= f.label :payer_id %><br />
+    <%= f.text_field :payer_id %>
+  </div>
+  <div class="field">
+    <%= f.label :recurring %><br />
+    <%= f.check_box :recurring %>
+  </div>
+  <div class="field">
+    <%= f.label :digital %><br />
+    <%= f.check_box :digital %>
+  </div>
+  <div class="field">
+    <%= f.label :popup %><br />
+    <%= f.check_box :popup %>
+  </div>
+  <div class="field">
+    <%= f.label :completed %><br />
+    <%= f.check_box :completed %>
+  </div>
+  <div class="field">
+    <%= f.label :canceled %><br />
+    <%= f.check_box :canceled %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
