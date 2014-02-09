@@ -1,0 +1,42 @@
+<div style="min-height:500px;" id="dg ">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4"></div>
+      <div class="col-sm-4">
+        <h2>Donations</h2><br/>
+      
+        <table id="line_items">
+          <tr>
+            <th></th>
+            <!-- <th class="price">Amount</th> -->
+          </tr>
+          <% for line_item in @cart.line_items %>
+            <tr class="<%= cycle :odd, :even %>">
+              <td><b>Donation for:</b><%=h line_item.product.name %></td>
+               <td class="qty"><%= line_item.quantity %></td> 
+              <td class="price"><%= number_to_currency(line_item.unit_price) %></td> 
+             <td class="price"><%= number_to_currency(line_item.full_price) %></td> 
+            </tr>
+            <tr></tr>
+          <% end %>
+          <tr>
+           <!--  <td></td> -->
+            <td >
+              <b>Total Donation:</b> <%= number_to_currency @cart.total_price %>
+            </td>
+            <%= link_to "Remove ", line_item, :confirm => 'Are you sure?', :method => :delete %>
+          </tr><br/>
+        </table>
+         <p style="margin-top:10px;">
+          <%= link_to image_tag("https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif"), express_orders_path %>
+        </p>
+
+        <p>
+          <%= link_to "Back to Donations", products_path %> 
+          <%= link_to "Submit Donation", new_order_path %>
+        </p>
+      </div>
+      <div class="col-sm-4"></div>
+    </div>
+  </div>
+</div>

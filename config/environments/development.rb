@@ -4,6 +4,18 @@ Elvis::Application.configure do
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
+  
+  config.after_initialize do
+    ActiveMerchant::Billing::Base.mode = :test
+    paypal_options = {
+    :login => "admin_api1.crazyaboutelvis.com",
+    :password => "1391453078",
+    :signature => "AFcWxV21C7fd0v3bYYYRCpSSRl31ABlXBa7WjSuI5c6TcfBjcy-jrSUe"
+  }
+  ::STANDARD_GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(paypal_options)
+  ::EXPRESS_GATEWAY = ActiveMerchant::Billing::PaypalExpressGateway.new(paypal_options)
+  end
+
   config.cache_classes = false
 
   # Log error messages when you accidentally call methods on nil.

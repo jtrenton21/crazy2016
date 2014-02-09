@@ -1,17 +1,27 @@
 Elvis::Application.routes.draw do
   
-  resources :payments, only: [:show, :create, :destroy] do
-    collection do
-      get :success
-      get :cancel
-      post :notify
-    end
+
+  resources :order_transactions
+
+
+  # resources :orders 
+    
+
+  resources :orders do
+    get 'express', :on => :collection
   end
 
-  resources :tops
+  resources :line_items
+
+  resources :carts
+
+  get 'cart' => 'carts#show', :as => 'current_cart'
+
+  # match 'cart' => 'carts#show', :via => :get, :as => :current_cart, :id => 'current'
+
+  resources :products
+  resources :categories
   resources :slides
-
-
   resources :eventdays
   resources :articles
   resources :visits
@@ -40,7 +50,7 @@ Elvis::Application.routes.draw do
   match '/about',       to: 'static_pages#about',       via: 'get'
   match '/eventinfo',   to: 'static_pages#eventinfo',   via: 'get'
   match '/partner',     to: 'static_pages#partner',     via: 'get'
-  
+  match '/donations',   to: 'products#index',          via: 'get'
   match '/signup',      to: 'users#new',                via: 'get'
   match '/admin',       to: 'users#admin',              via: 'get'
   match '/dashboard',   to: 'users#index',               as: "user_root"            

@@ -1,6 +1,16 @@
 Elvis::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
 
+  config.after_initialize do
+    ActiveMerchant::Billing::Base.mode = :test
+    paypal_options = {
+    :login => "admin_api1.crazyaboutelvis.com",
+    :password => "1391453078",
+    :signature => "AFcWxV21C7fd0v3bYYYRCpSSRl31ABlXBa7WjSuI5c6TcfBjcy-jrSUe"
+  }
+  ::STANDARD_GATEWAY = ActiveMerchant::Billing::PaypalGateway.new(paypal_options)
+  ::EXPRESS_GATEWAY = ActiveMerchant::Billing::PaypalExpressGateway.new(paypal_options)
+  end
   # Code is not reloaded between requests
   config.cache_classes = true
 

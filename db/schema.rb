@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140201205305) do
+ActiveRecord::Schema.define(:version => 20140203200111) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -25,6 +25,12 @@ ActiveRecord::Schema.define(:version => 20140201205305) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+  end
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "contents", :force => true do |t|
@@ -69,28 +75,6 @@ ActiveRecord::Schema.define(:version => 20140201205305) do
   end
 
   add_index "events", ["eventday_id"], :name => "index_events_on_eventday_id"
-
-  create_table "link_preview_parsers", :force => true do |t|
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "migrations", :force => true do |t|
-  end
-
-  create_table "payments", :force => true do |t|
-    t.integer  "amount",     :default => 1
-    t.string   "token"
-    t.string   "identifier"
-    t.string   "payer_id"
-    t.boolean  "recurring",  :default => false
-    t.boolean  "digital",    :default => true
-    t.boolean  "popup",      :default => false
-    t.boolean  "completed",  :default => false
-    t.boolean  "canceled",   :default => false
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
-  end
 
   create_table "slides", :force => true do |t|
     t.string   "title"

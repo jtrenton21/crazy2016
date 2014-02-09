@@ -10,8 +10,9 @@ class UsersController < ApplicationController
 		@events= Event.all
 		@slides = Slide.all
 		@slide = Slide.new
-		
-
+		@categories = Category.find(:all)
+		@products = Product.all
+		@product = Product.new
 	end
 
 	def new
