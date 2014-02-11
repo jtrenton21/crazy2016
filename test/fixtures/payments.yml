@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  amount: 1
+  token: MyString
+  indentifier: MyString
+  payer_id: MyString
+
+two:
+  amount: 1
+  token: MyString
+  indentifier: MyString
+  payer_id: MyString

@@ -1,21 +1,22 @@
 Elvis::Application.routes.draw do
   
 
-  resources :order_transactions
+  
+
+
+  resources :payments
 
 
   # resources :orders 
     
 
-  resources :orders do
-    get 'express', :on => :collection
-  end
+  # resources :orders do
+  #   get 'express', :on => :collection
+  # end
 
-  resources :line_items
+ 
 
-  resources :carts
-
-  get 'cart' => 'carts#show', :as => 'current_cart'
+  # get 'cart' => 'carts#show', :as => 'current_cart'
 
   # match 'cart' => 'carts#show', :via => :get, :as => :current_cart, :id => 'current'
 

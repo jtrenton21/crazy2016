@@ -1,0 +1,14 @@
+development: &sandbox # change to your own
+  username: admin_api1.crazyaboutelvis.com
+  password: 1391453078
+  signature: AFcWxV21C7fd0v3bYYYRCpSSRl31ABlXBa7WjSuI5c6TcfBjcy-jrSUe
+  sandbox: true
+
+test:
+  <<: *sandbox
+
+production: &production
+  username: SET_YOUR_OWN
+  password: SET_YOUR_OWN
+  signature: SET_YOUR_OWN
+  sandbox: false

@@ -39,7 +39,7 @@ end
   gem 'paperclip'
   gem 'paypal-express'
   
-  gem 'activemerchant'
+ 
   gem 'geocoder'
   gem "meta_search"
   gem 'ransack'
