@@ -9,10 +9,10 @@
                 <%= image_tag content.photo.url(:photo) %>
                 <% unless content.visit.nil? %>
                   <p id='visitz2'>
-                    <span class="galvisit"><%= content.visit.location %> <%= content.visit.vdate  %></span><br/>
+                    <span class="galvisit"><%= content.visit.location %> <br/> <%= content.visit.vdate  %></span><br/>
                   </p>
                 <% end %>
-                <p id='galtitle'><span class='aftite'><%=content.title%></span></p><br/>
+                <p style=""id='galtitle'><span class='aftite'><%=content.title%></span></p><br/>
                 <p id='galauthor'><span class='tite'>Submitted By:</span><span class='aftite'><%= content.author %></span></p><br/>
               </a>
             </li>

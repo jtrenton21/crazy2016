@@ -21,7 +21,7 @@
                     <% @events.each do |event| %>
                       <%if eventday.id == event.eventday_id%>
                         <li>
-                          <a data-toggle="modal" data-target="#myModalq<%= x %>" href="#myModalq<%= x %>"><span class="textp"><%=event.name%><br/><%=event.start_time.strftime("%I:%M %P")%></span>
+                          <a data-toggle="modal" data-target="#myModalq<%= x %>" href="#myModalq<%= x %>"><span class="textp"><%=event.name%><br/><%=event.start_time%></span>
                           <a/>
                         </li>    
                         <div class="modal fade" id="myModalq<%= x %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -39,7 +39,7 @@
                                   </p>
                                   <p>
                                     <b class='eventb'>Starts At:</b>
-                                    <span class='textp'> <%= event.start_time.strftime("%I:%M %P")%> </span>
+                                    <span class='textp'> <%= event.start_time%> </span>
                                   </p>
                                   <p>
                                    <b class='eventb'>Location:</b>

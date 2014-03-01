@@ -33,14 +33,14 @@
 			        <div class="navbar-header">
 			          <button style="margin-top:20px;"type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
 			            <span class="sr-only">Toggle navigation</span>
-			            <span class="">MENU</span>
+			            <span class="icon-bar"></span>
 			            <span class="icon-bar"></span>
 			            <span class="icon-bar"></span>
 			            <span class="icon-bar"></span>
 			          </button>
 			          <a class="navbar-brand" href="#"><span id="navpic"><%= link_to image_tag("elogo.png", alt:"elvislogo"),'http://www.crazyaboutelvis.com/'%></span></a>
 			        </div>
-			        <div class="navbar-collapse">
+			        <div id="mynav" class="navbar-collapse collapse">
 			            <ul id="nav2" class="nav navbar-nav">
 				            <li><%= link_to "HOME",  home_path %></li>
 							<li><%= link_to "PHOTOS", gallery_path %></li>
@@ -56,9 +56,10 @@
 			</div><!--  END HEADER 2 -->
 		
     <script>
-    $(document).ready(function() {
-  		$('.navbar-collapse').collapse('hide');
-	});
+	    function myFunction()
+		{
+			$('.navbar-nav').collapse('hide');
+		}
     </script>
 			
 	

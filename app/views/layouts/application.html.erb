@@ -24,7 +24,7 @@
   <%= javascript_include_tag "application" , "main" %>
   <%= csrf_meta_tags %>
   </head>
-  <body >
+  <body onload="myFunction()" >
       <%= render 'layouts/header' %>
         <% flash.each do |key, value| %>
           <%= content_tag(:div, value, class: "alert alert-#{key}") %>
@@ -38,11 +38,7 @@
           <%= link_to "Log Out", session_path("current"), method: "delete" %>
       <%end%>
     
-<script>
-    $(document).ready(function() {
-      $('.navbar-collapse').collapse('hide');
-  });
-    </script>
+
   
 
 
