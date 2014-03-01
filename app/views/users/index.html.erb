@@ -17,7 +17,8 @@ $('#myTab a').click(function (e) {
           <li><a href="#photos" data-toggle="tab">Photos</a></li>
           <li><a href="#events" data-toggle="tab">Events</a></li>
           <li><a href="#news" data-toggle="tab">News</a></li>
-          <li><a href="#products" data-toggle="tab">Site Products</a></li>
+          <li><a href="#donations" data-toggle="tab">Donations</a></li>
+          <li><a href="#tickets" data-toggle="tab">Tickets</a></li>
         </ul>
         <div class="tab-content">
           <div class="tab-pane active" id="users"><%= render 'adminusers' %></div>
@@ -25,7 +26,8 @@ $('#myTab a').click(function (e) {
           <div class="tab-pane" id="photos"><%= render 'photo_gallery' %></div>
           <div class="tab-pane" id="events"><%= render 'events' %></div>
           <div class="tab-pane" id="news"><%= render 'news_articles' %></div>
-          <div class="tab-pane" id="products"><%= render 'products' %></div>
+          <div class="tab-pane" id="donations"><%= render 'donations' %></div>
+          <div class="tab-pane" id="tickets"><%= render 'tickets' %></div>
         </div>
       </div>
     </div>

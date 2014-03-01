@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140209194125) do
+ActiveRecord::Schema.define(:version => 20140228232044) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -63,7 +63,7 @@ ActiveRecord::Schema.define(:version => 20140209194125) do
   create_table "events", :force => true do |t|
     t.string   "name"
     t.text     "einfo"
-    t.time     "start_time"
+    t.string   "start_time"
     t.string   "address"
     t.date     "weekday"
     t.float    "longitude"
@@ -107,6 +107,19 @@ ActiveRecord::Schema.define(:version => 20140209194125) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
   end
+
+  create_table "tickets", :force => true do |t|
+    t.string   "event"
+    t.string   "date"
+    t.string   "time"
+    t.decimal  "price"
+    t.string   "description"
+    t.integer  "event_id"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
+  add_index "tickets", ["event_id"], :name => "index_tickets_on_event_id"
 
   create_table "users", :force => true do |t|
     t.string   "email"

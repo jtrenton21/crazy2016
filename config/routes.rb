@@ -1,25 +1,16 @@
 Elvis::Application.routes.draw do
   
-
-  
-
-
-  resources :payments
-
-
   # resources :orders 
     
-
   # resources :orders do
   #   get 'express', :on => :collection
   # end
 
- 
-
   # get 'cart' => 'carts#show', :as => 'current_cart'
 
   # match 'cart' => 'carts#show', :via => :get, :as => :current_cart, :id => 'current'
-
+  resources :tickets
+  resources :payments
   resources :products
   resources :categories
   resources :slides
@@ -46,7 +37,7 @@ Elvis::Application.routes.draw do
   match '/merchandise', to: 'static_pages#merchandise', via: 'get'
   match '/contact',     to: 'static_pages#contact',     via: 'get'
   match '/news',        to: 'articles#index',           via: 'get'
-  match '/ticket',      to: 'static_pages#ticket',      via: 'get'
+  
   match '/home',        to: 'static_pages#home',        via: 'get'
   match '/about',       to: 'static_pages#about',       via: 'get'
   match '/eventinfo',   to: 'static_pages#eventinfo',   via: 'get'

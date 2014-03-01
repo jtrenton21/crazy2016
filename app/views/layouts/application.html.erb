@@ -8,8 +8,8 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="public/favicon.ico">
     <title>Crazy About Elvis</title>
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
-    <link href='http://fonts.googleapis.com/css?family=Lora:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lora:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
    
    <script src="http://cdn.jsdelivr.net/bootstrap/3.0.3/js/collapse.js"></script>
    <script src="http://cdn.jsdelivr.net/bootstrap/3.0.3/js/transition.js"></script>
@@ -38,7 +38,11 @@
           <%= link_to "Log Out", session_path("current"), method: "delete" %>
       <%end%>
     
-
+<script>
+    $(document).ready(function() {
+      $('.navbar-collapse').collapse('hide');
+  });
+    </script>
   
 
 

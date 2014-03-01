@@ -5,7 +5,9 @@
         <% @articles.each do |article| %>
           <li class="newsy">
             <span id="newspic"><%= image_tag article.photo.url(:photo) %></span>
+              <!-- <iframe src= "<%=article.link %>"></iframe> -->
               <span id='newsit'><%= article.title %></span><br/>
+              
               <p style="margin-top:4px;" id='anews'><%= article.author %></p>
               <p id='dnews'><%= article.published %></p>
               <button style="border-radius:7px; color:#AE1A26; margin-bottom:5px; margin-top:-10px;"><%=link_to "Click To Read", article.link, :class => "btn", :id => "newsbut", :target => "_blank" %></button>

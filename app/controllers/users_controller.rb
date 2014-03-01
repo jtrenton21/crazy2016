@@ -13,6 +13,9 @@ class UsersController < ApplicationController
 		@categories = Category.find(:all)
 		@products = Product.all
 		@product = Product.new
+		@tickets = Ticket.all
+		@ticket = Ticket.new
+
 	end
 
 	def new

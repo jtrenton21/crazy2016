@@ -1,0 +1,30 @@
+<div class="contents"> 
+    <div class="container">
+        <div id="w">
+        <h3>Tickets</h3><br/>
+       <%= link_to 'Create New Ticket', new_ticket_path %>
+          <table id="newsart" class="table table-bordered">
+            <tr>
+              <th>Event</th>
+              <th>Price</th>
+              <th>Date</th>
+              <th>Description</th>
+              <th>Review</th>
+              <th>Edit</th>
+              <th>Remove</th>
+            </tr>
+            <% @tickets.each do |ticket| %>
+              <tr>
+                <td><%= ticket.event.name %></td>
+                <td><%= number_to_currency(ticket.price) %></td>
+                <td><%= ticket.event.eventday.month %> <%= ticket.event.eventday.date %></td>
+                <td><%= ticket.event.einfo %></td>
+                <td><%= link_to 'View', ticket %></td> 
+                <td><%= link_to 'Edit', edit_ticket_path(ticket) %></td>
+                <td><%= link_to 'Destroy', ticket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <%end%>  
+          </table>
+        </div>
+      </div>
+    </div>

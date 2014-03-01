@@ -19,8 +19,9 @@
                 <tr>
                   
                     <td><%= event.name%></td>
-                    <td><%=event.start_time.strftime("%H:%M %P")%></td>
+                    
                     <td><%= event.eventday.day %> <%= event.eventday.month %>  <%= event.eventday.date %>,<%= event.eventday.year %> </td>
+                    <td><%=event.start_time%></td>
                     <td><%= event.address%></td>
                     <td><%= link_to 'Show', event %></td>
                     <td><%= link_to 'Edit', edit_event_path(event) %></td>

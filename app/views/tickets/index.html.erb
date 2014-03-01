@@ -1,0 +1,26 @@
+<div style="padding-top:30px; min-height:500px;" id="dg ">
+    <div class="container">
+
+        <% @tickets.each do |ticket| %>
+            <div style="text-align:center;" id="ticketz" class="col-lg-4 team">
+                <span style="height:50px; width:50px;" class="img-circle"> <%= image_tag 'ticket.png' %></span>
+                  <h5 style="margin-bottom:-1px;"><%= ticket.event.name %></h5>
+                  <!-- <h5><i></i></h5> -->
+                  <p style="margin-bottom:-1px; margin-top:2px;" id="tixdate"><%= ticket.event.eventday.month %> <%= ticket.event.eventday.date %></p>
+                  <p style=" margin-bottom:-1px; margin-top:3px;"><%= ticket.event.start_time %></p>
+                  <p style="margin-top:2px; margin-bottom:-1px;"><%= number_to_currency(ticket.price)  %></p>
+                  <p><%= ticket.event.einfo %></p>
+                   
+                  <p>
+                    <button class="btn btn-sm">Get Tickets</button>
+
+                  </p>
+                </div>
+
+        <%end%>
+    </div>
+</div>
+  
+
+
+

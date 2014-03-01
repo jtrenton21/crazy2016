@@ -1,0 +1,36 @@
+<div class="contents"> 
+    <div class="container">
+        <div id="w">
+        <h3>Donations</h3><br/>
+        
+       <%= link_to 'ADD NEW DONATION', new_product_path %>
+          <table id="newsart" class="table table-bordered">
+            <tr>
+              <th>Category</th>
+              <th>Title</th>
+              <th>Amount</th>
+              <th>View</th>
+              <th>Edit</th>
+              <th>Remove</th>
+            </tr>
+            <% @products.each do |product| %>
+                <tr>
+                    <td><%=product.category.name%></td>
+                    <td><%= product.name %></td>
+                    <td><%= number_to_currency(product.price) %></td>
+                    <td><%= link_to 'View', product %></td>
+                    <td><%= link_to 'Edit', edit_product_path(product) %></td>
+                    <td><%= link_to 'Remove', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+              <%end%>  
+            </table>
+          
+        </div>
+      </div>
+    </div>
+               
+        
+
+
+
+
