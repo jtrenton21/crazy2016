@@ -1,0 +1,12 @@
+development:
+  paypal_url: "https://www.sandbox.paypal.com/cgi-bin/webscr"
+  paypal_email: "tedzeppelin-facilitator@live.com"
+  cert_id: M34AEZYY2KCF6
+
+production:
+  paypal_url: "https://www.sandbox.paypal.com/cgi-bin/webscr"
+  paypal_email: "tedzeppelin-facilitator@live.com"
+  cert_id: M34AEZYY2KCF6
+
+
+

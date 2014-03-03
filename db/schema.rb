@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140228232044) do
+ActiveRecord::Schema.define(:version => 20140302213032) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -75,6 +75,17 @@ ActiveRecord::Schema.define(:version => 20140228232044) do
   end
 
   add_index "events", ["eventday_id"], :name => "index_events_on_eventday_id"
+
+  create_table "orders", :force => true do |t|
+    t.integer  "quantity"
+    t.decimal  "amount",     :precision => 10, :scale => 0
+    t.string   "status"
+    t.integer  "ticket_id"
+    t.datetime "created_at",                                :null => false
+    t.datetime "updated_at",                                :null => false
+  end
+
+  add_index "orders", ["ticket_id"], :name => "index_orders_on_ticket_id"
 
   create_table "payments", :force => true do |t|
     t.integer  "amount"

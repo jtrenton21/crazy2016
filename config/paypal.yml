@@ -1,14 +1,9 @@
-development: &sandbox # change to your own
-  username: admin_api1.crazyaboutelvis.com
-  password: 1391453078
-  signature: AFcWxV21C7fd0v3bYYYRCpSSRl31ABlXBa7WjSuI5c6TcfBjcy-jrSUe
-  sandbox: true
+development:
+  paypal_url: "https://www.sandbox.paypal.com/cgi-bin/webscr"
+  paypal_email: "admin_api1.crazyaboutelvis.com"
+  cert_id: M34AEZYY2KCF6
 
-test:
-  <<: *sandbox
-
-production: &production
-  username: SET_YOUR_OWN
-  password: SET_YOUR_OWN
-  signature: SET_YOUR_OWN
-  sandbox: false
+production:
+  paypal_url: "https://www.sandbox.paypal.com/cgi-bin/webscr"
+  paypal_email: "admin_api1.crazyaboutelvis.com"
+  cert_id: M34AEZYY2KCF6

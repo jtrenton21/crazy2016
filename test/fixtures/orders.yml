@@ -1,17 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
 one:
-  cart: 
-  ip_address: MyString
-  first_name: MyString
-  last_name: MyString
-  card_type: MyString
-  card_expires_on: 2014-02-03
+  quantity: 1
+  amount: 9.99
+  status: MyString
+  ticket: 
 
 two:
-  cart: 
-  ip_address: MyString
-  first_name: MyString
-  last_name: MyString
-  card_type: MyString
-  card_expires_on: 2014-02-03
+  quantity: 1
+  amount: 9.99
+  status: MyString
+  ticket: 

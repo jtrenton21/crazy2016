@@ -3,7 +3,7 @@ class TicketsController < ApplicationController
   # GET /tickets.json
   def index
     @tickets = Ticket.all
-
+    flash[:notice] = "Your Transaction is #{params[:st]} for amount of $#{params[:amt]}. Thank You for shopping." if params[:st]
    
   end
 
@@ -58,5 +58,16 @@ class TicketsController < ApplicationController
     @ticket.destroy
     redirect_to user_root_path
     
+  end
+  def notification
+    #handle for old deals.
+    if params[:item_number1] && !params[:item_number1].empty?
+      #paypal sends an IPN even when the transaction is voided.
+      if params[:payment_status] != 'Voided'
+        @product = Product.find(params[:item_number1].to_i) rescue nil
+        @product.orders.build(:quantity => 1, :amount => params[:mc_gross_1], :status => params[:payment_status]).save unless @product.nil?
+      end
+    end
+    render :nothing => true
   end
 end
