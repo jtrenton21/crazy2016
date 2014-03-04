@@ -1,0 +1,21 @@
+<div class="contents"> 
+    <div class="container">
+        <div style="background:#f2f2f2; min-height:400px;" id="dg">
+            <div class ="row centered">
+            <h1 id="partners" class="red">PARTNERS</h1><br/>
+            <%#= link_to 'Add New Partner', new_partner_path %>
+            <% @partners.each do |partner| %>
+              <div class="col-sm-3">
+               
+                <p id="partphoto"><%= image_tag partner.photo.url(:photo) %></p>
+                <p id="partname"><%= partner.name %></p>
+                <p id ="partadd"><%= partner.address %></p>
+                <p id ="partcsz"><%= partner.city %>,
+                <%= partner.state %>
+                <%= partner.zip %></p>
+                <p id ="partphone"><%= partner.phone %></p> 
+               </div>
+            <% end %>
+        </div>
+    </div>
+</div>

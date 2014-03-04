@@ -1,5 +1,8 @@
 Elvis::Application.routes.draw do
   
+  resources :partners
+
+
   resources :orders
 
 
@@ -48,7 +51,7 @@ Elvis::Application.routes.draw do
   match '/home',        to: 'static_pages#home',        via: 'get'
   match '/about',       to: 'static_pages#about',       via: 'get'
   match '/eventinfo',   to: 'static_pages#eventinfo',   via: 'get'
-  match '/partner',     to: 'static_pages#partner',     via: 'get'
+  # match '/partner',     to: 'static_pages#partner',     via: 'get'
   match '/donations',   to: 'products#index',          via: 'get'
   match '/signup',      to: 'users#new',                via: 'get'
   match '/admin',       to: 'users#admin',              via: 'get'

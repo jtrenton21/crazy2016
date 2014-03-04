@@ -46,6 +46,7 @@ font-family: 'Lora', serif;
 a {
 
   color: #AE1A26;
+  text-decoration:none;
 }
 
 #clickit{
@@ -768,11 +769,15 @@ li.bx-clone{
     opacity: 1;
 }
 }
+.newsy{
 
+  text-align:center;
+}
 .newsy img{
-
-  height:165px;
-    width:176px;
+  border-radius:175px;
+  height:175px;
+  margin:0 auto;
+  width:175px;
 }
 
 #newsit{
@@ -783,6 +788,7 @@ li.bx-clone{
 #newspic img{
 
   border:2px solid grey;
+  
 }
 
 #navpic img{
@@ -840,4 +846,51 @@ color:#AE1A26;
 
   max-height:156px;
   max-width: 156px;
+}
+
+/*Partners*/
+
+#partners{
+
+  margin-bottom:20px;
+  margin-top:-15px;
+}
+
+#partphoto img{
+
+  border-radius:80px;
+
+  height:80px;
+  width:80px;
+
+}
+
+#partname{
+
+  font-weight:bold;
+  margin-bottom:-1px;
+}
+
+#partadd{
+font-size:12px;
+margin-bottom:-7px;
+  
+}
+
+#partcsz{
+font-size:12px;
+ margin-bottom:-7px; 
+}
+
+#partphone{
+font-size:12px;
+  
+}
+
+/*John Wilkinson*/
+
+#johnw{
+
+  margin-top:-75px;
+  margin-bottom:10px;
 }

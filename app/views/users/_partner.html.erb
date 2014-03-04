@@ -1,0 +1,37 @@
+<div class="contents"> 
+    <div class="container">
+        <div id="w">
+            <h1>Partners</h1>
+            <%= link_to 'Add New Partner', new_partner_path %>
+            <table id="newsart" class="table table-bordered">  <tr>
+                <th>Name</th>
+                <th>Logo</th>
+                <th>Address</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Zip</th>
+                <th>Phone</th>
+                <th>View</th>
+                <th>Edit</th>
+                <th>Delete</th>
+              </tr>
+
+            <% @partners.each do |partner| %>
+              <tr>
+                <td><%= partner.name %></td>
+                <td id="newsphoto"><%= image_tag partner.photo.url(:photo) %></td>
+                <td><%= partner.address %></td>
+                <td><%= partner.city %></td>
+                <td><%= partner.state %></td>
+                <td><%= partner.zip %></td>
+                <td><%= partner.phone %></td> 
+                <td><%= link_to 'View', partner %></td>
+                <td><%= link_to 'Edit', edit_partner_path(partner) %></td>
+                <td><%= link_to 'Destroy', partner, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <% end %>
+            </table>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,56 @@
+<div class="contents"> 
+    <div class="container">
+        <div id="w">
+            <div class ="row centered">
+              <h1>New Partner</h1>
+              <%= link_to 'Back', user_root_path %>
+            <%= simple_form_for(@partner) do |f| %>
+              <% if @partner.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(@partner.errors.count, "error") %> prohibited this partner from being saved:</h2>
+
+                  <ul>
+                  <% @partner.errors.full_messages.each do |msg| %>
+                    <li><%= msg %></li>
+                  <% end %>
+                  </ul>
+                </div>
+              <% end %>
+
+              <div class="field">
+                <%= f.label :name %><br />
+                <%= f.text_field :name %>
+              </div>
+              <div class="field">
+                <%= f.label :address %><br />
+                <%= f.text_field :address %>
+              </div>
+              <div class="field">
+                <%= f.label :city %><br />
+                <%= f.text_field :city %>
+              </div>
+              <div class="field">
+                <%= f.label :state %><br />
+                <%= f.text_field :state %>
+              </div>
+              <div class="field">
+                <%= f.label :zip %><br />
+                <%= f.text_field :zip %>
+              </div>
+              <div class="field">
+                <%= f.label :phone %><br />
+                <%= f.text_field :phone %>
+              </div>
+              <div class="field">
+                
+                <span id='drop'><p style="margin-bottom:-5px;" id='pictext'>Please Select A Photo to Upload</p></span><br/>
+                <p style="margin-left:450px;" id="newspe"><%= f.file_field :photo %></p>
+              </div>
+              <div class="actions">
+                <%= f.submit %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>

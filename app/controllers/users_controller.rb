@@ -15,6 +15,8 @@ class UsersController < ApplicationController
 		@product = Product.new
 		@tickets = Ticket.all
 		@ticket = Ticket.new
+		@partners = Partner.all
+		@partner = Partner.new
 
 	end
 
