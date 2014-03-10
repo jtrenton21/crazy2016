@@ -1,47 +1,17 @@
 class Payment < ActiveRecord::Base
-  attr_accessible :amount, :indentifier, :payer_id, :token, :products_attributes
-  has_many :products
-
-  validates :amount, presence: true
-  # validates :identifier, uniqueness: true
+ belongs_to :order_cart
+  serialize :params
+  after_create :mark_order_cart_as_purchased
   
-
-  def details
-    
-      client.details(self.token)
-    end
-  
-
-  attr_reader :redirect_uri
-  
-  def setup!(return_url, cancel_url)
-    response = client.setup(
-      payment_request,
-      return_url,
-      cancel_url,
-      pay_on_paypal: true,
-      
-    )
-    self.token = response.token
-    self.save!
-    @redirect_uri = response.redirect_uri
-    
-    self
-  end
-
- 
   private
-
-  def client
-    Paypal::Express::Request.new PAYPAL_CONFIG
-  end
-
-  DESCRIPTION = {
-    item: 'Donations',
-    
-  }
-
   
-
+  def mark_order_cart_as_purchased
+    if status == "Completed" && params[:secret] == APP_CONFIG[:paypal_secret] &&
+        params[:receiver_email] == APP_CONFIG[:paypal_email] &&
+        params[:mc_gross] == cart.total_price.to_s && params[:mc_currency] == "USD"
+      order_cart.update_attribute(:purchased_at, Time.now)
+    end
+  end
+end
   
 end

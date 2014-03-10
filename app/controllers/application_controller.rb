@@ -14,6 +14,18 @@ class ApplicationController < ActionController::Base
     @current_cart
   end
 
+  def current_order_cart
+    if session[:order_cart_id]
+      @current_order_cart ||= OrderCart.find(session[:order_cart_id])
+      session[:order_cart_id] = nil if @current_order_cart.purchased_at
+    end
+    if session[:order_cart_id].nil?
+      @current_order_cart = OrderCart.create!
+      session[:order_cart_id] = @current_order_cart.id
+    end
+    @current_order_cart
+  end
+
   private
 
 	def current_user

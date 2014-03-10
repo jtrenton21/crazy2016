@@ -1,5 +1,8 @@
 Elvis::Application.routes.draw do
   
+  resources :order_carts
+
+
   resources :partners
 
 
@@ -12,7 +15,7 @@ Elvis::Application.routes.draw do
   #   get 'express', :on => :collection
   # end
 
-  # get 'cart' => 'carts#show', :as => 'current_cart'
+  get 'order_cart' => 'order_carts#show', :as => 'current_order_cart'
 
   # match 'cart' => 'carts#show', :via => :get, :as => :current_cart, :id => 'current'
   resources :tickets do 

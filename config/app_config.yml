@@ -1,0 +1,17 @@
+development:
+  paypal_url: "https://www.sandbox.paypal.com/cgi-bin/webscr"
+  paypal_email: "tedzeppelin-facilitator@live.com"
+  paypal_cert_id: QT5QKMU6DQR8L
+  paypal_secret: supersecret  
+
+test:
+  paypal_email: test@example.com
+  paypal_secret: testsecret
+  paypal_cert_id: 123456789
+  paypal_url: testpaypalurl
+
+production:
+  paypal_url: "https://www.sandbox.paypal.com/cgi-bin/webscr"
+  paypal_email: "tedzeppelin-facilitator@live.com"
+  paypal_cert_id: QT5QKMU6DQR8L
+  paypal_secret: elvissecret

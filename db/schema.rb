@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140303214615) do
+ActiveRecord::Schema.define(:version => 20140310023458) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -76,13 +76,20 @@ ActiveRecord::Schema.define(:version => 20140303214615) do
 
   add_index "events", ["eventday_id"], :name => "index_events_on_eventday_id"
 
+  create_table "order_carts", :force => true do |t|
+    t.datetime "purchased_at"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
   create_table "orders", :force => true do |t|
     t.integer  "quantity"
-    t.decimal  "amount",     :precision => 10, :scale => 0
+    t.decimal  "amount",        :precision => 10, :scale => 0
     t.string   "status"
     t.integer  "ticket_id"
-    t.datetime "created_at",                                :null => false
-    t.datetime "updated_at",                                :null => false
+    t.datetime "created_at",                                   :null => false
+    t.datetime "updated_at",                                   :null => false
+    t.integer  "order_cart_id"
   end
 
   add_index "orders", ["ticket_id"], :name => "index_orders_on_ticket_id"
@@ -108,8 +115,9 @@ ActiveRecord::Schema.define(:version => 20140303214615) do
     t.string   "token"
     t.string   "indentifier"
     t.string   "payer_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",    :null => false
+    t.datetime "updated_at",    :null => false
+    t.integer  "order_cart_id"
   end
 
   create_table "products", :force => true do |t|
