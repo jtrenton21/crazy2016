@@ -1,0 +1,44 @@
+<div class="panel-group" id="accordion">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h6 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+            <span style="font-size:18px;" class="red">EVENT SCHEDULE</span><br/>
+            <span style="font-size:14px;" class="red">Click to View</span><br/>
+        </a>
+      </h6>
+    </div>
+    <div id="collapseOne" class="accordion-body collapse">
+      <div class="panel-body">
+        <h3>Events Calendar</h3><br/>
+       <%= link_to 'ADD NEW EVENT', new_event_path %>
+          <table id="newsart" class="table table-bordered">
+            <tr>
+              
+              <th>Event Name</th>
+              <th>Date</th>
+              <th>Start Time</th>
+              <th>Adddress</th>
+              <th>Show</th>
+              <th>Edit</th>
+              <th>Remove</th>
+            </tr>
+            <% @events.each do |event| %>
+              
+                <tr>
+                  
+                    <td><%= event.name%></td>
+                    
+                    <td><%= event.eventday.day %> <%= event.eventday.month %>  <%= event.eventday.date %>,<%= event.eventday.year %> </td>
+                    <td><%=event.start_time%></td>
+                    <td><%= event.address%></td>
+                    <td><%= link_to 'Show', event %></td>
+                    <td><%= link_to 'Edit', edit_event_path(event) %></td>
+                    <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+              <%end%>  
+            </table>
+      </div>
+    </div>
+  </div>
+</div>

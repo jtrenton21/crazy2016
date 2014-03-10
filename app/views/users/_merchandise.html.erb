@@ -1,0 +1,40 @@
+<div class="panel-group" id="accordion">
+  <div class="panel ">
+    <div class="panel-heading">
+      <h6 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+            <span style="font-size:18px;" class="red">MERCHANDISE</span><br/>
+            <span style="font-size:14px;" class="red">Click to View</span><br/>
+        </a>
+      </h6>
+    </div>
+    <div id="collapseThree" class="accordion-body collapse">
+      <div class="panel-body">
+        <%= link_to 'ADD NEW MERCHANDISE', new_product_path %>
+          <table id="newsart" class="table table-bordered">
+            <tr>
+              <th>Category</th>
+              <th>Title</th>
+              <th>Amount</th>
+              <th>View</th>
+              <th>Edit</th>
+              <th>Remove</th>
+            </tr>
+            <% @products.each do |product| %>
+                <tr>
+                   
+                    <td><%=product.category.name%></td>
+                  
+                    <td><%= product.name %></td>
+                    <td><%= number_to_currency(product.price) %></td>
+                    <td><%= link_to 'View', product %></td>
+                    <td><%= link_to 'Edit', edit_product_path(product) %></td>
+                    <td><%= link_to 'Remove', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                </tr>
+              <%end%>  
+            </table>
+          
+      </div>
+    </div>
+  </div>
+</div>

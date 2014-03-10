@@ -1,5 +1,11 @@
 Elvis::Application.routes.draw do
   
+  resources :line_items
+
+
+  resources :carts
+
+
   resources :order_carts
 
 
@@ -16,6 +22,7 @@ Elvis::Application.routes.draw do
   # end
 
   get 'order_cart' => 'order_carts#show', :as => 'current_order_cart'
+  get 'cart' => 'carts#show', :as => 'current_cart'
 
   # match 'cart' => 'carts#show', :via => :get, :as => :current_cart, :id => 'current'
   resources :tickets do 
@@ -23,6 +30,8 @@ Elvis::Application.routes.draw do
        post 'notification'
      end
    end
+
+
   resources :payments
   resources :products
   resources :categories
@@ -37,6 +46,12 @@ Elvis::Application.routes.draw do
   resources :contents do
      collection do
       match 'search' => 'contents#search', via: [:get, :post], as: :search
+     end
+  end
+
+  resources :products do
+     collection do
+      match 'search' => 'products#search', via: [:get, :post], as: :search
      end
   end
 

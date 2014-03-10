@@ -9,7 +9,7 @@ def total_price
   def paypal_encrypted(return_url, notify_url)
     values = {
       :business => APP_CONFIG[:paypal_email],
-      :cmd => '_order_cart',
+      :cmd => '_cart',
       :upload => 1,
       :return => return_url,
       :invoice => id,

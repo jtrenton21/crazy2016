@@ -2,36 +2,48 @@
   <div class="container">
     <div style="background:#f2f2f2; min-height:400px;" id="dg">
       <div class ="row centered">
-        <table id="line_items">
+       <!-- <table id="line-item" class="table table-bordered"> -->
+         <h2 class="red">Ticket Cart</h2><br/>
+         <div class="col-sm-4"></div>
+         <div class="col-sm-4">
+         <table>
           <tr>
-            <th>Ticket</th>
+            <th>Event</th>
             <th>Qty</th>
-            <th class="price">Unit Price</th>
-            <th class="price">Full Price</th>
-            <th>Remove</th>
+            <!-- <th class="price">Unit Price</th> -->
+            <th class="price">Price</th>
+            
           </tr>
             <% for order in @order_cart.orders %>
               <tr class="<%= cycle :odd, :even %>">
                 <td><%=h order.ticket.event.name %></td>
                 <td class="qty"><%= order.quantity %></td>
-                <td class="price"><%= number_to_currency(order.amount) %></td>
+                <!-- <td class="price"><%#= number_to_currency(order.amount) %></td> -->
                 <td class="price"><%= number_to_currency(order.full_price) %></td>
               <td><%= link_to 'Remove', order, method: :delete, data: { confirm: 'Are you sure?' } %></td>
               </tr>
             <% end %>
           <tr>
-            <td class="total price" colspan="4">
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="total price" style="margin-right:-40px;">
               Total: <%= number_to_currency @order_cart.total_price %>
             </td>
           </tr>
         </table>
-        <p><%= link_to "Continue Shopping", tickets_url %></p>
+      </div>
+      <div class="col-sm-4"></div>
+    </div><br/>
+    <div class ="row centered">
+        
         <%= form_tag APP_CONFIG[:paypal_url] do %>
           <%= hidden_field_tag :cmd, "_s-xclick" %>
           <%= hidden_field_tag :encrypted, @order_cart.paypal_encrypted(tickets_url, payments_url(:secret => APP_CONFIG[:paypal_secret])) %>
-          <p><%= submit_tag "Checkout" %></p>
+          <p><%= submit_tag "Checkout" %></p><br/>
+          <p><%= link_to "Back to Tickets", tickets_url %></p>
         <% end %>
-        
+       </div> 
       </div>
     </div>
   </div>

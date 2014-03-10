@@ -1,6 +1,18 @@
 class ProductsController < ApplicationController
+  def search
+    index
+    render :index
+  end
+
   def index
-    @products = Product.all(:limit => 10)
+    @product= Product.all
+    @content = Product.new
+    @search = Product.joins(:category).search(params[:q])
+    @products = @search.result
+    @products = @products.joins(:category)
+    @search.build_condition if @search.conditions.empty?
+    @search.build_sort if @search.sorts.empty?
+   
   end
   
   def show

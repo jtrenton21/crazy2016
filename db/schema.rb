@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140310023458) do
+ActiveRecord::Schema.define(:version => 20140310040044) do
 
   create_table "articles", :force => true do |t|
     t.string   "title"
@@ -25,6 +25,12 @@ ActiveRecord::Schema.define(:version => 20140310023458) do
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+  end
+
+  create_table "carts", :force => true do |t|
+    t.datetime "purchased_at"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
   end
 
   create_table "categories", :force => true do |t|
@@ -76,6 +82,15 @@ ActiveRecord::Schema.define(:version => 20140310023458) do
 
   add_index "events", ["eventday_id"], :name => "index_events_on_eventday_id"
 
+  create_table "line_items", :force => true do |t|
+    t.decimal  "unit_price"
+    t.integer  "product_id"
+    t.integer  "cart_id"
+    t.integer  "quantity"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "order_carts", :force => true do |t|
     t.datetime "purchased_at"
     t.datetime "created_at",   :null => false
@@ -125,9 +140,14 @@ ActiveRecord::Schema.define(:version => 20140310023458) do
     t.decimal  "price"
     t.text     "description"
     t.integer  "category_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
     t.integer  "payment_id"
+    t.string   "image"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "products", ["category_id"], :name => "index_products_on_category_id"

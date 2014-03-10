@@ -1,0 +1,42 @@
+<div class="panel-group" id="accordion">
+  <div class="panel ">
+    <div class="panel-heading">
+      <h6 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+            <span style="font-size:18px;" class="red">EVENT TICKETS</span><br/>
+            <span style="font-size:14px;" class="red">Click to View</span><br/>
+        </a>
+      </h6>
+    </div>
+    <div id="collapseTwo" class="accordion-body collapse">
+      <div class="panel-body">
+        
+      
+          <h3>Tickets</h3><br/>
+       <%= link_to 'Create New Ticket', new_ticket_path %>
+          <table id="newsart" class="table table-bordered">
+            <tr>
+              <th>Event</th>
+              <th>Price</th>
+              <th>Date</th>
+              <th>Description</th>
+              <th>Review</th>
+              <th>Edit</th>
+              <th>Remove</th>
+            </tr>
+            <% @tickets.each do |ticket| %>
+              <tr>
+                <td><%= ticket.event.name %></td>
+                <td><%= number_to_currency(ticket.price) %></td>
+                <td><%= ticket.event.eventday.month %> <%= ticket.event.eventday.date %></td>
+                <td><%= ticket.event.einfo %></td>
+                <td><%= link_to 'View', ticket %></td> 
+                <td><%= link_to 'Edit', edit_ticket_path(ticket) %></td>
+                <td><%= link_to 'Destroy', ticket, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              </tr>
+            <%end%>  
+          </table>
+      </div>
+    </div>
+  </div>
+</div>

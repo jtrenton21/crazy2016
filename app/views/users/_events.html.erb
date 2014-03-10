@@ -1,34 +1,8 @@
 <div class="contents"> 
     <div class="container">
         <div id="w">
-        <h3>Events Calendar</h3><br/>
-       <%= link_to 'ADD NEW EVENT', new_event_path %>
-          <table id="newsart" class="table table-bordered">
-            <tr>
-              
-              <th>Event Name</th>
-              <th>Date</th>
-              <th>Start Time</th>
-              <th>Adddress</th>
-              <th>Show</th>
-              <th>Edit</th>
-              <th>Remove</th>
-            </tr>
-            <% @events.each do |event| %>
-              
-                <tr>
-                  
-                    <td><%= event.name%></td>
-                    
-                    <td><%= event.eventday.day %> <%= event.eventday.month %>  <%= event.eventday.date %>,<%= event.eventday.year %> </td>
-                    <td><%=event.start_time%></td>
-                    <td><%= event.address%></td>
-                    <td><%= link_to 'Show', event %></td>
-                    <td><%= link_to 'Edit', edit_event_path(event) %></td>
-                    <td><%= link_to 'Destroy', event, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-                </tr>
-              <%end%>  
-            </table>
+        <%= render 'myevents'%>
+        <%= render 'mytickets' %>
           
         </div>
       </div>

@@ -2,12 +2,12 @@
 
 one:
   unit_price: 9.99
-  product: 
-  cart: 
+  product_id: 1
+  cart_id: 1
   quantity: 1
 
 two:
   unit_price: 9.99
-  product: 
-  cart: 
+  product_id: 1
+  cart_id: 1
   quantity: 1
